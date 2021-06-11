@@ -1,0 +1,779 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Code Generation Report</title>
+<link rel="stylesheet" type="text/css" href="resources/eml_report.css" />
+<link rel="stylesheet" type="text/css" href="resources/jQuery/ui.resizable.css" />
+<link rel="stylesheet" type="text/css" href="index.css" />
+<style>
+	pre.code{
+		-moz-tab-size: 4; /* For Firefox */
+		-o-tab-size: 4; /* For Opera 10.6-12.1 */
+		tab-size: 4; /* For Chrome */
+	}
+</style>
+<script type="text/javascript" src="resources/jQuery/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="resources/jQuery/jquery-ui-1.7.custom.min.js"></script>
+<script type="text/javascript" src="resources/jQuery/jquery.tablesorter.mod.js"></script>
+<script type="text/javascript" src="resources/jQuery/jquery.hotkeys-0.7.8.js"></script>
+<script type="text/javascript" src="resources/eml_report_interactions.js"></script>
+<script type="text/javascript" src="resources/eml_report_layout.js"></script>
+<script type="text/javascript" src="rtwshrink.js"></script>
+<script type="text/javascript">
+var localizedMessages = {
+    callSelectPrompt: "Select a function call:",
+    callSelectSource: "Calls from this function",
+    callSelectTarget: "Calls to this function",
+    infoForExpression: "Information for the selected expression:",
+    infoForVarType: "Information for the selected variable:",
+    infoForVarConst: "Information for the selected compile-time constant:",
+    infoForVarNone: "This variable does not have information associated with it.",
+    infoForFilter: "Matched {0}/{1} functions, {2}/{3} methods",
+    autoExtrinsicCall: "Only supported within the MATLAB environment."
+};
+var keyBindings = {
+        selectMCodeTab: "Ctrl+m",
+    selectCallStackTab: "Ctrl+k",
+        selectCCodeTab: "Ctrl+c",
+       selectReportTab: "Ctrl+r",
+     selectCenterPanel: "Ctrl+w",
+      selectSummaryTab: "Ctrl+s",
+     selectMessagesTab: "Ctrl+a",
+    selectWatchListTab: "Ctrl+v",
+     selectBuildLogTab: "Ctrl+t",
+    clearAllHighlights: "Esc"
+};
+var functionInfoTable = {
+ MATLABcode1: "ApproxMatMult8x81_mcode.html",
+ fpath1: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/TBM/ApproxMatMult8x8.m",
+ lines1: [1, 1, 41],
+ watch1: "ApproxMatMult8x81_watch.html",
+ title1: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\TBM\\ApproxMatMult8x8.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\TBM\\ApproxMatMult8x8.m')\">ApproxMatMult8x8</a></span>",
+ tcall1: [  ],
+ scall1: [ [ "From line 19 to dec2binfrac", "98#srcline1" ], [ "From line 20 to dec2binfrac", "98#srcline1" ], [ "From line 25 to TBM_ETM", "314#srcline1" ], [ "From line 27 to binfrac2dec", "380#srcline1" ] ],
+ MATLABcode98: "dec2binfrac98_mcode.html",
+ fpath98: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/TBM/dec2binfrac.m",
+ lines98: [1, 1, 13],
+ watch98: "dec2binfrac98_watch.html",
+ title98: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\TBM\\dec2binfrac.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\TBM\\dec2binfrac.m')\">dec2binfrac</a></span>",
+ tcall98: [ [ "From ApproxMatMult8x8 line 19", "1#F98N8:B134" ], [ "From ApproxMatMult8x8 line 20", "1#F98N8:B145" ] ],
+ scall98: [  ],
+ MATLABcode191: "zero_extend191_mcode.html",
+ fpath191: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/TBM/zero_extend.m",
+ lines191: [1, 1, 8],
+ watch191: "zero_extend191_watch.html",
+ title191: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\TBM\\zero_extend.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\TBM\\zero_extend.m')\">zero_extend &gt; 1</a></span>",
+ tcall191: [ [ "From TBM line 16", "293#F191N11:B78" ] ],
+ scall191: [  ],
+ MATLABcode195: "zero_extend195_mcode.html",
+ fpath195: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/TBM/zero_extend.m",
+ lines195: [1, 1, 8],
+ watch195: "zero_extend195_watch.html",
+ title195: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\TBM\\zero_extend.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\TBM\\zero_extend.m')\">zero_extend &gt; 2</a></span>",
+ tcall195: [ [ "From TBM line 22", "293#F195N11:B111" ] ],
+ scall195: [  ],
+ MATLABcode199: "zero_extend199_mcode.html",
+ fpath199: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/TBM/zero_extend.m",
+ lines199: [1, 1, 8],
+ watch199: "zero_extend199_watch.html",
+ title199: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\TBM\\zero_extend.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\TBM\\zero_extend.m')\">zero_extend &gt; 3</a></span>",
+ tcall199: [ [ "From TBM line 29", "293#F199N11:B152" ] ],
+ scall199: [  ],
+ MATLABcode203: "zero_extend203_mcode.html",
+ fpath203: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/TBM/zero_extend.m",
+ lines203: [1, 1, 8],
+ watch203: "zero_extend203_watch.html",
+ title203: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\TBM\\zero_extend.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\TBM\\zero_extend.m')\">zero_extend &gt; 4</a></span>",
+ tcall203: [ [ "From TBM line 37", "293#F203N11:B194" ] ],
+ scall203: [  ],
+ MATLABcode207: "zero_extend207_mcode.html",
+ fpath207: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/TBM/zero_extend.m",
+ lines207: [1, 1, 8],
+ watch207: "zero_extend207_watch.html",
+ title207: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\TBM\\zero_extend.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\TBM\\zero_extend.m')\">zero_extend &gt; 5</a></span>",
+ tcall207: [ [ "From TBM line 46", "293#F207N11:B244" ] ],
+ scall207: [  ],
+ MATLABcode211: "zero_extend211_mcode.html",
+ fpath211: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/TBM/zero_extend.m",
+ lines211: [1, 1, 8],
+ watch211: "zero_extend211_watch.html",
+ title211: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\TBM\\zero_extend.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\TBM\\zero_extend.m')\">zero_extend &gt; 6</a></span>",
+ tcall211: [ [ "From TBM line 56", "293#F211N11:B309" ] ],
+ scall211: [  ],
+ MATLABcode215: "zero_extend215_mcode.html",
+ fpath215: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/TBM/zero_extend.m",
+ lines215: [1, 1, 8],
+ watch215: "zero_extend215_watch.html",
+ title215: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\TBM\\zero_extend.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\TBM\\zero_extend.m')\">zero_extend &gt; 7</a></span>",
+ tcall215: [ [ "From TBM line 67", "293#F215N11:B382" ] ],
+ scall215: [  ],
+ MATLABcode216: "zero_extend216_mcode.html",
+ fpath216: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/TBM/zero_extend.m",
+ lines216: [1, 1, 8],
+ watch216: "zero_extend216_watch.html",
+ title216: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\TBM\\zero_extend.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\TBM\\zero_extend.m')\">zero_extend &gt; 8</a></span>",
+ tcall216: [ [ "From TBM line 80", "293#F216N11:B456" ] ],
+ scall216: [  ],
+ MATLABcode293: "TBM293_mcode.html",
+ fpath293: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/TBM/TBM.m",
+ lines293: [1, 1, 104],
+ watch293: "TBM293_watch.html",
+ title293: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\TBM\\TBM.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\TBM\\TBM.m')\">TBM</a></span>",
+ tcall293: [ [ "From TBM_ETM line 11", "314#F293N3:B84" ], [ "From TBM_ETM line 15", "314#F293N3:B96" ] ],
+ scall293: [ [ "From line 16 to zero_extend > 1", "191#srcline1" ], [ "From line 22 to zero_extend > 2", "195#srcline1" ], [ "From line 29 to zero_extend > 3", "199#srcline1" ], [ "From line 37 to zero_extend > 4", "203#srcline1" ], [ "From line 46 to zero_extend > 5", "207#srcline1" ], [ "From line 56 to zero_extend > 6", "211#srcline1" ], [ "From line 67 to zero_extend > 7", "215#srcline1" ], [ "From line 80 to zero_extend > 8", "216#srcline1" ] ],
+ MATLABcode314: "TBM_ETM314_mcode.html",
+ fpath314: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/TBM/TBM_ETM.m",
+ lines314: [1, 1, 39],
+ watch314: "TBM_ETM314_watch.html",
+ title314: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\TBM\\TBM_ETM.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\TBM\\TBM_ETM.m')\">TBM_ETM</a></span>",
+ tcall314: [ [ "From ApproxMatMult8x8 line 25", "1#F314N4:B176" ] ],
+ scall314: [ [ "From line 11 to TBM", "293#srcline1" ], [ "From line 15 to TBM", "293#srcline1" ] ],
+ MATLABcode380: "binfrac2dec380_mcode.html",
+ fpath380: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/TBM/binfrac2dec.m",
+ lines380: [1, 1, 5],
+ watch380: "binfrac2dec380_watch.html",
+ title380: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\TBM\\binfrac2dec.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\TBM\\binfrac2dec.m')\">binfrac2dec</a></span>",
+ tcall380: [ [ "From ApproxMatMult8x8 line 27", "1#F380N5:B194" ] ],
+ scall380: [  ],
+ rootFcnID: "1",
+ firstPage: "1",
+ htmlRoot: "C:/Users/USER/Documents/One%20Lab/Comparing_multipliers/Application/Application/TBM/codegen/mex/ApproxMatMult8x8/html/"
+};
+var scriptInfoTable = {
+ fpath1: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/TBM/ApproxMatMult8x8.m",
+ fpath2: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/scalexpCompatible.m",
+ fpath3: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/xor.m",
+ fpath4: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/isBuiltInNumeric.m",
+ fpath5: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/eml_mtimes_helper.m",
+ fpath6: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/+scalar/abs.m",
+ fpath7: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/applyScalarFunction.m",
+ fpath8: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elfun/abs.m",
+ fpath9: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/isnumerictype.m",
+ fpath10: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/length.m",
+ fpath11: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/eml_fi_checkforconst.m",
+ fpath12: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/isfi.m",
+ fpath13: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/fi_impl.m",
+ fpath14: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/eml_fi_checkforntype.m",
+ fpath15: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/sparfun/issparse.m",
+ fpath16: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/codingForGPU.m",
+ fpath17: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/useParforConst.m",
+ fpath18: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elmat/intmax.m",
+ fpath19: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elmat/intmin.m",
+ fpath20: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/eml/eml_int_forloop_overflow_check.m",
+ fpath21: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/+scalar/floor.m",
+ fpath22: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/applyScalarFunctionInPlace.m",
+ fpath23: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elfun/floor.m",
+ fpath24: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/floatModel.m",
+ fpath25: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/mantissa_nbits.m",
+ fpath26: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/scalarEg.m",
+ fpath27: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/isfimath.m",
+ fpath28: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/power.m",
+ fpath29: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/applyBinaryScalarFunction.m",
+ fpath30: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elmat/isnan.m",
+ fpath31: "C:/Program Files/MATLAB/R2017b/toolbox/shared/coder/coder/+coder/+internal/error.m",
+ fpath32: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/+scalar/pow2.m",
+ fpath33: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elfun/pow2.m",
+ fpath34: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elmat/isinf.m",
+ fpath35: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elmat/isfinite.m",
+ fpath36: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/strfun/dec2bin.m",
+ fpath37: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/div.m",
+ fpath38: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/rdivide.m",
+ fpath39: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/mrdivide.p",
+ fpath40: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/indexMinus.m",
+ fpath41: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/indexPlus.m",
+ fpath42: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elmat/ismatrix.m",
+ fpath43: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/mpower.m",
+ fpath44: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/ifWhileCond.m",
+ fpath45: "C:/Program Files/MATLAB/R2017b/toolbox/shared/coder/coder/+coder/+internal/narginchk.m",
+ fpath46: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/charCastCheck.m",
+ fpath47: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/strfun/char.m",
+ fpath48: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/TBM/dec2binfrac.m",
+ fpath49: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/cat.m",
+ fpath50: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/scalexpAllocNoCheck.m",
+ fpath51: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/scalexpAlloc.m",
+ fpath52: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/minOrMax.m",
+ fpath53: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/datafun/max.m",
+ fpath54: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/strfun/bin2dec.m",
+ fpath55: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/private/bitbinop.m",
+ fpath56: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/bitand.m",
+ fpath57: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/bitshift.m",
+ fpath58: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/unsignedClass.m",
+ fpath59: "C:/Program Files/MATLAB/R2017b/toolbox/shared/coder/coder/+coder/+internal/indexIntRelop.m",
+ fpath60: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/private/all_in_integer_range.m",
+ fpath61: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/bitget.m",
+ fpath62: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/toLogicalCheck.m",
+ fpath63: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/TBM/zero_extend.m",
+ fpath64: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/prodsize.m",
+ fpath65: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elmat/fliplr.m",
+ fpath66: "C:/Program Files/MATLAB/R2017b/toolbox/comm/comm/eml/bi2de.m",
+ fpath67: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/strcmp.m",
+ fpath68: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/strfun/isstring.m",
+ fpath69: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elmat/private/eml_isequal_core.m",
+ fpath70: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elmat/isequal.m",
+ fpath71: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/constNonSingletonDim.m",
+ fpath72: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/allOrAny.m",
+ fpath73: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/any.m",
+ fpath74: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/datafun/private/process_sumprod_inputs.m",
+ fpath75: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/datafun/private/combineVectorElements.m",
+ fpath76: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/datafun/private/sumprod.m",
+ fpath77: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/datafun/sum.m",
+ fpath78: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/TBM/TBM.m",
+ fpath79: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/bitor.m",
+ fpath80: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/TBM/TBM_ETM.m",
+ fpath81: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/colon.m",
+ fpath82: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/vAllOrAny.m",
+ fpath83: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/TBM/binfrac2dec.m"
+};
+</script>
+</head>
+<body>
+
+<div class="west">
+<ul class="ui-tabs-nav">
+<li class="ui-tabs-nav-item ui-tabs-selected"><span class="tab-link" id="MATLABcode"><span>MATLAB code</span></span></li>
+<li class="ui-tabs-nav-item"><span class="tab-link" id="callstack"><span>Call stack</span></span></li>
+<li class="ui-tabs-nav-item"><span class="tab-link" id="ccode"><span>C code</span></span></li>
+</ul>
+<div id="MATLABcodebody" class="ui-tabs-panel">
+<!-- Begin Filter -->
+<div class="grayline methodset" onclick="filterClick(event);">
+<a class="collapsed">Filter</a>
+</div>
+<div id="filterbody" class="hidden">
+<table class="myfunc-filter-tbl">
+<tr>
+<td title="Use this filter to display only functions and methods that contain variables or expressions with the specified attributes." colspan="2" class="checkbox">
+<div class="myfunc-filterby-chk"><input type="checkbox" class="filterenable" />
+<div class="filter-enable-lbl">Filter functions and methods</div></div></td></tr><tr>
+<td class="label"><div class="myfunc-filterby-lbl">Filter by:</div></td>
+<td class="select">
+<div class="filters">
+<select class="myfunc-filterby">
+<option id="size">Size</option>
+<option id="complex">Complexity</option>
+<option id="class">Class</option>
+</select>
+</div>
+</td>
+</tr>
+
+<tr>
+<td class="label"><div class="myfunc-filterstr-lbl">Filter:</div></td>
+<td class="input"><div>
+
+<div class="size">
+<select class="myfunc-filter size">
+<option value="1 98 191 195 199 203 207 211 215 216 293 314 380">1 x 1</option>
+<option value="1 98">1 x 1 *</option>
+<option value="216">1 x 10</option>
+<option value="191 195 199 203 207 211 215 216 293">1 x 11</option>
+<option value="1 98">1 x 13</option>
+<option value="314">1 x 16</option>
+<option value="1">1 x 18</option>
+<option value="215">1 x 2</option>
+<option value="380">1 x 26</option>
+<option value="191 211">1 x 3</option>
+<option value="1">1 x 32</option>
+<option value="195 207">1 x 4</option>
+<option value="199 203">1 x 5</option>
+<option value="199 203">1 x 6</option>
+<option value="195 207">1 x 7</option>
+<option value="191 211 293">1 x 8</option>
+<option value="215 293">1 x 9</option>
+<option value="1">1 x <b>:</b>52</option>
+<option value="1">8 x 8</option>
+<option value="293">9 x 11</option>
+</select>
+</div>
+
+<div class="complex">
+<select class="myfunc-filter complex">
+<option value="">Complex values</option>
+<option value="1 98 191 195 199 203 207 211 215 216 293 314 380">Real values</option>
+</select>
+</div>
+<!-- Begin Class Filter -->
+<div class="class">
+<select class="myfunc-filter class">
+<option value="1 98 293 380">char</option>
+<option value="1 98 191 195 199 203 207 211 215 216 293 314 380">double</option>
+<option value="191 195 207 211">logical</option>
+<option value="293 314">uint16</option>
+<option value="314">uint32</option>
+<option value="293 314">uint8</option>
+</select>
+</div>
+<!-- End Class Filter -->
+
+
+<div class="wl">
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="mode">
+<select class="wl-operator" name=":1 98 191 195 199 203 207 211 215 216 293 314 380;16:">
+<option value="eq">=</option>
+<option value="ne">~=</option>
+<option value="lt">&lt;</option>
+<option value="le">&lt;=</option>
+<option value="ge">&gt;=</option>
+<option value="gt">&gt;</option>
+</select>
+</td>
+<td class="value"><select class="wl">
+<option value="">16</option>
+</select>
+<input class="wl" />
+</td>
+</tr>
+</table>
+</div>
+</div>
+</td>
+</tr>
+</table>
+<div class="myfunc-count"></div>
+</div>
+<!-- End Filter -->
+<div class="grayline methodset" onmouseover="callTreeMouseOver(event);" onmouseout="callTreeMouseOut(event);" onclick="functionSetClick(event);">
+<a class="expanded">Functions</a>
+</div>
+<!-- Begin Function Tree -->
+<div id="functiontreebody">
+<div class="functionwrapper" onmouseover="callTreeMouseOver(event);" onmouseout="callTreeMouseOut(event);" onclick="functionTreeClick(event);">
+<ol class="tree">
+<!-- Begin Function Tree Roots -->
+<li class="leaf  passed"><a href="#" class="fcn  " id="F1N2:F1">ApproxMatMult8x8</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F293N3:F2">TBM</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F314N4:F3">TBM_ETM</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F380N5:F4">binfrac2dec</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F98N8:F5">dec2binfrac</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F191N11:F6">zero_extend &gt; 1</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F195N11:F7">zero_extend &gt; 2</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F199N11:F8">zero_extend &gt; 3</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F203N11:F9">zero_extend &gt; 4</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F207N11:F10">zero_extend &gt; 5</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F211N11:F11">zero_extend &gt; 6</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F215N11:F12">zero_extend &gt; 7</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F216N11:F13">zero_extend &gt; 8</a></li>
+<!-- End Function Tree Roots -->
+</ol>
+<!-- Function Tree Nodes -->
+<div class="functiontreenodes hidden">
+</div>
+<!-- End Function Tree Nodes -->
+</div>
+</div>
+<!-- End Function Tree -->
+</div>
+<!-- Begin Call Tree -->
+<div id="callstackbody" class="ui-tabs-panel hidden">
+<div class="treewrapper" onmouseover="callTreeMouseOver(event);" onmouseout="callTreeMouseOut(event);" onclick="callTreeClick(event);">
+<ol class="tree">
+<!-- Call Tree Root -->
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F1N2:L1">ApproxMatMult8x8</a>
+<ul>
+<li class="leaf passed"><a href="#" class="fcn  " id="F98N8:L2">dec2binfrac</a></li>
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F314N4:L3">TBM_ETM</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F380N5:L4">binfrac2dec</a></li>
+</ul>
+</li>
+</ol>
+<!-- Call Tree Nodes -->
+<div class="callstacknodes hidden">
+<ol class="callstacknode" id="callstacknode1">
+
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F1N2:l1">ApproxMatMult8x8</a>
+<ul>
+<li class="leaf passed"><a href="#" class="fcn  " id="F98N8:l2">dec2binfrac</a></li>
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F314N4:l3">TBM_ETM</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F380N5:l4">binfrac2dec</a></li>
+</ul>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode98">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F98N8:l5">dec2binfrac</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode191">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F191N11:l6">zero_extend &gt; 1</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode195">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F195N11:l7">zero_extend &gt; 2</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode199">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F199N11:l8">zero_extend &gt; 3</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode203">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F203N11:l9">zero_extend &gt; 4</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode207">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F207N11:l10">zero_extend &gt; 5</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode211">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F211N11:l11">zero_extend &gt; 6</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode215">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F215N11:l12">zero_extend &gt; 7</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode216">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F216N11:l13">zero_extend &gt; 8</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode293">
+
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F293N3:l14">TBM</a>
+<ul>
+<li class="leaf passed"><a href="#" class="fcn  " id="F191N11:l15">zero_extend &gt; 1</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F195N11:l16">zero_extend &gt; 2</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F199N11:l17">zero_extend &gt; 3</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F203N11:l18">zero_extend &gt; 4</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F207N11:l19">zero_extend &gt; 5</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F211N11:l20">zero_extend &gt; 6</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F215N11:l21">zero_extend &gt; 7</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F216N11:l22">zero_extend &gt; 8</a></li>
+</ul>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode314">
+
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F314N4:l23">TBM_ETM</a>
+<ul>
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F293N3:l24">TBM</a></li>
+</ul>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode380">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F380N5:l25">binfrac2dec</a>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<!-- End Call Tree -->
+<!-- Begin C Code -->
+<div id="ccodebody" class="ui-tabs-panel hidden">
+<div class="grayline methodset" onclick="ccodeClick(event,1);">
+<a class="expanded">Target Source Files</a>
+</div>
+<!-- Begin C Code List -->
+<div id="ccodelistbody1" class="visible">
+<table class="myfunc-list" cellspacing="0" cellpadding="0" onclick="cFileClickWithMexWarning(event);">
+<tbody>
+<tr class="ccode" id="ApproxMatMult8x8_c.html"><td class="ccode"><a href="#">ApproxMatMult8x8.c</a></td></tr>
+<tr class="ccode" id="ApproxMatMult8x8_h.html"><td class="ccode"><a href="#">ApproxMatMult8x8.h</a></td></tr>
+<tr class="ccode" id="ApproxMatMult8x8_data_c.html"><td class="ccode"><a href="#">ApproxMatMult8x8_data.c</a></td></tr>
+<tr class="ccode" id="ApproxMatMult8x8_data_h.html"><td class="ccode"><a href="#">ApproxMatMult8x8_data.h</a></td></tr>
+<tr class="ccode" id="ApproxMatMult8x8_initialize_c.html"><td class="ccode"><a href="#">ApproxMatMult8x8_initialize.c</a></td></tr>
+<tr class="ccode" id="ApproxMatMult8x8_initialize_h.html"><td class="ccode"><a href="#">ApproxMatMult8x8_initialize.h</a></td></tr>
+<tr class="ccode" id="ApproxMatMult8x8_terminate_c.html"><td class="ccode"><a href="#">ApproxMatMult8x8_terminate.c</a></td></tr>
+<tr class="ccode" id="ApproxMatMult8x8_terminate_h.html"><td class="ccode"><a href="#">ApproxMatMult8x8_terminate.h</a></td></tr>
+<tr class="ccode" id="ApproxMatMult8x8_types_h.html"><td class="ccode"><a href="#">ApproxMatMult8x8_types.h</a></td></tr>
+<tr class="ccode" id="TBM_c.html"><td class="ccode"><a href="#">TBM.c</a></td></tr>
+<tr class="ccode" id="TBM_h.html"><td class="ccode"><a href="#">TBM.h</a></td></tr>
+<tr class="ccode" id="bi2de_c.html"><td class="ccode"><a href="#">bi2de.c</a></td></tr>
+<tr class="ccode" id="bi2de_h.html"><td class="ccode"><a href="#">bi2de.h</a></td></tr>
+<tr class="ccode" id="bin2dec_c.html"><td class="ccode"><a href="#">bin2dec.c</a></td></tr>
+<tr class="ccode" id="bin2dec_h.html"><td class="ccode"><a href="#">bin2dec.h</a></td></tr>
+<tr class="ccode" id="c_mexapi_version_c.html"><td class="ccode"><a href="#">c_mexapi_version.c</a></td></tr>
+<tr class="ccode" id="dec2bin_c.html"><td class="ccode"><a href="#">dec2bin.c</a></td></tr>
+<tr class="ccode" id="dec2bin_h.html"><td class="ccode"><a href="#">dec2bin.h</a></td></tr>
+<tr class="ccode" id="dec2binfrac_c.html"><td class="ccode"><a href="#">dec2binfrac.c</a></td></tr>
+<tr class="ccode" id="dec2binfrac_h.html"><td class="ccode"><a href="#">dec2binfrac.h</a></td></tr>
+<tr class="ccode" id="error_c.html"><td class="ccode"><a href="#">error.c</a></td></tr>
+<tr class="ccode" id="error_h.html"><td class="ccode"><a href="#">error.h</a></td></tr>
+<tr class="ccode" id="fliplr_c.html"><td class="ccode"><a href="#">fliplr.c</a></td></tr>
+<tr class="ccode" id="fliplr_h.html"><td class="ccode"><a href="#">fliplr.h</a></td></tr>
+<tr class="ccode" id="rt_nonfinite_h.html"><td class="ccode"><a href="#">rt_nonfinite.h</a></td></tr>
+<tr class="ccode" id="rtwtypes_h.html"><td class="ccode"><a href="#">rtwtypes.h</a></td></tr>
+<tr class="ccode" id="sum_c.html"><td class="ccode"><a href="#">sum.c</a></td></tr>
+<tr class="ccode" id="sum_h.html"><td class="ccode"><a href="#">sum.h</a></td></tr>
+<tr class="ccode" id="toLogicalCheck_c.html"><td class="ccode"><a href="#">toLogicalCheck.c</a></td></tr>
+<tr class="ccode" id="toLogicalCheck_h.html"><td class="ccode"><a href="#">toLogicalCheck.h</a></td></tr>
+</tbody>
+</table>
+</div>
+<!-- End C Code List -->
+<div class="grayline methodset" onclick="ccodeClick(event,3);">
+<a class="collapsed">Interface Source Files</a>
+</div>
+<!-- Begin C Code List -->
+<div id="ccodelistbody3" class="hidden">
+<table class="myfunc-list" cellspacing="0" cellpadding="0" onclick="cFileClickWithMexWarning(event);">
+<tbody>
+<tr class="ccode" id="_coder_ApproxMatMult8x8_api_c.html"><td class="ccode"><a href="#">_coder_ApproxMatMult8x8_api.c</a></td></tr>
+<tr class="ccode" id="_coder_ApproxMatMult8x8_api_h.html"><td class="ccode"><a href="#">_coder_ApproxMatMult8x8_api.h</a></td></tr>
+<tr class="ccode" id="_coder_ApproxMatMult8x8_info_c.html"><td class="ccode"><a href="#">_coder_ApproxMatMult8x8_info.c</a></td></tr>
+<tr class="ccode" id="_coder_ApproxMatMult8x8_info_h.html"><td class="ccode"><a href="#">_coder_ApproxMatMult8x8_info.h</a></td></tr>
+<tr class="ccode" id="_coder_ApproxMatMult8x8_mex_c.html"><td class="ccode"><a href="#">_coder_ApproxMatMult8x8_mex.c</a></td></tr>
+<tr class="ccode" id="_coder_ApproxMatMult8x8_mex_h.html"><td class="ccode"><a href="#">_coder_ApproxMatMult8x8_mex.h</a></td></tr>
+</tbody>
+</table>
+</div>
+<!-- End C Code List -->
+</div>
+<!-- End C Code -->
+</div>
+<!-- Tooltips -->
+<div class="aux hidden">
+<div class="tooltips">
+<div class="tooltip" id="TT1"><table class="tooltip"><tr><th>Size</th><td>8 x 8</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT2"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT3"><table class="tooltip"><tr><th>Size</th><td>1 x 18</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT4"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>logical</td></tr></table></div>
+<div class="tooltip" id="TT5"><table class="tooltip"><tr><th>Size</th><td>1 x 1 *</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT6"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fi</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>16</td></tr><tr><th>FL</th><td>13</td></tr></table></div>
+<div class="tooltip" id="TT7"><table class="tooltip"><tr><th>Size</th><td>1 x <b>:</b>52</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT8"><table class="tooltip"><tr><th>Size</th><td>1 x 13</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT9"><table class="tooltip"><tr><th>Size</th><td>1 x <b>:</b>65</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT10"><table class="tooltip"><tr><th>Size</th><td>1 x 32</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT11"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>uint32</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT12"><table class="tooltip"><tr><th>Size</th><td>1 x 6</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT13"><table class="tooltip"><tr><th>Size</th><td>1 x 6</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT14"><table class="tooltip"><tr><th>Size</th><td>1 x 26</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT15"><table class="tooltip"><tr><th>Size</th><td>1 x 26</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT16"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>uint8</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT17"><table class="tooltip"><tr><th>Size</th><td>0 x 0</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT18"><table class="tooltip"><tr><th>Size</th><td>1 x 3</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT19"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT20"><table class="tooltip"><tr><th>Size</th><td>1 x 0</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT21"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT22"><table class="tooltip"><tr><th>Size</th><td>1 x 2</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT23"><table class="tooltip"><tr><th>Size</th><td>1 x 3</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT24"><table class="tooltip"><tr><th>Size</th><td>1 x 2</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT25"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.numerictype</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>16</td></tr><tr><th>FL</th><td>13</td></tr></table></div>
+<div class="tooltip" id="TT26"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fimath</td></tr></table></div>
+<div class="tooltip" id="TT27"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fi</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>16</td></tr><tr><th>FL</th><td>13</td></tr></table></div>
+<div class="tooltip" id="TT28"><table class="tooltip"><tr><th>Size</th><td>1 x 8</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT29"><table class="tooltip"><tr><th>Size</th><td>1 x 15</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT30"><table class="tooltip"><tr><th>Size</th><td>1 x 4</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT31"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>mxArray</td></tr></table></div>
+<div class="tooltip" id="TT32"><table class="tooltip"><tr><th>Size</th><td>1 x <b>:</b>?</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT33"><table class="tooltip"><tr><th>Size</th><td>1 x 5</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT34"><table class="tooltip"><tr><th>Size</th><td>1 x 23</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT35"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT36"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>int32</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT37"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT38"><table class="tooltip"><tr><th>Size</th><td>1 x 14</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT39"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT40"><table class="tooltip"><tr><th>Size</th><td>1 x 31</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT41"><table class="tooltip"><tr><th>Size</th><td>1 x 16</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT42"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT43"><table class="tooltip"><tr><th>Size</th><td>1 x 52 *</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT44"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT45"><table class="tooltip"><tr><th>Size</th><td>1 x 2</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT46"><table class="tooltip"><tr><th>Size</th><td>1 x <b>:</b>51</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT47"><table class="tooltip"><tr><th>Size</th><td>1 x 1 *</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT48"><table class="tooltip"><tr><th>Size</th><td>1 x <b>:</b>51</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT49"><table class="tooltip"><tr><th>Size</th><td>1 x 1 *</td></tr><tr><th>Class</th><td>logical</td></tr></table></div>
+<div class="tooltip" id="TT50"><table class="tooltip"><tr><th>Size</th><td>13 x 1</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT51"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT52"><table class="tooltip"><tr><th>Size</th><td>1 x 13</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT53"><table class="tooltip"><tr><th>Size</th><td><b>:</b>? x <b>:</b>?</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT54"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT55"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT56"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT57"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT58"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT59"><table class="tooltip"><tr><th>Size</th><td>2 x 1</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT60"><table class="tooltip"><tr><th>Size</th><td>2 x 1</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT61"><table class="tooltip"><tr><th>Size</th><td>1 x <b>:</b>?</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT62"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>uint16</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT63"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT64"><table class="tooltip"><tr><th>Size</th><td>1 x 2</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT65"><table class="tooltip"><tr><th>Size</th><td>1 x 19</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT66"><table class="tooltip"><tr><th>Size</th><td>1 x 8</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT67"><table class="tooltip"><tr><th>Size</th><td>1 x 11</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT68"><table class="tooltip"><tr><th>Size</th><td>1 x 3</td></tr><tr><th>Class</th><td>logical</td></tr></table></div>
+<div class="tooltip" id="TT69"><table class="tooltip"><tr><th>Size</th><td>1 x 7</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT70"><table class="tooltip"><tr><th>Size</th><td>1 x 4</td></tr><tr><th>Class</th><td>logical</td></tr></table></div>
+<div class="tooltip" id="TT71"><table class="tooltip"><tr><th>Size</th><td>1 x 6</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT72"><table class="tooltip"><tr><th>Size</th><td>1 x 5</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT73"><table class="tooltip"><tr><th>Size</th><td>1 x 4</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT74"><table class="tooltip"><tr><th>Size</th><td>1 x 7</td></tr><tr><th>Class</th><td>logical</td></tr></table></div>
+<div class="tooltip" id="TT75"><table class="tooltip"><tr><th>Size</th><td>1 x 3</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT76"><table class="tooltip"><tr><th>Size</th><td>1 x 8</td></tr><tr><th>Class</th><td>logical</td></tr></table></div>
+<div class="tooltip" id="TT77"><table class="tooltip"><tr><th>Size</th><td>1 x 9</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT78"><table class="tooltip"><tr><th>Size</th><td>1 x 10</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT79"><table class="tooltip"><tr><th>Size</th><td>1 x 2</td></tr><tr><th>Class</th><td>logical</td></tr></table></div>
+<div class="tooltip" id="TT80"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT81"><table class="tooltip"><tr><th>Size</th><td>1 x 2</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT82"><table class="tooltip"><tr><th>Size</th><td>1 x 7</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT83"><table class="tooltip"><tr><th>Size</th><td>1 x 2</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT84"><table class="tooltip"><tr><th>Size</th><td>1 x 2</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT85"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT86"><table class="tooltip"><tr><th>Size</th><td>1 x 2</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT87"><table class="tooltip"><tr><th>Size</th><td>1 x 2</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT88"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>int8</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT89"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT90"><table class="tooltip"><tr><th>Size</th><td>9 x 11</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT91"><table class="tooltip"><tr><th>Size</th><td>11 x 1</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT92"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT93"><table class="tooltip"><tr><th>Size</th><td>1 x 16</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT94"><table class="tooltip"><tr><th>Size</th><td>1 x 26</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT95"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="V1"><table class="tooltip"><tr><th>Value</th><td>    13</br></td></tr></table></div>
+<div class="tooltip" id="V2"><table class="tooltip"><tr><th>Value</th><td>     2</br></td></tr></table></div>
+<div class="tooltip" id="V3"><table class="tooltip"><tr><th>Value</th><td>    11</br></td></tr></table></div>
+<div class="tooltip" id="V4"><table class="tooltip"><tr><th>Value</th><td>     3</br></td></tr></table></div>
+<div class="tooltip" id="V5"><table class="tooltip"><tr><th>Value</th><td>     4</br></td></tr></table></div>
+<div class="tooltip" id="V6"><table class="tooltip"><tr><th>Value</th><td>     5</br></td></tr></table></div>
+<div class="tooltip" id="V7"><table class="tooltip"><tr><th>Value</th><td>     6</br></td></tr></table></div>
+<div class="tooltip" id="V8"><table class="tooltip"><tr><th>Value</th><td>     7</br></td></tr></table></div>
+<div class="tooltip" id="V9"><table class="tooltip"><tr><th>Value</th><td>     8</br></td></tr></table></div>
+<div class="tooltip" id="V10"><table class="tooltip"><tr><th>Value</th><td>     9</br></td></tr></table></div>
+<div class="tooltip" id="V11"><table class="tooltip"><tr><th>Value</th><td></br>        RoundingMethod: Nearest</br>        OverflowAction: Saturate</br>           ProductMode: FullPrecision</br>               SumMode: FullPrecision</br></td></tr></table></div>
+<div class="tooltip" id="V12"><table class="tooltip"><tr><th>Value</th><td></br>          DataTypeMode: Fixed-point: binary point scaling</br>            Signedness: Unsigned</br>            WordLength: 16</br>        FractionLength: 13</br></td></tr></table></div>
+</div>
+</div>
+<!-- End Tooltips -->
+
+<div class="south">
+<ul class="ui-tabs-nav">
+<li class="ui-tabs-nav-item ui-tabs-selected"><span class="tab-link" id="summary"><span>Summary</span></span></li>
+<li class="ui-tabs-nav-item"><span class="tab-link" id="messages"><span>All Messages (0)</span></span></li>
+<li class="ui-tabs-nav-item"><span class="tab-link" id="watchlist"><span>Variables</span></span></li>
+<li class="ui-tabs-nav-item hidden"><span class="tab-link" id="watchload"><span>Variables</span></span></li>
+<li class="ui-tabs-nav-item"><span class="tab-link" id="buildlog1"><span>Build Log</span></span></li>
+</ul>
+
+<!-- Compilation Summary -->
+<div id="summarybody" class="ui-tabs-panel">
+<table cellpadding="1" cellspacing="4">
+<tr><td>C source code generated on:</td><td>08-Sep-2018 00:51:09</td></tr>
+<tr><td>Coding target:</td><td>MEX Function</td></tr>
+<tr><td>Number of errors:</td><td><a href="javascript:selectMessagesTab();">0</a></td></tr>
+<tr><td>Number of warnings:</td><td><a href="javascript:selectMessagesTab();">0</a></td></tr>
+<tr><td>Number of notices:</td><td><a href="javascript:selectMessagesTab();">0</a></td></tr>
+</table>
+<p/><p/><table>
+<tr><td><b>Tell Us What You Think</b></td></tr>
+<tr><td>We value your feedback. Please take a few minutes to answer this short questionnaire regarding the Code Generation Report.</td></tr>
+<tr><td><a href="matlab: emlcprivate('launchReportSurvey');">&gt;&gt;Provide Feedback</a></td></tr>
+</table>
+</div>
+
+<!-- Message Table -->
+<div id="messagesbody" class="ui-tabs-panel hidden">
+<div>
+<div class="msgsuccess">Code generation successful. Click here to <a href="javaScript:selectSummaryTab();">view summary</a>.</div>
+</div>
+</div>
+<!-- Watchlist Table -->
+<div id="watchlistbody" class="ui-tabs-panel hidden">
+</div>
+<div id="watchloadbody" class="ui-tabs-panel hidden">
+Loading Variables table ...
+</div>
+
+<!-- Build Log -->
+<div id="buildlog1body" class="ui-tabs-panel hidden">
+<div class="grayline"></div>
+<table cellpadding="4" cellspacing="1"><tr>
+<td align="left" class="td-linebottomrt-gray" colspan="2">Build Parameters</td>
+</tr>
+<tr><td align="left" valign="top" class="td-linebottomrt">Build directory</td>
+<td align="left" valign="top" class="td-linebottomrt-link"><a href="matlab: cd('C:\Users\USER\Documents\One Lab\Comparing_multipliers\Application\Application\TBM\codegen\mex\ApproxMatMult8x8')">C:\Users\USER\Documents\One Lab\Comparing_multipliers\Application\Application\TBM\codegen\mex\ApproxMatMult8x8</a></td></tr>
+<tr><td align="left" valign="top" class="td-linebottomrt">Make wrapper</td>
+<td align="left" valign="top" class="td-linebottomrt-link">ApproxMatMult8x8_mex.bat</td></tr>
+</table>
+<br/>
+<table border="1" cellpadding="4" cellspacing="1" width="100%">
+<tr><td align="left" class="td-linebottomrt-gray">Build Log</td></tr>
+<tr><td valign="top" class="td-script">
+<pre>
+<span class="td-line-number">    1   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "ApproxMatMult8x8_data.c"</span>
+<span class="td-line-number">    2   </span><span class="td-line-normal">ApproxMatMult8x8_data.c</span>
+<span class="td-line-number">    3   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "ApproxMatMult8x8_initialize.c"</span>
+<span class="td-line-number">    4   </span><span class="td-line-normal">ApproxMatMult8x8_initialize.c</span>
+<span class="td-line-number">    5   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "ApproxMatMult8x8_terminate.c"</span>
+<span class="td-line-number">    6   </span><span class="td-line-normal">ApproxMatMult8x8_terminate.c</span>
+<span class="td-line-number">    7   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "ApproxMatMult8x8.c"</span>
+<span class="td-line-number">    8   </span><span class="td-line-normal">ApproxMatMult8x8.c</span>
+<span class="td-line-number">    9   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "dec2bin.c"</span>
+<span class="td-line-number">   10   </span><span class="td-line-normal">dec2bin.c</span>
+<span class="td-line-number">   11   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "error.c"</span>
+<span class="td-line-number">   12   </span><span class="td-line-normal">error.c</span>
+<span class="td-line-number">   13   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "dec2binfrac.c"</span>
+<span class="td-line-number">   14   </span><span class="td-line-normal">dec2binfrac.c</span>
+<span class="td-line-number">   15   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "bin2dec.c"</span>
+<span class="td-line-number">   16   </span><span class="td-line-normal">bin2dec.c</span>
+<span class="td-line-number">   17   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "TBM.c"</span>
+<span class="td-line-number">   18   </span><span class="td-line-normal">TBM.c</span>
+<span class="td-line-number">   19   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "toLogicalCheck.c"</span>
+<span class="td-line-number">   20   </span><span class="td-line-normal">toLogicalCheck.c</span>
+<span class="td-line-number">   21   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "fliplr.c"</span>
+<span class="td-line-number">   22   </span><span class="td-line-normal">fliplr.c</span>
+<span class="td-line-number">   23   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "bi2de.c"</span>
+<span class="td-line-number">   24   </span><span class="td-line-normal">bi2de.c</span>
+<span class="td-line-number">   25   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "sum.c"</span>
+<span class="td-line-number">   26   </span><span class="td-line-normal">sum.c</span>
+<span class="td-line-number">   27   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "interface/_coder_ApproxMatMult8x8_info.c"</span>
+<span class="td-line-number">   28   </span><span class="td-line-normal">_coder_ApproxMatMult8x8_info.c</span>
+<span class="td-line-number">   29   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "interface/_coder_ApproxMatMult8x8_api.c"</span>
+<span class="td-line-number">   30   </span><span class="td-line-normal">_coder_ApproxMatMult8x8_api.c</span>
+<span class="td-line-number">   31   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "interface/_coder_ApproxMatMult8x8_mex.c"</span>
+<span class="td-line-number">   32   </span><span class="td-line-normal">_coder_ApproxMatMult8x8_mex.c</span>
+<span class="td-line-number">   33   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\TBM" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "c_mexapi_version.c"</span>
+<span class="td-line-number">   34   </span><span class="td-line-normal">c_mexapi_version.c</span>
+<span class="td-line-number">   35   </span><span class="td-line-normal">link /nologo /manifest /DLL /LIBPATH:"C:\Program Files\MATLAB\R2017b\extern\lib\win64\microsoft" libmx.lib libmex.lib libmat.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /EXPORT:mexFunction /NODEFAULTLIB:LIBCMT   /OUT:ApproxMatMult8x8_mex.mexw64  ApproxMatMult8x8_data.obj ApproxMatMult8x8_initialize.obj ApproxMatMult8x8_terminate.obj ApproxMatMult8x8.obj dec2bin.obj error.obj dec2binfrac.obj bin2dec.obj TBM.obj toLogicalCheck.obj fliplr.obj bi2de.obj sum.obj _coder_ApproxMatMult8x8_info.obj _coder_ApproxMatMult8x8_api.obj _coder_ApproxMatMult8x8_mex.obj c_mexapi_version.obj   @ApproxMatMult8x8_mex_mex.arf</span>
+<span class="td-line-number">   36   </span><span class="td-line-normal">   Creating library ApproxMatMult8x8_mex.lib and object ApproxMatMult8x8_mex.exp</span>
+<span class="td-line-number">   37   </span><span class="td-line-normal">Build completed using compiler msvc150</span>
+<span class="td-line-number">   38   </span><span class="td-line-normal">mt -outputresource:"ApproxMatMult8x8_mex.mexw64;2" -manifest "ApproxMatMult8x8_mex.mexw64.manifest"</span>
+<span class="td-line-number">   39   </span><span class="td-line-normal">Microsoft (R) Manifest Tool</span>
+<span class="td-line-number">   40   </span><span class="td-line-normal">Copyright (c) Microsoft Corporation. </span>
+<span class="td-line-number">   41   </span><span class="td-line-normal">All rights reserved.</span>
+</pre>
+</td></tr></table>
+
+</div>
+
+<!-- Potential Differences -->
+<div id="potentialDifferencesBody" class="ui-tabs-panel hidden">
+</div>
+
+</div>
+<!-- Begin MATLAB Code Panel -->
+<div class="center">
+<div class="center-title">
+<div class="ui-tabs-nav-item ui-tabs-selected">
+<span class="functiontitle">
+</span>
+<!-- Begin Call Sites -->
+<span id="callsiteselecttable" class="call-sites-tbl">
+<span id="callsiteselectlabel" class="filtered">Calls:</span>
+<select id="callsiteselect" onchange="callSiteChange(event)">
+<option value="callsiteprompt">Select a function call:</option>
+</select>
+</span>
+<!-- End Call Sites -->
+</div>
+</div>
+<div class="ui-tabs-panel">
+<iframe id="hiddenCodeFrame"></iframe>
+<div class="code" onmouseover="mcodeMouseOver(event);" onmouseout="mcodeMouseOut(event);"onclick="mcodeClick(event);">
+</div>
+</div>
+</div>
+<!-- End MATLAB Code Panel -->
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+<body>
+<script src="resources/eml_report_loadable_data.js"></script>
+<pre class="code">
+<span class="srcline"><span class="lineno"><a href="84,1" id="srcline1"> 1</a></span><span class="line"><span class="comment">% approx 8-4 compressor based on approximate AMA5</span></span></span>
+<span class="srcline"><span class="lineno"><a href="84,2" id="srcline2"> 2</a></span><span class="line"><span class="keyword">function</span> [<span class="var type1" id="S2T4U3">S4</span>,<span class="var type1" id="S3T4U4">S3</span>,<span class="var type1" id="S4T4U5">S2</span>,<span class="var type1" id="S5T2U6">S1</span>] = Approx8to4_AMA5(<span class="var type1" id="S6T2U9">X8</span>,<span class="var type1" id="S7T2U10">X7</span>,<span class="var type1" id="S8T2U11">X6</span>,<span class="var type1" id="S9T2U12">X5</span>,<span class="var type1" id="S10T2U13">X4</span>,<span class="var type1" id="S11T2U14">X3</span>,<span class="var type1" id="S12T2U15">X2</span>,<span class="var type1" id="S13T2U16">X1</span>)</span></span>
+<span class="srcline"><span class="lineno"><a href="84,3" id="srcline3"> 3</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="84,4" id="srcline4"> 4</a></span><span class="line">[<span class="var type1" id="S14T4U20">C11</span>,<span class="var type1" id="S15T4U21">S11</span>]=<span class="fcn" id="F192N18:B23">HalfAdder</span>(<span class="var type1" id="S12T2U24">X2</span>,<span class="var type1" id="S13T2U25">X1</span>);</span></span>
+<span class="srcline"><span class="lineno"><a href="84,5" id="srcline5"> 5</a></span><span class="line">[<span class="var type1" id="S17T2U29">C12</span>,<span class="var type1" id="S18T2U30">S12</span>]=<span class="fcn" id="F241N5:B32">AMA5FA</span>(<span class="var type1" id="S9T2U33">X5</span>,<span class="var type1" id="S10T2U34">X4</span>,<span class="var type1" id="S11T2U35">X3</span>);</span></span>
+<span class="srcline"><span class="lineno"><a href="84,6" id="srcline6"> 6</a></span><span class="line">[<span class="var type1" id="S20T2U39">C13</span>,<span class="var type1" id="S21T2U40">S13</span>]=<span class="fcn" id="F241N5:B42">AMA5FA</span>(<span class="var type1" id="S6T2U43">X8</span>,<span class="var type1" id="S7T2U44">X7</span>,<span class="var type1" id="S8T2U45">X6</span>);</span></span>
+<span class="srcline"><span class="lineno"><a href="84,7" id="srcline7"> 7</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="84,8" id="srcline8"> 8</a></span><span class="line">[<span class="var type1" id="S22T4U49">C14</span>,<span class="var type1" id="S5T2U50">S1</span>]=<span class="fcn" id="F248N5:B52">AMA5FA</span>(<span class="var type1" id="S15T4U53">S11</span>,<span class="var type1" id="S18T2U54">S12</span>,<span class="var type1" id="S21T2U55">S13</span>);</span></span>
+<span class="srcline"><span class="lineno"><a href="84,9" id="srcline9"> 9</a></span><span class="line">[<span class="var type1" id="S23T4U59">C15</span>,<span class="var type1" id="S24T2U60">S14</span>]=<span class="fcn" id="F248N5:B62">AMA5FA</span>(<span class="var type1" id="S14T4U63">C11</span>,<span class="var type1" id="S17T2U64">C12</span>,<span class="var type1" id="S20T2U65">C13</span>);</span></span>
+<span class="srcline"><span class="lineno"><a href="84,10" id="srcline10">10</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="84,11" id="srcline11">11</a></span><span class="line">[<span class="var type1" id="S25T4U69">C16</span>,<span class="var type1" id="S4T4U70">S2</span>]=<span class="fcn" id="F242N18:B72">HalfAdder</span>(<span class="var type1" id="S22T4U73">C14</span>,<span class="var type1" id="S24T2U74">S14</span>);</span></span>
+<span class="srcline"><span class="lineno"><a href="84,12" id="srcline12">12</a></span><span class="line">[<span class="var type1" id="S2T4U78">S4</span>,<span class="var type1" id="S3T4U79">S3</span>]=<span class="fcn" id="F249N18:B81">HalfAdder</span>(<span class="var type1" id="S25T4U82">C16</span>,<span class="var type1" id="S23T4U83">C15</span>);</span></span>
+<span class="srcline"><span class="lineno"><a href="84,13" id="srcline13">13</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="84,14" id="srcline14">14</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="84,15" id="srcline15">15</a></span><span class="line"><span class="keyword">end</span></span></span>
+</pre>
+</body>
+</html>

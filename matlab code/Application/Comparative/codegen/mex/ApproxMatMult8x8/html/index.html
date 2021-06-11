@@ -1,0 +1,1316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Code Generation Report</title>
+<link rel="stylesheet" type="text/css" href="resources/eml_report.css" />
+<link rel="stylesheet" type="text/css" href="resources/jQuery/ui.resizable.css" />
+<link rel="stylesheet" type="text/css" href="index.css" />
+<style>
+	pre.code{
+		-moz-tab-size: 4; /* For Firefox */
+		-o-tab-size: 4; /* For Opera 10.6-12.1 */
+		tab-size: 4; /* For Chrome */
+	}
+</style>
+<script type="text/javascript" src="resources/jQuery/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="resources/jQuery/jquery-ui-1.7.custom.min.js"></script>
+<script type="text/javascript" src="resources/jQuery/jquery.tablesorter.mod.js"></script>
+<script type="text/javascript" src="resources/jQuery/jquery.hotkeys-0.7.8.js"></script>
+<script type="text/javascript" src="resources/eml_report_interactions.js"></script>
+<script type="text/javascript" src="resources/eml_report_layout.js"></script>
+<script type="text/javascript" src="rtwshrink.js"></script>
+<script type="text/javascript">
+var localizedMessages = {
+    callSelectPrompt: "Select a function call:",
+    callSelectSource: "Calls from this function",
+    callSelectTarget: "Calls to this function",
+    infoForExpression: "Information for the selected expression:",
+    infoForVarType: "Information for the selected variable:",
+    infoForVarConst: "Information for the selected compile-time constant:",
+    infoForVarNone: "This variable does not have information associated with it.",
+    infoForFilter: "Matched {0}/{1} functions, {2}/{3} methods",
+    autoExtrinsicCall: "Only supported within the MATLAB environment."
+};
+var keyBindings = {
+        selectMCodeTab: "Ctrl+m",
+    selectCallStackTab: "Ctrl+k",
+        selectCCodeTab: "Ctrl+c",
+       selectReportTab: "Ctrl+r",
+     selectCenterPanel: "Ctrl+w",
+      selectSummaryTab: "Ctrl+s",
+     selectMessagesTab: "Ctrl+a",
+    selectWatchListTab: "Ctrl+v",
+     selectBuildLogTab: "Ctrl+t",
+    clearAllHighlights: "Esc"
+};
+var functionInfoTable = {
+ MATLABcode1: "ApproxMatMult8x81_mcode.html",
+ fpath1: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/ApproxMatMult8x8.m",
+ lines1: [1, 1, 41],
+ watch1: "ApproxMatMult8x81_watch.html",
+ title1: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\ApproxMatMult8x8.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\ApproxMatMult8x8.m')\">ApproxMatMult8x8</a></span>",
+ tcall1: [  ],
+ scall1: [ [ "From line 19 to dec2binfrac", "98#srcline1" ], [ "From line 20 to dec2binfrac", "98#srcline1" ], [ "From line 25 to COMPARATIVE_ETM", "305#srcline1" ], [ "From line 27 to binfrac2dec", "393#srcline1" ] ],
+ MATLABcode98: "dec2binfrac98_mcode.html",
+ fpath98: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/dec2binfrac.m",
+ lines98: [1, 1, 13],
+ watch98: "dec2binfrac98_watch.html",
+ title98: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\dec2binfrac.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\dec2binfrac.m')\">dec2binfrac</a></span>",
+ tcall98: [ [ "From ApproxMatMult8x8 line 19", "1#F98N28:B135" ], [ "From ApproxMatMult8x8 line 20", "1#F98N28:B146" ] ],
+ scall98: [  ],
+ MATLABcode192: "HalfAdder192_mcode.html",
+ fpath192: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/HalfAdder.m",
+ lines192: [1, 1, 6],
+ watch192: "HalfAdder192_watch.html",
+ title192: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\HalfAdder.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\HalfAdder.m')\">HalfAdder &gt; 1</a></span>",
+ tcall192: [ [ "From AMA4ArrayMultiplier_8X8 line 16", "240#F192N18:B68" ], [ "From AMA4ArrayMultiplier_8X8 line 23", "240#F192N18:B179" ], [ "From Approx4to3_AMA5 line 4", "243#F192N18:B28" ], [ "From Approx5to3_AMA5 line 5", "244#F192N18:B39" ], [ "From Approx6to3_AMA5 line 5", "246#F192N18:B40" ], [ "From Approx8to4_AMA5 line 4", "250#F192N18:B23" ], [ "From AMA5ArrayMultiplier_8X8 line 16", "276#F192N18:B68" ], [ "From AMA5ArrayMultiplier_8X8 line 23", "276#F192N18:B179" ], [ "From AMA5ArrayMultiplier_8X8 line 25", "276#F192N18:B191" ], [ "From AMA5ArrayMultiplier_8X8 line 34", "276#F192N18:B294" ], [ "From AMA5ArrayMultiplier_8X8 line 44", "276#F192N18:B397" ], [ "From AMA5ArrayMultiplier_8X8 line 53", "276#F192N18:B500" ], [ "From AMA5ArrayMultiplier_8X8 line 62", "276#F192N18:B603" ], [ "From AMA5ArrayMultiplier_8X8 line 71", "276#F192N18:B706" ], [ "From InXA2ArrayMultiplier_8X8 line 15", "279#F192N18:B68" ], [ "From InXA1ArrayMultiplier_8X8 line 15", "282#F192N18:B68" ] ],
+ scall192: [  ],
+ MATLABcode193: "AMA4FA193_mcode.html",
+ fpath193: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/AMA4FA.m",
+ lines193: [1, 2, 16],
+ watch193: "AMA4FA193_watch.html",
+ title193: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\AMA4FA.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\AMA4FA.m')\">AMA4FA &gt; 1</a></span>",
+ tcall193: [ [ "From AMA4ArrayMultiplier_8X8 line 17", "240#F193N3:B83" ] ],
+ scall193: [  ],
+ MATLABcode194: "AMA4FA194_mcode.html",
+ fpath194: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/AMA4FA.m",
+ lines194: [1, 2, 16],
+ watch194: "AMA4FA194_watch.html",
+ title194: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\AMA4FA.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\AMA4FA.m')\">AMA4FA &gt; 2</a></span>",
+ tcall194: [ [ "From AMA4ArrayMultiplier_8X8 line 18", "240#F194N3:B99" ], [ "From AMA4ArrayMultiplier_8X8 line 19", "240#F194N3:B115" ], [ "From AMA4ArrayMultiplier_8X8 line 20", "240#F194N3:B131" ], [ "From AMA4ArrayMultiplier_8X8 line 21", "240#F194N3:B147" ], [ "From AMA4ArrayMultiplier_8X8 line 22", "240#F194N3:B163" ] ],
+ scall194: [  ],
+ MATLABcode197: "HalfAdder197_mcode.html",
+ fpath197: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/HalfAdder.m",
+ lines197: [1, 1, 6],
+ watch197: "HalfAdder197_watch.html",
+ title197: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\HalfAdder.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\HalfAdder.m')\">HalfAdder &gt; 2</a></span>",
+ tcall197: [ [ "From AMA4ArrayMultiplier_8X8 line 25", "240#F197N18:B191" ], [ "From AMA4ArrayMultiplier_8X8 line 34", "240#F197N18:B294" ], [ "From AMA4ArrayMultiplier_8X8 line 44", "240#F197N18:B397" ], [ "From AMA4ArrayMultiplier_8X8 line 53", "240#F197N18:B500" ], [ "From AMA4ArrayMultiplier_8X8 line 62", "240#F197N18:B603" ], [ "From AMA4ArrayMultiplier_8X8 line 71", "240#F197N18:B706" ], [ "From Comp_E_AMA5_8X8_Multiplier line 40", "275#F197N18:B506" ], [ "From InXA2ArrayMultiplier_8X8 line 22", "279#F197N18:B179" ], [ "From InXA2ArrayMultiplier_8X8 line 24", "279#F197N18:B191" ], [ "From InXA2ArrayMultiplier_8X8 line 33", "279#F197N18:B294" ], [ "From InXA2ArrayMultiplier_8X8 line 43", "279#F197N18:B397" ], [ "From InXA2ArrayMultiplier_8X8 line 52", "279#F197N18:B500" ], [ "From InXA2ArrayMultiplier_8X8 line 61", "279#F197N18:B603" ], [ "From InXA2ArrayMultiplier_8X8 line 70", "279#F197N18:B706" ], [ "From InXA1ArrayMultiplier_8X8 line 22", "282#F197N18:B179" ], [ "From InXA1ArrayMultiplier_8X8 line 24", "282#F197N18:B191" ], [ "From InXA1ArrayMultiplier_8X8 line 33", "282#F197N18:B294" ], [ "From InXA1ArrayMultiplier_8X8 line 43", "282#F197N18:B397" ], [ "From InXA1ArrayMultiplier_8X8 line 52", "282#F197N18:B500" ], [ "From InXA1ArrayMultiplier_8X8 line 61", "282#F197N18:B603" ], [ "From InXA1ArrayMultiplier_8X8 line 70", "282#F197N18:B706" ] ],
+ scall197: [  ],
+ MATLABcode198: "AMA4FA198_mcode.html",
+ fpath198: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/AMA4FA.m",
+ lines198: [1, 2, 16],
+ watch198: "AMA4FA198_watch.html",
+ title198: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\AMA4FA.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\AMA4FA.m')\">AMA4FA &gt; 3</a></span>",
+ tcall198: [ [ "From AMA4ArrayMultiplier_8X8 line 26", "240#F198N3:B203" ], [ "From AMA4ArrayMultiplier_8X8 line 35", "240#F198N3:B306" ], [ "From AMA4ArrayMultiplier_8X8 line 45", "240#F198N3:B409" ], [ "From AMA4ArrayMultiplier_8X8 line 54", "240#F198N3:B512" ], [ "From AMA4ArrayMultiplier_8X8 line 63", "240#F198N3:B615" ] ],
+ scall198: [  ],
+ MATLABcode199: "AMA4FA199_mcode.html",
+ fpath199: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/AMA4FA.m",
+ lines199: [1, 2, 16],
+ watch199: "AMA4FA199_watch.html",
+ title199: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\AMA4FA.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\AMA4FA.m')\">AMA4FA &gt; 4</a></span>",
+ tcall199: [ [ "From AMA4ArrayMultiplier_8X8 line 27", "240#F199N3:B216" ], [ "From AMA4ArrayMultiplier_8X8 line 28", "240#F199N3:B229" ], [ "From AMA4ArrayMultiplier_8X8 line 29", "240#F199N3:B242" ], [ "From AMA4ArrayMultiplier_8X8 line 30", "240#F199N3:B255" ], [ "From AMA4ArrayMultiplier_8X8 line 36", "240#F199N3:B319" ], [ "From AMA4ArrayMultiplier_8X8 line 37", "240#F199N3:B332" ], [ "From AMA4ArrayMultiplier_8X8 line 38", "240#F199N3:B345" ], [ "From AMA4ArrayMultiplier_8X8 line 46", "240#F199N3:B422" ], [ "From AMA4ArrayMultiplier_8X8 line 47", "240#F199N3:B435" ], [ "From AMA4ArrayMultiplier_8X8 line 55", "240#F199N3:B525" ] ],
+ scall199: [  ],
+ MATLABcode202: "MAFA202_mcode.html",
+ fpath202: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/MAFA.m",
+ lines202: [1, 1, 14],
+ watch202: "MAFA202_watch.html",
+ title202: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\MAFA.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\MAFA.m')\">MAFA &gt; 1</a></span>",
+ tcall202: [ [ "From AMA4ArrayMultiplier_8X8 line 31", "240#F202N23:B268" ], [ "From AMA4ArrayMultiplier_8X8 line 39", "240#F202N23:B358" ], [ "From AMA4ArrayMultiplier_8X8 line 48", "240#F202N23:B448" ], [ "From AMA4ArrayMultiplier_8X8 line 56", "240#F202N23:B538" ], [ "From AMA4ArrayMultiplier_8X8 line 64", "240#F202N23:B628" ], [ "From AMA5ArrayMultiplier_8X8 line 31", "276#F202N23:B268" ], [ "From AMA5ArrayMultiplier_8X8 line 39", "276#F202N23:B358" ], [ "From AMA5ArrayMultiplier_8X8 line 48", "276#F202N23:B448" ], [ "From AMA5ArrayMultiplier_8X8 line 56", "276#F202N23:B538" ], [ "From AMA5ArrayMultiplier_8X8 line 64", "276#F202N23:B628" ] ],
+ scall202: [  ],
+ MATLABcode203: "MAFA203_mcode.html",
+ fpath203: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/MAFA.m",
+ lines203: [1, 1, 14],
+ watch203: "MAFA203_watch.html",
+ title203: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\MAFA.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\MAFA.m')\">MAFA &gt; 2</a></span>",
+ tcall203: [ [ "From AMA4ArrayMultiplier_8X8 line 32", "240#F203N23:B281" ], [ "From AMA4ArrayMultiplier_8X8 line 40", "240#F203N23:B371" ], [ "From AMA4ArrayMultiplier_8X8 line 41", "240#F203N23:B384" ], [ "From AMA4ArrayMultiplier_8X8 line 49", "240#F203N23:B461" ], [ "From AMA4ArrayMultiplier_8X8 line 50", "240#F203N23:B474" ], [ "From AMA4ArrayMultiplier_8X8 line 51", "240#F203N23:B487" ], [ "From AMA4ArrayMultiplier_8X8 line 57", "240#F203N23:B551" ], [ "From AMA4ArrayMultiplier_8X8 line 58", "240#F203N23:B564" ], [ "From AMA4ArrayMultiplier_8X8 line 59", "240#F203N23:B577" ], [ "From AMA4ArrayMultiplier_8X8 line 60", "240#F203N23:B590" ], [ "From AMA4ArrayMultiplier_8X8 line 65", "240#F203N23:B641" ], [ "From AMA4ArrayMultiplier_8X8 line 66", "240#F203N23:B654" ], [ "From AMA4ArrayMultiplier_8X8 line 67", "240#F203N23:B667" ], [ "From AMA4ArrayMultiplier_8X8 line 68", "240#F203N23:B680" ], [ "From AMA4ArrayMultiplier_8X8 line 69", "240#F203N23:B693" ], [ "From AMA4ArrayMultiplier_8X8 line 72", "240#F203N23:B718" ], [ "From AMA4ArrayMultiplier_8X8 line 73", "240#F203N23:B731" ], [ "From AMA4ArrayMultiplier_8X8 line 74", "240#F203N23:B744" ], [ "From AMA4ArrayMultiplier_8X8 line 75", "240#F203N23:B757" ], [ "From AMA4ArrayMultiplier_8X8 line 76", "240#F203N23:B770" ], [ "From AMA4ArrayMultiplier_8X8 line 77", "240#F203N23:B783" ], [ "From AMA4ArrayMultiplier_8X8 line 78", "240#F203N23:B796" ], [ "From AMA5ArrayMultiplier_8X8 line 32", "276#F203N23:B281" ], [ "From AMA5ArrayMultiplier_8X8 line 40", "276#F203N23:B371" ], [ "From AMA5ArrayMultiplier_8X8 line 41", "276#F203N23:B384" ], [ "From AMA5ArrayMultiplier_8X8 line 49", "276#F203N23:B461" ], [ "From AMA5ArrayMultiplier_8X8 line 50", "276#F203N23:B474" ], [ "From AMA5ArrayMultiplier_8X8 line 51", "276#F203N23:B487" ], [ "From AMA5ArrayMultiplier_8X8 line 57", "276#F203N23:B551" ], [ "From AMA5ArrayMultiplier_8X8 line 58", "276#F203N23:B564" ], [ "From AMA5ArrayMultiplier_8X8 line 59", "276#F203N23:B577" ], [ "From AMA5ArrayMultiplier_8X8 line 60", "276#F203N23:B590" ], [ "From AMA5ArrayMultiplier_8X8 line 65", "276#F203N23:B641" ], [ "From AMA5ArrayMultiplier_8X8 line 66", "276#F203N23:B654" ], [ "From AMA5ArrayMultiplier_8X8 line 67", "276#F203N23:B667" ], [ "From AMA5ArrayMultiplier_8X8 line 68", "276#F203N23:B680" ], [ "From AMA5ArrayMultiplier_8X8 line 69", "276#F203N23:B693" ], [ "From AMA5ArrayMultiplier_8X8 line 72", "276#F203N23:B718" ], [ "From AMA5ArrayMultiplier_8X8 line 73", "276#F203N23:B731" ], [ "From AMA5ArrayMultiplier_8X8 line 74", "276#F203N23:B744" ], [ "From AMA5ArrayMultiplier_8X8 line 75", "276#F203N23:B757" ], [ "From AMA5ArrayMultiplier_8X8 line 76", "276#F203N23:B770" ], [ "From AMA5ArrayMultiplier_8X8 line 77", "276#F203N23:B783" ], [ "From AMA5ArrayMultiplier_8X8 line 78", "276#F203N23:B796" ], [ "From InXA2ArrayMultiplier_8X8 line 30", "279#F203N23:B268" ], [ "From InXA2ArrayMultiplier_8X8 line 31", "279#F203N23:B281" ], [ "From InXA2ArrayMultiplier_8X8 line 38", "279#F203N23:B358" ], [ "From InXA2ArrayMultiplier_8X8 line 39", "279#F203N23:B371" ], [ "From InXA2ArrayMultiplier_8X8 line 40", "279#F203N23:B384" ], [ "From InXA2ArrayMultiplier_8X8 line 47", "279#F203N23:B448" ], [ "From InXA2ArrayMultiplier_8X8 line 48", "279#F203N23:B461" ], [ "From InXA2ArrayMultiplier_8X8 line 49", "279#F203N23:B474" ], [ "From InXA2ArrayMultiplier_8X8 line 50", "279#F203N23:B487" ], [ "From InXA2ArrayMultiplier_8X8 line 55", "279#F203N23:B538" ], [ "From InXA2ArrayMultiplier_8X8 line 56", "279#F203N23:B551" ], [ "From InXA2ArrayMultiplier_8X8 line 57", "279#F203N23:B564" ], [ "From InXA2ArrayMultiplier_8X8 line 58", "279#F203N23:B577" ], [ "From InXA2ArrayMultiplier_8X8 line 59", "279#F203N23:B590" ], [ "From InXA2ArrayMultiplier_8X8 line 63", "279#F203N23:B628" ], [ "From InXA2ArrayMultiplier_8X8 line 64", "279#F203N23:B641" ], [ "From InXA2ArrayMultiplier_8X8 line 65", "279#F203N23:B654" ], [ "From InXA2ArrayMultiplier_8X8 line 66", "279#F203N23:B667" ], [ "From InXA2ArrayMultiplier_8X8 line 67", "279#F203N23:B680" ], [ "From InXA2ArrayMultiplier_8X8 line 68", "279#F203N23:B693" ], [ "From InXA2ArrayMultiplier_8X8 line 71", "279#F203N23:B718" ], [ "From InXA2ArrayMultiplier_8X8 line 72", "279#F203N23:B731" ], [ "From InXA2ArrayMultiplier_8X8 line 73", "279#F203N23:B744" ], [ "From InXA2ArrayMultiplier_8X8 line 74", "279#F203N23:B757" ], [ "From InXA2ArrayMultiplier_8X8 line 75", "279#F203N23:B770" ], [ "From InXA2ArrayMultiplier_8X8 line 76", "279#F203N23:B783" ], [ "From InXA2ArrayMultiplier_8X8 line 77", "279#F203N23:B796" ], [ "From InXA1ArrayMultiplier_8X8 line 30", "282#F203N23:B268" ], [ "From InXA1ArrayMultiplier_8X8 line 31", "282#F203N23:B281" ], [ "From InXA1ArrayMultiplier_8X8 line 38", "282#F203N23:B358" ], [ "From InXA1ArrayMultiplier_8X8 line 39", "282#F203N23:B371" ], [ "From InXA1ArrayMultiplier_8X8 line 40", "282#F203N23:B384" ], [ "From InXA1ArrayMultiplier_8X8 line 47", "282#F203N23:B448" ], [ "From InXA1ArrayMultiplier_8X8 line 48", "282#F203N23:B461" ], [ "From InXA1ArrayMultiplier_8X8 line 49", "282#F203N23:B474" ], [ "From InXA1ArrayMultiplier_8X8 line 50", "282#F203N23:B487" ], [ "From InXA1ArrayMultiplier_8X8 line 55", "282#F203N23:B538" ], [ "From InXA1ArrayMultiplier_8X8 line 56", "282#F203N23:B551" ], [ "From InXA1ArrayMultiplier_8X8 line 57", "282#F203N23:B564" ], [ "From InXA1ArrayMultiplier_8X8 line 58", "282#F203N23:B577" ], [ "From InXA1ArrayMultiplier_8X8 line 59", "282#F203N23:B590" ], [ "From InXA1ArrayMultiplier_8X8 line 63", "282#F203N23:B628" ], [ "From InXA1ArrayMultiplier_8X8 line 64", "282#F203N23:B641" ], [ "From InXA1ArrayMultiplier_8X8 line 65", "282#F203N23:B654" ], [ "From InXA1ArrayMultiplier_8X8 line 66", "282#F203N23:B667" ], [ "From InXA1ArrayMultiplier_8X8 line 67", "282#F203N23:B680" ], [ "From InXA1ArrayMultiplier_8X8 line 68", "282#F203N23:B693" ], [ "From InXA1ArrayMultiplier_8X8 line 71", "282#F203N23:B718" ], [ "From InXA1ArrayMultiplier_8X8 line 72", "282#F203N23:B731" ], [ "From InXA1ArrayMultiplier_8X8 line 73", "282#F203N23:B744" ], [ "From InXA1ArrayMultiplier_8X8 line 74", "282#F203N23:B757" ], [ "From InXA1ArrayMultiplier_8X8 line 75", "282#F203N23:B770" ], [ "From InXA1ArrayMultiplier_8X8 line 76", "282#F203N23:B783" ], [ "From InXA1ArrayMultiplier_8X8 line 77", "282#F203N23:B796" ] ],
+ scall203: [  ],
+ MATLABcode240: "AMA4ArrayMultiplier_8X8240_mcode.html",
+ fpath240: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/AMA4ArrayMultiplier_8X8.m",
+ lines240: [1, 3, 84],
+ watch240: "AMA4ArrayMultiplier_8X8240_watch.html",
+ title240: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\AMA4ArrayMultiplier_8X8.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\AMA4ArrayMultiplier_8X8.m')\">AMA4ArrayMultiplier_8X8</a></span>",
+ tcall240: [ [ "From mult_selector line 4", "283#F240N2:B18" ] ],
+ scall240: [ [ "From line 16 to HalfAdder > 1", "192#srcline1" ], [ "From line 17 to AMA4FA > 1", "193#srcline2" ], [ "From line 18 to AMA4FA > 2", "194#srcline2" ], [ "From line 19 to AMA4FA > 2", "194#srcline2" ], [ "From line 20 to AMA4FA > 2", "194#srcline2" ], [ "From line 21 to AMA4FA > 2", "194#srcline2" ], [ "From line 22 to AMA4FA > 2", "194#srcline2" ], [ "From line 23 to HalfAdder > 1", "192#srcline1" ], [ "From line 25 to HalfAdder > 2", "197#srcline1" ], [ "From line 26 to AMA4FA > 3", "198#srcline2" ], [ "From line 27 to AMA4FA > 4", "199#srcline2" ], [ "From line 28 to AMA4FA > 4", "199#srcline2" ], [ "From line 29 to AMA4FA > 4", "199#srcline2" ], [ "From line 30 to AMA4FA > 4", "199#srcline2" ], [ "From line 31 to MAFA > 1", "202#srcline1" ], [ "From line 32 to MAFA > 2", "203#srcline1" ], [ "From line 34 to HalfAdder > 2", "197#srcline1" ], [ "From line 35 to AMA4FA > 3", "198#srcline2" ], [ "From line 36 to AMA4FA > 4", "199#srcline2" ], [ "From line 37 to AMA4FA > 4", "199#srcline2" ], [ "From line 38 to AMA4FA > 4", "199#srcline2" ], [ "From line 39 to MAFA > 1", "202#srcline1" ], [ "From line 40 to MAFA > 2", "203#srcline1" ], [ "From line 41 to MAFA > 2", "203#srcline1" ], [ "From line 44 to HalfAdder > 2", "197#srcline1" ], [ "From line 45 to AMA4FA > 3", "198#srcline2" ], [ "From line 46 to AMA4FA > 4", "199#srcline2" ], [ "From line 47 to AMA4FA > 4", "199#srcline2" ], [ "From line 48 to MAFA > 1", "202#srcline1" ], [ "From line 49 to MAFA > 2", "203#srcline1" ], [ "From line 50 to MAFA > 2", "203#srcline1" ], [ "From line 51 to MAFA > 2", "203#srcline1" ], [ "From line 53 to HalfAdder > 2", "197#srcline1" ], [ "From line 54 to AMA4FA > 3", "198#srcline2" ], [ "From line 55 to AMA4FA > 4", "199#srcline2" ], [ "From line 56 to MAFA > 1", "202#srcline1" ], [ "From line 57 to MAFA > 2", "203#srcline1" ], [ "From line 58 to MAFA > 2", "203#srcline1" ], [ "From line 59 to MAFA > 2", "203#srcline1" ], [ "From line 60 to MAFA > 2", "203#srcline1" ], [ "From line 62 to HalfAdder > 2", "197#srcline1" ], [ "From line 63 to AMA4FA > 3", "198#srcline2" ], [ "From line 64 to MAFA > 1", "202#srcline1" ], [ "From line 65 to MAFA > 2", "203#srcline1" ], [ "From line 66 to MAFA > 2", "203#srcline1" ], [ "From line 67 to MAFA > 2", "203#srcline1" ], [ "From line 68 to MAFA > 2", "203#srcline1" ], [ "From line 69 to MAFA > 2", "203#srcline1" ], [ "From line 71 to HalfAdder > 2", "197#srcline1" ], [ "From line 72 to MAFA > 2", "203#srcline1" ], [ "From line 73 to MAFA > 2", "203#srcline1" ], [ "From line 74 to MAFA > 2", "203#srcline1" ], [ "From line 75 to MAFA > 2", "203#srcline1" ], [ "From line 76 to MAFA > 2", "203#srcline1" ], [ "From line 77 to MAFA > 2", "203#srcline1" ], [ "From line 78 to MAFA > 2", "203#srcline1" ] ],
+ MATLABcode241: "AMA5FA241_mcode.html",
+ fpath241: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/AMA5FA.m",
+ lines241: [1, 2, 8],
+ watch241: "AMA5FA241_watch.html",
+ title241: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\AMA5FA.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\AMA5FA.m')\">AMA5FA &gt; 1</a></span>",
+ tcall241: [ [ "From Approx4to3_AMA5 line 3", "243#F241N5:B18" ], [ "From Approx5to3_AMA5 line 3", "244#F241N5:B19" ], [ "From Approx5to3_AMA5 line 4", "244#F241N5:B29" ], [ "From Approx6to3_AMA5 line 3", "246#F241N5:B20" ], [ "From Approx6to3_AMA5 line 4", "246#F241N5:B30" ], [ "From Approx7to3_AMA5 line 3", "247#F241N5:B21" ], [ "From Approx7to3_AMA5 line 4", "247#F241N5:B31" ], [ "From Approx7to3_AMA5 line 5", "247#F241N5:B41" ], [ "From Approx7to3_AMA5 line 6", "247#F241N5:B51" ], [ "From Approx8to4_AMA5 line 5", "250#F241N5:B32" ], [ "From Approx8to4_AMA5 line 6", "250#F241N5:B42" ], [ "From Comp_E_AMA5_8X8_Multiplier line 16", "275#F241N5:B68" ], [ "From Comp_E_AMA5_8X8_Multiplier line 30", "275#F241N5:B407" ], [ "From AMA5ArrayMultiplier_8X8 line 18", "276#F241N5:B99" ], [ "From AMA5ArrayMultiplier_8X8 line 19", "276#F241N5:B115" ], [ "From AMA5ArrayMultiplier_8X8 line 20", "276#F241N5:B131" ], [ "From AMA5ArrayMultiplier_8X8 line 21", "276#F241N5:B147" ], [ "From AMA5ArrayMultiplier_8X8 line 22", "276#F241N5:B163" ], [ "From AMA5ArrayMultiplier_8X8 line 27", "276#F241N5:B216" ], [ "From AMA5ArrayMultiplier_8X8 line 28", "276#F241N5:B229" ], [ "From AMA5ArrayMultiplier_8X8 line 29", "276#F241N5:B242" ], [ "From AMA5ArrayMultiplier_8X8 line 30", "276#F241N5:B255" ], [ "From AMA5ArrayMultiplier_8X8 line 36", "276#F241N5:B319" ], [ "From AMA5ArrayMultiplier_8X8 line 37", "276#F241N5:B332" ], [ "From AMA5ArrayMultiplier_8X8 line 38", "276#F241N5:B345" ], [ "From AMA5ArrayMultiplier_8X8 line 46", "276#F241N5:B422" ], [ "From AMA5ArrayMultiplier_8X8 line 47", "276#F241N5:B435" ], [ "From AMA5ArrayMultiplier_8X8 line 55", "276#F241N5:B525" ] ],
+ scall241: [  ],
+ MATLABcode242: "HalfAdder242_mcode.html",
+ fpath242: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/HalfAdder.m",
+ lines242: [1, 1, 6],
+ watch242: "HalfAdder242_watch.html",
+ title242: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\HalfAdder.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\HalfAdder.m')\">HalfAdder &gt; 3</a></span>",
+ tcall242: [ [ "From Approx4to3_AMA5 line 5", "243#F242N18:B37" ], [ "From Approx8to4_AMA5 line 11", "250#F242N18:B72" ], [ "From Exact4to3 > 1 line 10", "258#F242N18:B28" ], [ "From Exact4to3 > 3 line 10", "261#F242N18:B28" ] ],
+ scall242: [  ],
+ MATLABcode243: "Approx4to3_AMA5243_mcode.html",
+ fpath243: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/Approx4to3_AMA5.m",
+ lines243: [1, 2, 9],
+ watch243: "Approx4to3_AMA5243_watch.html",
+ title243: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\Approx4to3_AMA5.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\Approx4to3_AMA5.m')\">Approx4to3_AMA5</a></span>",
+ tcall243: [ [ "From Comp_E_AMA5_8X8_Multiplier line 17", "275#F243N6:B88" ] ],
+ scall243: [ [ "From line 3 to AMA5FA > 1", "241#srcline2" ], [ "From line 4 to HalfAdder > 1", "192#srcline1" ], [ "From line 5 to HalfAdder > 3", "242#srcline1" ] ],
+ MATLABcode244: "Approx5to3_AMA5244_mcode.html",
+ fpath244: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/Approx5to3_AMA5.m",
+ lines244: [1, 2, 7],
+ watch244: "Approx5to3_AMA5244_watch.html",
+ title244: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\Approx5to3_AMA5.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\Approx5to3_AMA5.m')\">Approx5to3_AMA5</a></span>",
+ tcall244: [ [ "From Comp_E_AMA5_8X8_Multiplier line 18", "275#F244N7:B112" ] ],
+ scall244: [ [ "From line 3 to AMA5FA > 1", "241#srcline2" ], [ "From line 4 to AMA5FA > 1", "241#srcline2" ], [ "From line 5 to HalfAdder > 1", "192#srcline1" ] ],
+ MATLABcode245: "AMA5FA245_mcode.html",
+ fpath245: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/AMA5FA.m",
+ lines245: [1, 2, 8],
+ watch245: "AMA5FA245_watch.html",
+ title245: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\AMA5FA.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\AMA5FA.m')\">AMA5FA &gt; 2</a></span>",
+ tcall245: [ [ "From Approx6to3_AMA5 line 6", "246#F245N5:B49" ], [ "From Comp_E_AMA5_8X8_Multiplier line 29", "275#F245N5:B397" ], [ "From AMA5ArrayMultiplier_8X8 line 17", "276#F245N5:B83" ], [ "From AMA5ArrayMultiplier_8X8 line 26", "276#F245N5:B203" ], [ "From AMA5ArrayMultiplier_8X8 line 35", "276#F245N5:B306" ], [ "From AMA5ArrayMultiplier_8X8 line 45", "276#F245N5:B409" ], [ "From AMA5ArrayMultiplier_8X8 line 54", "276#F245N5:B512" ], [ "From AMA5ArrayMultiplier_8X8 line 63", "276#F245N5:B615" ] ],
+ scall245: [  ],
+ MATLABcode246: "Approx6to3_AMA5246_mcode.html",
+ fpath246: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/Approx6to3_AMA5.m",
+ lines246: [1, 2, 8],
+ watch246: "Approx6to3_AMA5246_watch.html",
+ title246: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\Approx6to3_AMA5.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\Approx6to3_AMA5.m')\">Approx6to3_AMA5</a></span>",
+ tcall246: [ [ "From Comp_E_AMA5_8X8_Multiplier line 19", "275#F246N8:B140" ] ],
+ scall246: [ [ "From line 3 to AMA5FA > 1", "241#srcline2" ], [ "From line 4 to AMA5FA > 1", "241#srcline2" ], [ "From line 5 to HalfAdder > 1", "192#srcline1" ], [ "From line 6 to AMA5FA > 2", "245#srcline2" ] ],
+ MATLABcode247: "Approx7to3_AMA5247_mcode.html",
+ fpath247: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/Approx7to3_AMA5.m",
+ lines247: [1, 2, 8],
+ watch247: "Approx7to3_AMA5247_watch.html",
+ title247: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\Approx7to3_AMA5.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\Approx7to3_AMA5.m')\">Approx7to3_AMA5</a></span>",
+ tcall247: [ [ "From Comp_E_AMA5_8X8_Multiplier line 20", "275#F247N9:B172" ] ],
+ scall247: [ [ "From line 3 to AMA5FA > 1", "241#srcline2" ], [ "From line 4 to AMA5FA > 1", "241#srcline2" ], [ "From line 5 to AMA5FA > 1", "241#srcline2" ], [ "From line 6 to AMA5FA > 1", "241#srcline2" ] ],
+ MATLABcode248: "AMA5FA248_mcode.html",
+ fpath248: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/AMA5FA.m",
+ lines248: [1, 2, 8],
+ watch248: "AMA5FA248_watch.html",
+ title248: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\AMA5FA.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\AMA5FA.m')\">AMA5FA &gt; 3</a></span>",
+ tcall248: [ [ "From Approx8to4_AMA5 line 8", "250#F248N5:B52" ], [ "From Approx8to4_AMA5 line 9", "250#F248N5:B62" ] ],
+ scall248: [  ],
+ MATLABcode249: "HalfAdder249_mcode.html",
+ fpath249: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/HalfAdder.m",
+ lines249: [1, 1, 6],
+ watch249: "HalfAdder249_watch.html",
+ title249: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\HalfAdder.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\HalfAdder.m')\">HalfAdder &gt; 4</a></span>",
+ tcall249: [ [ "From Approx8to4_AMA5 line 12", "250#F249N18:B81" ], [ "From Exact6to3 line 12", "255#F249N18:B40" ], [ "From Exact5to3 line 12", "257#F249N18:B39" ], [ "From Exact4to3 > 1 line 11", "258#F249N18:B37" ], [ "From Exact4to3 > 2 line 10", "260#F249N18:B28" ], [ "From Exact4to3 > 2 line 11", "260#F249N18:B37" ], [ "From Exact4to3 > 3 line 11", "261#F249N18:B37" ], [ "From Comp_E_AMA5_8X8_Multiplier line 39", "275#F249N18:B497" ] ],
+ scall249: [  ],
+ MATLABcode250: "Approx8to4_AMA5250_mcode.html",
+ fpath250: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/Approx8to4_AMA5.m",
+ lines250: [1, 2, 16],
+ watch250: "Approx8to4_AMA5250_watch.html",
+ title250: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\Approx8to4_AMA5.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\Approx8to4_AMA5.m')\">Approx8to4_AMA5</a></span>",
+ tcall250: [ [ "From Comp_E_AMA5_8X8_Multiplier line 21", "275#F250N10:B209" ] ],
+ scall250: [ [ "From line 4 to HalfAdder > 1", "192#srcline1" ], [ "From line 5 to AMA5FA > 1", "241#srcline2" ], [ "From line 6 to AMA5FA > 1", "241#srcline2" ], [ "From line 8 to AMA5FA > 3", "248#srcline2" ], [ "From line 9 to AMA5FA > 3", "248#srcline2" ], [ "From line 11 to HalfAdder > 3", "242#srcline1" ], [ "From line 12 to HalfAdder > 4", "249#srcline1" ] ],
+ MATLABcode251: "MAFA251_mcode.html",
+ fpath251: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/MAFA.m",
+ lines251: [1, 1, 14],
+ watch251: "MAFA251_watch.html",
+ title251: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\MAFA.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\MAFA.m')\">MAFA &gt; 3</a></span>",
+ tcall251: [ [ "From Exact7to3 line 4", "254#F251N23:B21" ], [ "From Exact7to3 line 5", "254#F251N23:B31" ], [ "From Exact6to3 line 10", "255#F251N23:B20" ], [ "From Exact6to3 line 11", "255#F251N23:B30" ], [ "From Exact5to3 line 10", "257#F251N23:B19" ], [ "From Exact4to3 > 1 line 9", "258#F251N23:B18" ], [ "From RCA_15bits line 8", "274#F251N23:B54" ], [ "From Comp_E_AMA5_8X8_Multiplier line 26", "275#F251N23:B368" ] ],
+ scall251: [  ],
+ MATLABcode252: "MAFA252_mcode.html",
+ fpath252: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/MAFA.m",
+ lines252: [1, 1, 14],
+ watch252: "MAFA252_watch.html",
+ title252: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\MAFA.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\MAFA.m')\">MAFA &gt; 4</a></span>",
+ tcall252: [ [ "From Exact7to3 line 6", "254#F252N23:B41" ], [ "From Exact4to3 > 3 line 9", "261#F252N23:B18" ], [ "From Comp_E_AMA5_8X8_Multiplier line 31", "275#F252N23:B417" ] ],
+ scall252: [  ],
+ MATLABcode253: "MAFA253_mcode.html",
+ fpath253: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/MAFA.m",
+ lines253: [1, 1, 14],
+ watch253: "MAFA253_watch.html",
+ title253: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\MAFA.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\MAFA.m')\">MAFA &gt; 5</a></span>",
+ tcall253: [ [ "From Exact7to3 line 7", "254#F253N23:B51" ], [ "From Exact6to3 line 13", "255#F253N23:B49" ], [ "From Exact4to3 > 2 line 9", "260#F253N23:B18" ], [ "From Comp_E_AMA5_8X8_Multiplier line 32", "275#F253N23:B427" ], [ "From Comp_E_AMA5_8X8_Multiplier line 34", "275#F253N23:B449" ], [ "From Comp_E_AMA5_8X8_Multiplier line 35", "275#F253N23:B459" ], [ "From Comp_E_AMA5_8X8_Multiplier line 38", "275#F253N23:B487" ] ],
+ scall253: [  ],
+ MATLABcode254: "Exact7to3254_mcode.html",
+ fpath254: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/Exact7to3.m",
+ lines254: [1, 2, 12],
+ watch254: "Exact7to3254_watch.html",
+ title254: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\Exact7to3.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\Exact7to3.m')\">Exact7to3</a></span>",
+ tcall254: [ [ "From Comp_E_AMA5_8X8_Multiplier line 22", "275#F254N17:B249" ] ],
+ scall254: [ [ "From line 4 to MAFA > 3", "251#srcline1" ], [ "From line 5 to MAFA > 3", "251#srcline1" ], [ "From line 6 to MAFA > 4", "252#srcline1" ], [ "From line 7 to MAFA > 5", "253#srcline1" ] ],
+ MATLABcode255: "Exact6to3255_mcode.html",
+ fpath255: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/Exact6to3.m",
+ lines255: [1, 2, 18],
+ watch255: "Exact6to3255_watch.html",
+ title255: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\Exact6to3.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\Exact6to3.m')\">Exact6to3</a></span>",
+ tcall255: [ [ "From Comp_E_AMA5_8X8_Multiplier line 23", "275#F255N16:B285" ] ],
+ scall255: [ [ "From line 10 to MAFA > 3", "251#srcline1" ], [ "From line 11 to MAFA > 3", "251#srcline1" ], [ "From line 12 to HalfAdder > 4", "249#srcline1" ], [ "From line 13 to MAFA > 5", "253#srcline1" ] ],
+ MATLABcode256: "MAFA256_mcode.html",
+ fpath256: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/MAFA.m",
+ lines256: [1, 1, 14],
+ watch256: "MAFA256_watch.html",
+ title256: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\MAFA.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\MAFA.m')\">MAFA &gt; 6</a></span>",
+ tcall256: [ [ "From Exact5to3 line 11", "257#F256N23:B29" ] ],
+ scall256: [  ],
+ MATLABcode257: "Exact5to3257_mcode.html",
+ fpath257: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/Exact5to3.m",
+ lines257: [1, 2, 17],
+ watch257: "Exact5to3257_watch.html",
+ title257: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\Exact5to3.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\Exact5to3.m')\">Exact5to3</a></span>",
+ tcall257: [ [ "From Comp_E_AMA5_8X8_Multiplier line 24", "275#F257N15:B317" ] ],
+ scall257: [ [ "From line 10 to MAFA > 3", "251#srcline1" ], [ "From line 11 to MAFA > 6", "256#srcline1" ], [ "From line 12 to HalfAdder > 4", "249#srcline1" ] ],
+ MATLABcode258: "Exact4to3258_mcode.html",
+ fpath258: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/Exact4to3.m",
+ lines258: [1, 2, 16],
+ watch258: "Exact4to3258_watch.html",
+ title258: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\Exact4to3.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\Exact4to3.m')\">Exact4to3 &gt; 1</a></span>",
+ tcall258: [ [ "From Comp_E_AMA5_8X8_Multiplier line 25", "275#F258N14:B345" ] ],
+ scall258: [ [ "From line 9 to MAFA > 3", "251#srcline1" ], [ "From line 10 to HalfAdder > 3", "242#srcline1" ], [ "From line 11 to HalfAdder > 4", "249#srcline1" ] ],
+ MATLABcode259: "AMA5FA259_mcode.html",
+ fpath259: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/AMA5FA.m",
+ lines259: [1, 2, 8],
+ watch259: "AMA5FA259_watch.html",
+ title259: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\AMA5FA.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\AMA5FA.m')\">AMA5FA &gt; 4</a></span>",
+ tcall259: [ [ "From Comp_E_AMA5_8X8_Multiplier line 28", "275#F259N5:B387" ] ],
+ scall259: [  ],
+ MATLABcode260: "Exact4to3260_mcode.html",
+ fpath260: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/Exact4to3.m",
+ lines260: [1, 2, 16],
+ watch260: "Exact4to3260_watch.html",
+ title260: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\Exact4to3.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\Exact4to3.m')\">Exact4to3 &gt; 2</a></span>",
+ tcall260: [ [ "From Comp_E_AMA5_8X8_Multiplier line 33", "275#F260N14:B438" ] ],
+ scall260: [ [ "From line 9 to MAFA > 5", "253#srcline1" ], [ "From line 10 to HalfAdder > 4", "249#srcline1" ], [ "From line 11 to HalfAdder > 4", "249#srcline1" ] ],
+ MATLABcode261: "Exact4to3261_mcode.html",
+ fpath261: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/Exact4to3.m",
+ lines261: [1, 2, 16],
+ watch261: "Exact4to3261_watch.html",
+ title261: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\Exact4to3.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\Exact4to3.m')\">Exact4to3 &gt; 3</a></span>",
+ tcall261: [ [ "From Comp_E_AMA5_8X8_Multiplier line 36", "275#F261N14:B470" ] ],
+ scall261: [ [ "From line 9 to MAFA > 4", "252#srcline1" ], [ "From line 10 to HalfAdder > 3", "242#srcline1" ], [ "From line 11 to HalfAdder > 4", "249#srcline1" ] ],
+ MATLABcode274: "RCA_15bits274_mcode.html",
+ fpath274: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/RCA_15bits.m",
+ lines274: [1, 1, 15],
+ watch274: "RCA_15bits274_watch.html",
+ title274: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\RCA_15bits.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\RCA_15bits.m')\">RCA_15bits</a></span>",
+ tcall274: [ [ "From Comp_E_AMA5_8X8_Multiplier line 48", "275#F274N24:B574" ] ],
+ scall274: [ [ "From line 8 to MAFA > 3", "251#srcline1" ] ],
+ MATLABcode275: "Comp_E_AMA5_8X8_Multiplier275_mcode.html",
+ fpath275: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/Comp_E_AMA5_8X8_Multiplier.m",
+ lines275: [1, 3, 54],
+ watch275: "Comp_E_AMA5_8X8_Multiplier275_watch.html",
+ title275: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\Comp_E_AMA5_8X8_Multiplier.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\Comp_E_AMA5_8X8_Multiplier.m')\">Comp_E_AMA5_8X8_Multiplier</a></span>",
+ tcall275: [ [ "From mult_selector line 6", "283#F275N13:B27" ] ],
+ scall275: [ [ "From line 16 to AMA5FA > 1", "241#srcline2" ], [ "From line 17 to Approx4to3_AMA5", "243#srcline2" ], [ "From line 18 to Approx5to3_AMA5", "244#srcline2" ], [ "From line 19 to Approx6to3_AMA5", "246#srcline2" ], [ "From line 20 to Approx7to3_AMA5", "247#srcline2" ], [ "From line 21 to Approx8to4_AMA5", "250#srcline2" ], [ "From line 22 to Exact7to3", "254#srcline2" ], [ "From line 23 to Exact6to3", "255#srcline2" ], [ "From line 24 to Exact5to3", "257#srcline2" ], [ "From line 25 to Exact4to3 > 1", "258#srcline2" ], [ "From line 26 to MAFA > 3", "251#srcline1" ], [ "From line 28 to AMA5FA > 4", "259#srcline2" ], [ "From line 29 to AMA5FA > 2", "245#srcline2" ], [ "From line 30 to AMA5FA > 1", "241#srcline2" ], [ "From line 31 to MAFA > 4", "252#srcline1" ], [ "From line 32 to MAFA > 5", "253#srcline1" ], [ "From line 33 to Exact4to3 > 2", "260#srcline2" ], [ "From line 34 to MAFA > 5", "253#srcline1" ], [ "From line 35 to MAFA > 5", "253#srcline1" ], [ "From line 36 to Exact4to3 > 3", "261#srcline2" ], [ "From line 38 to MAFA > 5", "253#srcline1" ], [ "From line 39 to HalfAdder > 4", "249#srcline1" ], [ "From line 40 to HalfAdder > 2", "197#srcline1" ], [ "From line 48 to RCA_15bits", "274#srcline1" ] ],
+ MATLABcode276: "AMA5ArrayMultiplier_8X8276_mcode.html",
+ fpath276: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/AMA5ArrayMultiplier_8X8.m",
+ lines276: [1, 3, 84],
+ watch276: "AMA5ArrayMultiplier_8X8276_watch.html",
+ title276: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\AMA5ArrayMultiplier_8X8.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\AMA5ArrayMultiplier_8X8.m')\">AMA5ArrayMultiplier_8X8</a></span>",
+ tcall276: [ [ "From mult_selector line 8", "283#F276N4:B36" ] ],
+ scall276: [ [ "From line 16 to HalfAdder > 1", "192#srcline1" ], [ "From line 17 to AMA5FA > 2", "245#srcline2" ], [ "From line 18 to AMA5FA > 1", "241#srcline2" ], [ "From line 19 to AMA5FA > 1", "241#srcline2" ], [ "From line 20 to AMA5FA > 1", "241#srcline2" ], [ "From line 21 to AMA5FA > 1", "241#srcline2" ], [ "From line 22 to AMA5FA > 1", "241#srcline2" ], [ "From line 23 to HalfAdder > 1", "192#srcline1" ], [ "From line 25 to HalfAdder > 1", "192#srcline1" ], [ "From line 26 to AMA5FA > 2", "245#srcline2" ], [ "From line 27 to AMA5FA > 1", "241#srcline2" ], [ "From line 28 to AMA5FA > 1", "241#srcline2" ], [ "From line 29 to AMA5FA > 1", "241#srcline2" ], [ "From line 30 to AMA5FA > 1", "241#srcline2" ], [ "From line 31 to MAFA > 1", "202#srcline1" ], [ "From line 32 to MAFA > 2", "203#srcline1" ], [ "From line 34 to HalfAdder > 1", "192#srcline1" ], [ "From line 35 to AMA5FA > 2", "245#srcline2" ], [ "From line 36 to AMA5FA > 1", "241#srcline2" ], [ "From line 37 to AMA5FA > 1", "241#srcline2" ], [ "From line 38 to AMA5FA > 1", "241#srcline2" ], [ "From line 39 to MAFA > 1", "202#srcline1" ], [ "From line 40 to MAFA > 2", "203#srcline1" ], [ "From line 41 to MAFA > 2", "203#srcline1" ], [ "From line 44 to HalfAdder > 1", "192#srcline1" ], [ "From line 45 to AMA5FA > 2", "245#srcline2" ], [ "From line 46 to AMA5FA > 1", "241#srcline2" ], [ "From line 47 to AMA5FA > 1", "241#srcline2" ], [ "From line 48 to MAFA > 1", "202#srcline1" ], [ "From line 49 to MAFA > 2", "203#srcline1" ], [ "From line 50 to MAFA > 2", "203#srcline1" ], [ "From line 51 to MAFA > 2", "203#srcline1" ], [ "From line 53 to HalfAdder > 1", "192#srcline1" ], [ "From line 54 to AMA5FA > 2", "245#srcline2" ], [ "From line 55 to AMA5FA > 1", "241#srcline2" ], [ "From line 56 to MAFA > 1", "202#srcline1" ], [ "From line 57 to MAFA > 2", "203#srcline1" ], [ "From line 58 to MAFA > 2", "203#srcline1" ], [ "From line 59 to MAFA > 2", "203#srcline1" ], [ "From line 60 to MAFA > 2", "203#srcline1" ], [ "From line 62 to HalfAdder > 1", "192#srcline1" ], [ "From line 63 to AMA5FA > 2", "245#srcline2" ], [ "From line 64 to MAFA > 1", "202#srcline1" ], [ "From line 65 to MAFA > 2", "203#srcline1" ], [ "From line 66 to MAFA > 2", "203#srcline1" ], [ "From line 67 to MAFA > 2", "203#srcline1" ], [ "From line 68 to MAFA > 2", "203#srcline1" ], [ "From line 69 to MAFA > 2", "203#srcline1" ], [ "From line 71 to HalfAdder > 1", "192#srcline1" ], [ "From line 72 to MAFA > 2", "203#srcline1" ], [ "From line 73 to MAFA > 2", "203#srcline1" ], [ "From line 74 to MAFA > 2", "203#srcline1" ], [ "From line 75 to MAFA > 2", "203#srcline1" ], [ "From line 76 to MAFA > 2", "203#srcline1" ], [ "From line 77 to MAFA > 2", "203#srcline1" ], [ "From line 78 to MAFA > 2", "203#srcline1" ] ],
+ MATLABcode277: "InXA2FA277_mcode.html",
+ fpath277: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/InXA2FA.m",
+ lines277: [1, 2, 14],
+ watch277: "InXA2FA277_watch.html",
+ title277: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\InXA2FA.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\InXA2FA.m')\">InXA2FA &gt; 1</a></span>",
+ tcall277: [ [ "From InXA2ArrayMultiplier_8X8 line 16", "279#F277N22:B83" ], [ "From InXA2ArrayMultiplier_8X8 line 17", "279#F277N22:B99" ], [ "From InXA2ArrayMultiplier_8X8 line 18", "279#F277N22:B115" ], [ "From InXA2ArrayMultiplier_8X8 line 19", "279#F277N22:B131" ], [ "From InXA2ArrayMultiplier_8X8 line 20", "279#F277N22:B147" ], [ "From InXA2ArrayMultiplier_8X8 line 21", "279#F277N22:B163" ] ],
+ scall277: [  ],
+ MATLABcode278: "InXA2FA278_mcode.html",
+ fpath278: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/InXA2FA.m",
+ lines278: [1, 2, 14],
+ watch278: "InXA2FA278_watch.html",
+ title278: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\InXA2FA.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\InXA2FA.m')\">InXA2FA &gt; 2</a></span>",
+ tcall278: [ [ "From InXA2ArrayMultiplier_8X8 line 25", "279#F278N22:B203" ], [ "From InXA2ArrayMultiplier_8X8 line 26", "279#F278N22:B216" ], [ "From InXA2ArrayMultiplier_8X8 line 27", "279#F278N22:B229" ], [ "From InXA2ArrayMultiplier_8X8 line 28", "279#F278N22:B242" ], [ "From InXA2ArrayMultiplier_8X8 line 29", "279#F278N22:B255" ], [ "From InXA2ArrayMultiplier_8X8 line 34", "279#F278N22:B306" ], [ "From InXA2ArrayMultiplier_8X8 line 35", "279#F278N22:B319" ], [ "From InXA2ArrayMultiplier_8X8 line 36", "279#F278N22:B332" ], [ "From InXA2ArrayMultiplier_8X8 line 37", "279#F278N22:B345" ], [ "From InXA2ArrayMultiplier_8X8 line 44", "279#F278N22:B409" ], [ "From InXA2ArrayMultiplier_8X8 line 45", "279#F278N22:B422" ], [ "From InXA2ArrayMultiplier_8X8 line 46", "279#F278N22:B435" ], [ "From InXA2ArrayMultiplier_8X8 line 53", "279#F278N22:B512" ], [ "From InXA2ArrayMultiplier_8X8 line 54", "279#F278N22:B525" ], [ "From InXA2ArrayMultiplier_8X8 line 62", "279#F278N22:B615" ] ],
+ scall278: [  ],
+ MATLABcode279: "InXA2ArrayMultiplier_8X8279_mcode.html",
+ fpath279: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/InXA2ArrayMultiplier_8X8.m",
+ lines279: [1, 3, 83],
+ watch279: "InXA2ArrayMultiplier_8X8279_watch.html",
+ title279: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\InXA2ArrayMultiplier_8X8.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\InXA2ArrayMultiplier_8X8.m')\">InXA2ArrayMultiplier_8X8</a></span>",
+ tcall279: [ [ "From mult_selector line 10", "283#F279N21:B45" ] ],
+ scall279: [ [ "From line 15 to HalfAdder > 1", "192#srcline1" ], [ "From line 16 to InXA2FA > 1", "277#srcline2" ], [ "From line 17 to InXA2FA > 1", "277#srcline2" ], [ "From line 18 to InXA2FA > 1", "277#srcline2" ], [ "From line 19 to InXA2FA > 1", "277#srcline2" ], [ "From line 20 to InXA2FA > 1", "277#srcline2" ], [ "From line 21 to InXA2FA > 1", "277#srcline2" ], [ "From line 22 to HalfAdder > 2", "197#srcline1" ], [ "From line 24 to HalfAdder > 2", "197#srcline1" ], [ "From line 25 to InXA2FA > 2", "278#srcline2" ], [ "From line 26 to InXA2FA > 2", "278#srcline2" ], [ "From line 27 to InXA2FA > 2", "278#srcline2" ], [ "From line 28 to InXA2FA > 2", "278#srcline2" ], [ "From line 29 to InXA2FA > 2", "278#srcline2" ], [ "From line 30 to MAFA > 2", "203#srcline1" ], [ "From line 31 to MAFA > 2", "203#srcline1" ], [ "From line 33 to HalfAdder > 2", "197#srcline1" ], [ "From line 34 to InXA2FA > 2", "278#srcline2" ], [ "From line 35 to InXA2FA > 2", "278#srcline2" ], [ "From line 36 to InXA2FA > 2", "278#srcline2" ], [ "From line 37 to InXA2FA > 2", "278#srcline2" ], [ "From line 38 to MAFA > 2", "203#srcline1" ], [ "From line 39 to MAFA > 2", "203#srcline1" ], [ "From line 40 to MAFA > 2", "203#srcline1" ], [ "From line 43 to HalfAdder > 2", "197#srcline1" ], [ "From line 44 to InXA2FA > 2", "278#srcline2" ], [ "From line 45 to InXA2FA > 2", "278#srcline2" ], [ "From line 46 to InXA2FA > 2", "278#srcline2" ], [ "From line 47 to MAFA > 2", "203#srcline1" ], [ "From line 48 to MAFA > 2", "203#srcline1" ], [ "From line 49 to MAFA > 2", "203#srcline1" ], [ "From line 50 to MAFA > 2", "203#srcline1" ], [ "From line 52 to HalfAdder > 2", "197#srcline1" ], [ "From line 53 to InXA2FA > 2", "278#srcline2" ], [ "From line 54 to InXA2FA > 2", "278#srcline2" ], [ "From line 55 to MAFA > 2", "203#srcline1" ], [ "From line 56 to MAFA > 2", "203#srcline1" ], [ "From line 57 to MAFA > 2", "203#srcline1" ], [ "From line 58 to MAFA > 2", "203#srcline1" ], [ "From line 59 to MAFA > 2", "203#srcline1" ], [ "From line 61 to HalfAdder > 2", "197#srcline1" ], [ "From line 62 to InXA2FA > 2", "278#srcline2" ], [ "From line 63 to MAFA > 2", "203#srcline1" ], [ "From line 64 to MAFA > 2", "203#srcline1" ], [ "From line 65 to MAFA > 2", "203#srcline1" ], [ "From line 66 to MAFA > 2", "203#srcline1" ], [ "From line 67 to MAFA > 2", "203#srcline1" ], [ "From line 68 to MAFA > 2", "203#srcline1" ], [ "From line 70 to HalfAdder > 2", "197#srcline1" ], [ "From line 71 to MAFA > 2", "203#srcline1" ], [ "From line 72 to MAFA > 2", "203#srcline1" ], [ "From line 73 to MAFA > 2", "203#srcline1" ], [ "From line 74 to MAFA > 2", "203#srcline1" ], [ "From line 75 to MAFA > 2", "203#srcline1" ], [ "From line 76 to MAFA > 2", "203#srcline1" ], [ "From line 77 to MAFA > 2", "203#srcline1" ] ],
+ MATLABcode280: "InXA1FA280_mcode.html",
+ fpath280: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/InXA1FA.m",
+ lines280: [1, 2, 9],
+ watch280: "InXA1FA280_watch.html",
+ title280: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\InXA1FA.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\InXA1FA.m')\">InXA1FA &gt; 1</a></span>",
+ tcall280: [ [ "From InXA1ArrayMultiplier_8X8 line 16", "282#F280N20:B83" ], [ "From InXA1ArrayMultiplier_8X8 line 17", "282#F280N20:B99" ], [ "From InXA1ArrayMultiplier_8X8 line 18", "282#F280N20:B115" ], [ "From InXA1ArrayMultiplier_8X8 line 19", "282#F280N20:B131" ], [ "From InXA1ArrayMultiplier_8X8 line 20", "282#F280N20:B147" ], [ "From InXA1ArrayMultiplier_8X8 line 21", "282#F280N20:B163" ] ],
+ scall280: [  ],
+ MATLABcode281: "InXA1FA281_mcode.html",
+ fpath281: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/InXA1FA.m",
+ lines281: [1, 2, 9],
+ watch281: "InXA1FA281_watch.html",
+ title281: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\InXA1FA.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\InXA1FA.m')\">InXA1FA &gt; 2</a></span>",
+ tcall281: [ [ "From InXA1ArrayMultiplier_8X8 line 25", "282#F281N20:B203" ], [ "From InXA1ArrayMultiplier_8X8 line 26", "282#F281N20:B216" ], [ "From InXA1ArrayMultiplier_8X8 line 27", "282#F281N20:B229" ], [ "From InXA1ArrayMultiplier_8X8 line 28", "282#F281N20:B242" ], [ "From InXA1ArrayMultiplier_8X8 line 29", "282#F281N20:B255" ], [ "From InXA1ArrayMultiplier_8X8 line 34", "282#F281N20:B306" ], [ "From InXA1ArrayMultiplier_8X8 line 35", "282#F281N20:B319" ], [ "From InXA1ArrayMultiplier_8X8 line 36", "282#F281N20:B332" ], [ "From InXA1ArrayMultiplier_8X8 line 37", "282#F281N20:B345" ], [ "From InXA1ArrayMultiplier_8X8 line 44", "282#F281N20:B409" ], [ "From InXA1ArrayMultiplier_8X8 line 45", "282#F281N20:B422" ], [ "From InXA1ArrayMultiplier_8X8 line 46", "282#F281N20:B435" ], [ "From InXA1ArrayMultiplier_8X8 line 53", "282#F281N20:B512" ], [ "From InXA1ArrayMultiplier_8X8 line 54", "282#F281N20:B525" ], [ "From InXA1ArrayMultiplier_8X8 line 62", "282#F281N20:B615" ] ],
+ scall281: [  ],
+ MATLABcode282: "InXA1ArrayMultiplier_8X8282_mcode.html",
+ fpath282: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/InXA1ArrayMultiplier_8X8.m",
+ lines282: [1, 3, 83],
+ watch282: "InXA1ArrayMultiplier_8X8282_watch.html",
+ title282: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\InXA1ArrayMultiplier_8X8.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\InXA1ArrayMultiplier_8X8.m')\">InXA1ArrayMultiplier_8X8</a></span>",
+ tcall282: [ [ "From mult_selector line 12", "283#F282N19:B54" ] ],
+ scall282: [ [ "From line 15 to HalfAdder > 1", "192#srcline1" ], [ "From line 16 to InXA1FA > 1", "280#srcline2" ], [ "From line 17 to InXA1FA > 1", "280#srcline2" ], [ "From line 18 to InXA1FA > 1", "280#srcline2" ], [ "From line 19 to InXA1FA > 1", "280#srcline2" ], [ "From line 20 to InXA1FA > 1", "280#srcline2" ], [ "From line 21 to InXA1FA > 1", "280#srcline2" ], [ "From line 22 to HalfAdder > 2", "197#srcline1" ], [ "From line 24 to HalfAdder > 2", "197#srcline1" ], [ "From line 25 to InXA1FA > 2", "281#srcline2" ], [ "From line 26 to InXA1FA > 2", "281#srcline2" ], [ "From line 27 to InXA1FA > 2", "281#srcline2" ], [ "From line 28 to InXA1FA > 2", "281#srcline2" ], [ "From line 29 to InXA1FA > 2", "281#srcline2" ], [ "From line 30 to MAFA > 2", "203#srcline1" ], [ "From line 31 to MAFA > 2", "203#srcline1" ], [ "From line 33 to HalfAdder > 2", "197#srcline1" ], [ "From line 34 to InXA1FA > 2", "281#srcline2" ], [ "From line 35 to InXA1FA > 2", "281#srcline2" ], [ "From line 36 to InXA1FA > 2", "281#srcline2" ], [ "From line 37 to InXA1FA > 2", "281#srcline2" ], [ "From line 38 to MAFA > 2", "203#srcline1" ], [ "From line 39 to MAFA > 2", "203#srcline1" ], [ "From line 40 to MAFA > 2", "203#srcline1" ], [ "From line 43 to HalfAdder > 2", "197#srcline1" ], [ "From line 44 to InXA1FA > 2", "281#srcline2" ], [ "From line 45 to InXA1FA > 2", "281#srcline2" ], [ "From line 46 to InXA1FA > 2", "281#srcline2" ], [ "From line 47 to MAFA > 2", "203#srcline1" ], [ "From line 48 to MAFA > 2", "203#srcline1" ], [ "From line 49 to MAFA > 2", "203#srcline1" ], [ "From line 50 to MAFA > 2", "203#srcline1" ], [ "From line 52 to HalfAdder > 2", "197#srcline1" ], [ "From line 53 to InXA1FA > 2", "281#srcline2" ], [ "From line 54 to InXA1FA > 2", "281#srcline2" ], [ "From line 55 to MAFA > 2", "203#srcline1" ], [ "From line 56 to MAFA > 2", "203#srcline1" ], [ "From line 57 to MAFA > 2", "203#srcline1" ], [ "From line 58 to MAFA > 2", "203#srcline1" ], [ "From line 59 to MAFA > 2", "203#srcline1" ], [ "From line 61 to HalfAdder > 2", "197#srcline1" ], [ "From line 62 to InXA1FA > 2", "281#srcline2" ], [ "From line 63 to MAFA > 2", "203#srcline1" ], [ "From line 64 to MAFA > 2", "203#srcline1" ], [ "From line 65 to MAFA > 2", "203#srcline1" ], [ "From line 66 to MAFA > 2", "203#srcline1" ], [ "From line 67 to MAFA > 2", "203#srcline1" ], [ "From line 68 to MAFA > 2", "203#srcline1" ], [ "From line 70 to HalfAdder > 2", "197#srcline1" ], [ "From line 71 to MAFA > 2", "203#srcline1" ], [ "From line 72 to MAFA > 2", "203#srcline1" ], [ "From line 73 to MAFA > 2", "203#srcline1" ], [ "From line 74 to MAFA > 2", "203#srcline1" ], [ "From line 75 to MAFA > 2", "203#srcline1" ], [ "From line 76 to MAFA > 2", "203#srcline1" ], [ "From line 77 to MAFA > 2", "203#srcline1" ] ],
+ MATLABcode283: "mult_selector283_mcode.html",
+ fpath283: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/mult_selector.m",
+ lines283: [1, 1, 18],
+ watch283: "mult_selector283_watch.html",
+ title283: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\mult_selector.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\mult_selector.m')\">mult_selector</a></span>",
+ tcall283: [ [ "From COMPARATIVE_ETM line 11", "305#F283N31:B85" ], [ "From COMPARATIVE_ETM line 17", "305#F283N31:B98" ] ],
+ scall283: [ [ "From line 4 to AMA4ArrayMultiplier_8X8", "240#srcline3" ], [ "From line 6 to Comp_E_AMA5_8X8_Multiplier", "275#srcline3" ], [ "From line 8 to AMA5ArrayMultiplier_8X8", "276#srcline3" ], [ "From line 10 to InXA2ArrayMultiplier_8X8", "279#srcline3" ], [ "From line 12 to InXA1ArrayMultiplier_8X8", "282#srcline3" ] ],
+ MATLABcode305: "COMPARATIVE_ETM305_mcode.html",
+ fpath305: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/COMPARATIVE_ETM.m",
+ lines305: [1, 1, 41],
+ watch305: "COMPARATIVE_ETM305_watch.html",
+ title305: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\COMPARATIVE_ETM.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\COMPARATIVE_ETM.m')\">COMPARATIVE_ETM</a></span>",
+ tcall305: [ [ "From ApproxMatMult8x8 line 25", "1#F305N12:B177" ] ],
+ scall305: [ [ "From line 11 to mult_selector", "283#srcline1" ], [ "From line 17 to mult_selector", "283#srcline1" ] ],
+ MATLABcode393: "binfrac2dec393_mcode.html",
+ fpath393: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/binfrac2dec.m",
+ lines393: [1, 1, 5],
+ watch393: "binfrac2dec393_watch.html",
+ title393: "Function: <span class='functionname'><a title='C:&nbsp;\\Users\\USER\\Documents\\One&nbsp;Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\binfrac2dec.m' class='functionlink' href=\"matlab: open('C:\\Users\\USER\\Documents\\One Lab\\Comparing_multipliers\\Application\\Application\\Comparative\\binfrac2dec.m')\">binfrac2dec</a></span>",
+ tcall393: [ [ "From ApproxMatMult8x8 line 27", "1#F393N25:B196" ] ],
+ scall393: [  ],
+ rootFcnID: "1",
+ firstPage: "1",
+ htmlRoot: "C:/Users/USER/Documents/One%20Lab/Comparing_multipliers/Application/Application/Comparative/codegen/mex/ApproxMatMult8x8/html/"
+};
+var scriptInfoTable = {
+ fpath1: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/ApproxMatMult8x8.m",
+ fpath2: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/scalexpCompatible.m",
+ fpath3: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/xor.m",
+ fpath4: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/isBuiltInNumeric.m",
+ fpath5: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/eml_mtimes_helper.m",
+ fpath6: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/+scalar/abs.m",
+ fpath7: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/applyScalarFunction.m",
+ fpath8: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elfun/abs.m",
+ fpath9: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/isnumerictype.m",
+ fpath10: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/length.m",
+ fpath11: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/eml_fi_checkforconst.m",
+ fpath12: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/isfi.m",
+ fpath13: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/fi_impl.m",
+ fpath14: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/eml_fi_checkforntype.m",
+ fpath15: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/sparfun/issparse.m",
+ fpath16: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/codingForGPU.m",
+ fpath17: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/useParforConst.m",
+ fpath18: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elmat/intmax.m",
+ fpath19: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elmat/intmin.m",
+ fpath20: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/eml/eml_int_forloop_overflow_check.m",
+ fpath21: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/+scalar/floor.m",
+ fpath22: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/applyScalarFunctionInPlace.m",
+ fpath23: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elfun/floor.m",
+ fpath24: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/floatModel.m",
+ fpath25: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/mantissa_nbits.m",
+ fpath26: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/scalarEg.m",
+ fpath27: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/fixedpoint/isfimath.m",
+ fpath28: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/power.m",
+ fpath29: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/applyBinaryScalarFunction.m",
+ fpath30: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elmat/isnan.m",
+ fpath31: "C:/Program Files/MATLAB/R2017b/toolbox/shared/coder/coder/+coder/+internal/error.m",
+ fpath32: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/+scalar/pow2.m",
+ fpath33: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elfun/pow2.m",
+ fpath34: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elmat/isinf.m",
+ fpath35: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elmat/isfinite.m",
+ fpath36: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/strfun/dec2bin.m",
+ fpath37: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/div.m",
+ fpath38: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/rdivide.m",
+ fpath39: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/mrdivide.p",
+ fpath40: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/indexMinus.m",
+ fpath41: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/indexPlus.m",
+ fpath42: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elmat/ismatrix.m",
+ fpath43: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/mpower.m",
+ fpath44: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/ifWhileCond.m",
+ fpath45: "C:/Program Files/MATLAB/R2017b/toolbox/shared/coder/coder/+coder/+internal/narginchk.m",
+ fpath46: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/charCastCheck.m",
+ fpath47: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/strfun/char.m",
+ fpath48: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/dec2binfrac.m",
+ fpath49: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/cat.m",
+ fpath50: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/scalexpAllocNoCheck.m",
+ fpath51: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/scalexpAlloc.m",
+ fpath52: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/minOrMax.m",
+ fpath53: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/datafun/max.m",
+ fpath54: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/strfun/bin2dec.m",
+ fpath55: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/private/bitbinop.m",
+ fpath56: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/bitand.m",
+ fpath57: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/bitshift.m",
+ fpath58: "C:/Program Files/MATLAB/R2017b/toolbox/comm/comm/eml/de2bi.m",
+ fpath59: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/constNonSingletonDim.m",
+ fpath60: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/isDomainError.m",
+ fpath61: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elmat/private/eml_realmax.m",
+ fpath62: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elmat/realmax.m",
+ fpath63: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/+scalar/log.m",
+ fpath64: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elfun/log.m",
+ fpath65: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/+scalar/rem.m",
+ fpath66: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elfun/rem.m",
+ fpath67: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/toLogicalCheck.m",
+ fpath68: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/HalfAdder.m",
+ fpath69: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/AMA4FA.m",
+ fpath70: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/MAFA.m",
+ fpath71: "C:/Program Files/MATLAB/R2017b/toolbox/comm/comm/eml/bi2de.m",
+ fpath72: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/strcmp.m",
+ fpath73: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/strfun/isstring.m",
+ fpath74: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elmat/private/eml_isequal_core.m",
+ fpath75: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elmat/isequal.m",
+ fpath76: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/allOrAny.m",
+ fpath77: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/any.m",
+ fpath78: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/AMA4ArrayMultiplier_8X8.m",
+ fpath79: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/AMA5FA.m",
+ fpath80: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/Approx4to3_AMA5.m",
+ fpath81: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/Approx5to3_AMA5.m",
+ fpath82: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/Approx6to3_AMA5.m",
+ fpath83: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/Approx7to3_AMA5.m",
+ fpath84: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/Approx8to4_AMA5.m",
+ fpath85: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/Exact7to3.m",
+ fpath86: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/Exact6to3.m",
+ fpath87: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/Exact5to3.m",
+ fpath88: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/Exact4to3.m",
+ fpath89: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/RCA_15bits.m",
+ fpath90: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/Comp_E_AMA5_8X8_Multiplier.m",
+ fpath91: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/AMA5ArrayMultiplier_8X8.m",
+ fpath92: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/InXA2FA.m",
+ fpath93: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/InXA2ArrayMultiplier_8X8.m",
+ fpath94: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/InXA1FA.m",
+ fpath95: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/InXA1ArrayMultiplier_8X8.m",
+ fpath96: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/mult_selector.m",
+ fpath97: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/bitor.m",
+ fpath98: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/prodsize.m",
+ fpath99: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/elmat/fliplr.m",
+ fpath100: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/COMPARATIVE_ETM.m",
+ fpath101: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/unsignedClass.m",
+ fpath102: "C:/Program Files/MATLAB/R2017b/toolbox/shared/coder/coder/+coder/+internal/indexIntRelop.m",
+ fpath103: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/private/all_in_integer_range.m",
+ fpath104: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/bitget.m",
+ fpath105: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/ops/colon.m",
+ fpath106: "C:/Program Files/MATLAB/R2017b/toolbox/eml/eml/+coder/+internal/vAllOrAny.m",
+ fpath107: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/datafun/private/process_sumprod_inputs.m",
+ fpath108: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/datafun/private/combineVectorElements.m",
+ fpath109: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/datafun/private/sumprod.m",
+ fpath110: "C:/Program Files/MATLAB/R2017b/toolbox/eml/lib/matlab/datafun/sum.m",
+ fpath111: "C:/Users/USER/Documents/One Lab/Comparing_multipliers/Application/Application/Comparative/binfrac2dec.m"
+};
+</script>
+</head>
+<body>
+
+<div class="west">
+<ul class="ui-tabs-nav">
+<li class="ui-tabs-nav-item ui-tabs-selected"><span class="tab-link" id="MATLABcode"><span>MATLAB code</span></span></li>
+<li class="ui-tabs-nav-item"><span class="tab-link" id="callstack"><span>Call stack</span></span></li>
+<li class="ui-tabs-nav-item"><span class="tab-link" id="ccode"><span>C code</span></span></li>
+</ul>
+<div id="MATLABcodebody" class="ui-tabs-panel">
+<!-- Begin Filter -->
+<div class="grayline methodset" onclick="filterClick(event);">
+<a class="collapsed">Filter</a>
+</div>
+<div id="filterbody" class="hidden">
+<table class="myfunc-filter-tbl">
+<tr>
+<td title="Use this filter to display only functions and methods that contain variables or expressions with the specified attributes." colspan="2" class="checkbox">
+<div class="myfunc-filterby-chk"><input type="checkbox" class="filterenable" />
+<div class="filter-enable-lbl">Filter functions and methods</div></div></td></tr><tr>
+<td class="label"><div class="myfunc-filterby-lbl">Filter by:</div></td>
+<td class="select">
+<div class="filters">
+<select class="myfunc-filterby">
+<option id="size">Size</option>
+<option id="complex">Complexity</option>
+<option id="class">Class</option>
+</select>
+</div>
+</td>
+</tr>
+
+<tr>
+<td class="label"><div class="myfunc-filterstr-lbl">Filter:</div></td>
+<td class="input"><div>
+
+<div class="size">
+<select class="myfunc-filter size">
+<option value="1 98 192 193 194 197 198 199 202 203 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260 261 274 275 276 277 278 279 280 281 282 283 305 393">1 x 1</option>
+<option value="1 98">1 x 1 *</option>
+<option value="1 98">1 x 13</option>
+<option value="275">1 x 15</option>
+<option value="240 274 275 276 279 282 305">1 x 16</option>
+<option value="274">1 x 17</option>
+<option value="1">1 x 18</option>
+<option value="393">1 x 26</option>
+<option value="1">1 x 32</option>
+<option value="240 275 276 279 282">1 x 8</option>
+<option value="1">1 x <b>:</b>52</option>
+<option value="1 240 275 276 279 282">8 x 8</option>
+</select>
+</div>
+
+<div class="complex">
+<select class="myfunc-filter complex">
+<option value="">Complex values</option>
+<option value="1 98 192 193 194 197 198 199 202 203 240 241 242 243 244 245 246 247 248 250 251 252 254 255 256 257 258 261 274 275 276 277 278 279 280 281 282 283 305 393">Real values</option>
+</select>
+</div>
+<!-- Begin Class Filter -->
+<div class="class">
+<select class="myfunc-filter class">
+<option value="1 98 393">char</option>
+<option value="1 98 192 193 194 197 198 199 202 203 240 241 242 243 244 245 246 247 248 250 251 252 254 255 256 257 258 261 274 275 276 277 278 279 280 281 282 283 305 393">double</option>
+<option value="192 193 194 197 198 199 202 203 240 242 243 244 245 246 248 249 250 251 252 253 254 255 256 257 258 259 260 261 275 276 277 278 279 280 281 282">logical</option>
+<option value="305">uint16</option>
+<option value="305">uint32</option>
+<option value="240 275 276 279 282 283 305">uint8</option>
+</select>
+</div>
+<!-- End Class Filter -->
+
+
+<div class="wl">
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="mode">
+<select class="wl-operator" name=":1 98 192 193 194 197 198 199 202 203 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260 261 274 275 276 277 278 279 280 281 282 283 305 393;16:">
+<option value="eq">=</option>
+<option value="ne">~=</option>
+<option value="lt">&lt;</option>
+<option value="le">&lt;=</option>
+<option value="ge">&gt;=</option>
+<option value="gt">&gt;</option>
+</select>
+</td>
+<td class="value"><select class="wl">
+<option value="">16</option>
+</select>
+<input class="wl" />
+</td>
+</tr>
+</table>
+</div>
+</div>
+</td>
+</tr>
+</table>
+<div class="myfunc-count"></div>
+</div>
+<!-- End Filter -->
+<div class="grayline methodset" onmouseover="callTreeMouseOver(event);" onmouseout="callTreeMouseOut(event);" onclick="functionSetClick(event);">
+<a class="expanded">Functions</a>
+</div>
+<!-- Begin Function Tree -->
+<div id="functiontreebody">
+<div class="functionwrapper" onmouseover="callTreeMouseOver(event);" onmouseout="callTreeMouseOut(event);" onclick="functionTreeClick(event);">
+<ol class="tree">
+<!-- Begin Function Tree Roots -->
+<li class="leaf  passed"><a href="#" class="fcn  " id="F240N2:F1">AMA4ArrayMultiplier_8X8</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F193N3:F2">AMA4FA &gt; 1</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F194N3:F3">AMA4FA &gt; 2</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F198N3:F4">AMA4FA &gt; 3</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F199N3:F5">AMA4FA &gt; 4</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F276N4:F6">AMA5ArrayMultiplier_8X8</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F241N5:F7">AMA5FA &gt; 1</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F245N5:F8">AMA5FA &gt; 2</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F248N5:F9">AMA5FA &gt; 3</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F259N5:F10">AMA5FA &gt; 4</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F243N6:F11">Approx4to3_AMA5</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F244N7:F12">Approx5to3_AMA5</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F246N8:F13">Approx6to3_AMA5</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F247N9:F14">Approx7to3_AMA5</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F250N10:F15">Approx8to4_AMA5</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F1N11:F16">ApproxMatMult8x8</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F305N12:F17">COMPARATIVE_ETM</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F275N13:F18">Comp_E_AMA5_8X8_Multiplier</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F258N14:F19">Exact4to3 &gt; 1</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F260N14:F20">Exact4to3 &gt; 2</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F261N14:F21">Exact4to3 &gt; 3</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F257N15:F22">Exact5to3</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F255N16:F23">Exact6to3</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F254N17:F24">Exact7to3</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F192N18:F25">HalfAdder &gt; 1</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F197N18:F26">HalfAdder &gt; 2</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F242N18:F27">HalfAdder &gt; 3</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F249N18:F28">HalfAdder &gt; 4</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F282N19:F29">InXA1ArrayMultiplier_8X8</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F280N20:F30">InXA1FA &gt; 1</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F281N20:F31">InXA1FA &gt; 2</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F279N21:F32">InXA2ArrayMultiplier_8X8</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F277N22:F33">InXA2FA &gt; 1</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F278N22:F34">InXA2FA &gt; 2</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F202N23:F35">MAFA &gt; 1</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F203N23:F36">MAFA &gt; 2</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F251N23:F37">MAFA &gt; 3</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F252N23:F38">MAFA &gt; 4</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F253N23:F39">MAFA &gt; 5</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F256N23:F40">MAFA &gt; 6</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F274N24:F41">RCA_15bits</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F393N25:F42">binfrac2dec</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F98N28:F43">dec2binfrac</a></li>
+<li class="leaf  passed"><a href="#" class="fcn  " id="F283N31:F44">mult_selector</a></li>
+<!-- End Function Tree Roots -->
+</ol>
+<!-- Function Tree Nodes -->
+<div class="functiontreenodes hidden">
+</div>
+<!-- End Function Tree Nodes -->
+</div>
+</div>
+<!-- End Function Tree -->
+</div>
+<!-- Begin Call Tree -->
+<div id="callstackbody" class="ui-tabs-panel hidden">
+<div class="treewrapper" onmouseover="callTreeMouseOver(event);" onmouseout="callTreeMouseOut(event);" onclick="callTreeClick(event);">
+<ol class="tree">
+<!-- Call Tree Root -->
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F1N11:L1">ApproxMatMult8x8</a>
+<ul>
+<li class="leaf passed"><a href="#" class="fcn  " id="F98N28:L2">dec2binfrac</a></li>
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F305N12:L3">COMPARATIVE_ETM</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F393N25:L4">binfrac2dec</a></li>
+</ul>
+</li>
+</ol>
+<!-- Call Tree Nodes -->
+<div class="callstacknodes hidden">
+<ol class="callstacknode" id="callstacknode1">
+
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F1N11:l1">ApproxMatMult8x8</a>
+<ul>
+<li class="leaf passed"><a href="#" class="fcn  " id="F98N28:l2">dec2binfrac</a></li>
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F305N12:l3">COMPARATIVE_ETM</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F393N25:l4">binfrac2dec</a></li>
+</ul>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode98">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F98N28:l5">dec2binfrac</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode192">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F192N18:l6">HalfAdder &gt; 1</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode193">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F193N3:l7">AMA4FA &gt; 1</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode194">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F194N3:l8">AMA4FA &gt; 2</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode197">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F197N18:l9">HalfAdder &gt; 2</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode198">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F198N3:l10">AMA4FA &gt; 3</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode199">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F199N3:l11">AMA4FA &gt; 4</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode202">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F202N23:l12">MAFA &gt; 1</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode203">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F203N23:l13">MAFA &gt; 2</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode240">
+
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F240N2:l14">AMA4ArrayMultiplier_8X8</a>
+<ul>
+<li class="leaf passed"><a href="#" class="fcn  " id="F192N18:l15">HalfAdder &gt; 1</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F193N3:l16">AMA4FA &gt; 1</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F194N3:l17">AMA4FA &gt; 2</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F197N18:l18">HalfAdder &gt; 2</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F198N3:l19">AMA4FA &gt; 3</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F199N3:l20">AMA4FA &gt; 4</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F202N23:l21">MAFA &gt; 1</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F203N23:l22">MAFA &gt; 2</a></li>
+</ul>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode241">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F241N5:l23">AMA5FA &gt; 1</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode242">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F242N18:l24">HalfAdder &gt; 3</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode243">
+
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F243N6:l25">Approx4to3_AMA5</a>
+<ul>
+<li class="leaf passed"><a href="#" class="fcn  " id="F241N5:l26">AMA5FA &gt; 1</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F192N18:l27">HalfAdder &gt; 1</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F242N18:l28">HalfAdder &gt; 3</a></li>
+</ul>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode244">
+
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F244N7:l29">Approx5to3_AMA5</a>
+<ul>
+<li class="leaf passed"><a href="#" class="fcn  " id="F241N5:l30">AMA5FA &gt; 1</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F192N18:l31">HalfAdder &gt; 1</a></li>
+</ul>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode245">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F245N5:l32">AMA5FA &gt; 2</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode246">
+
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F246N8:l33">Approx6to3_AMA5</a>
+<ul>
+<li class="leaf passed"><a href="#" class="fcn  " id="F241N5:l34">AMA5FA &gt; 1</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F192N18:l35">HalfAdder &gt; 1</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F245N5:l36">AMA5FA &gt; 2</a></li>
+</ul>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode247">
+
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F247N9:l37">Approx7to3_AMA5</a>
+<ul>
+<li class="leaf passed"><a href="#" class="fcn  " id="F241N5:l38">AMA5FA &gt; 1</a></li>
+</ul>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode248">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F248N5:l39">AMA5FA &gt; 3</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode249">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F249N18:l40">HalfAdder &gt; 4</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode250">
+
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F250N10:l41">Approx8to4_AMA5</a>
+<ul>
+<li class="leaf passed"><a href="#" class="fcn  " id="F192N18:l42">HalfAdder &gt; 1</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F241N5:l43">AMA5FA &gt; 1</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F248N5:l44">AMA5FA &gt; 3</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F242N18:l45">HalfAdder &gt; 3</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F249N18:l46">HalfAdder &gt; 4</a></li>
+</ul>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode251">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F251N23:l47">MAFA &gt; 3</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode252">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F252N23:l48">MAFA &gt; 4</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode253">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F253N23:l49">MAFA &gt; 5</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode254">
+
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F254N17:l50">Exact7to3</a>
+<ul>
+<li class="leaf passed"><a href="#" class="fcn  " id="F251N23:l51">MAFA &gt; 3</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F252N23:l52">MAFA &gt; 4</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F253N23:l53">MAFA &gt; 5</a></li>
+</ul>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode255">
+
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F255N16:l54">Exact6to3</a>
+<ul>
+<li class="leaf passed"><a href="#" class="fcn  " id="F251N23:l55">MAFA &gt; 3</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F249N18:l56">HalfAdder &gt; 4</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F253N23:l57">MAFA &gt; 5</a></li>
+</ul>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode256">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F256N23:l58">MAFA &gt; 6</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode257">
+
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F257N15:l59">Exact5to3</a>
+<ul>
+<li class="leaf passed"><a href="#" class="fcn  " id="F251N23:l60">MAFA &gt; 3</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F256N23:l61">MAFA &gt; 6</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F249N18:l62">HalfAdder &gt; 4</a></li>
+</ul>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode258">
+
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F258N14:l63">Exact4to3 &gt; 1</a>
+<ul>
+<li class="leaf passed"><a href="#" class="fcn  " id="F251N23:l64">MAFA &gt; 3</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F242N18:l65">HalfAdder &gt; 3</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F249N18:l66">HalfAdder &gt; 4</a></li>
+</ul>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode259">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F259N5:l67">AMA5FA &gt; 4</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode260">
+
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F260N14:l68">Exact4to3 &gt; 2</a>
+<ul>
+<li class="leaf passed"><a href="#" class="fcn  " id="F253N23:l69">MAFA &gt; 5</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F249N18:l70">HalfAdder &gt; 4</a></li>
+</ul>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode261">
+
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F261N14:l71">Exact4to3 &gt; 3</a>
+<ul>
+<li class="leaf passed"><a href="#" class="fcn  " id="F252N23:l72">MAFA &gt; 4</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F242N18:l73">HalfAdder &gt; 3</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F249N18:l74">HalfAdder &gt; 4</a></li>
+</ul>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode274">
+
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F274N24:l75">RCA_15bits</a>
+<ul>
+<li class="leaf passed"><a href="#" class="fcn  " id="F251N23:l76">MAFA &gt; 3</a></li>
+</ul>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode275">
+
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F275N13:l77">Comp_E_AMA5_8X8_Multiplier</a>
+<ul>
+<li class="leaf passed"><a href="#" class="fcn  " id="F241N5:l78">AMA5FA &gt; 1</a></li>
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F243N6:l79">Approx4to3_AMA5</a></li>
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F244N7:l80">Approx5to3_AMA5</a></li>
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F246N8:l81">Approx6to3_AMA5</a></li>
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F247N9:l82">Approx7to3_AMA5</a></li>
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F250N10:l83">Approx8to4_AMA5</a></li>
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F254N17:l84">Exact7to3</a></li>
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F255N16:l85">Exact6to3</a></li>
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F257N15:l86">Exact5to3</a></li>
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F258N14:l87">Exact4to3 &gt; 1</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F251N23:l88">MAFA &gt; 3</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F259N5:l89">AMA5FA &gt; 4</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F245N5:l90">AMA5FA &gt; 2</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F252N23:l91">MAFA &gt; 4</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F253N23:l92">MAFA &gt; 5</a></li>
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F260N14:l93">Exact4to3 &gt; 2</a></li>
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F261N14:l94">Exact4to3 &gt; 3</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F249N18:l95">HalfAdder &gt; 4</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F197N18:l96">HalfAdder &gt; 2</a></li>
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F274N24:l97">RCA_15bits</a></li>
+</ul>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode276">
+
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F276N4:l98">AMA5ArrayMultiplier_8X8</a>
+<ul>
+<li class="leaf passed"><a href="#" class="fcn  " id="F192N18:l99">HalfAdder &gt; 1</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F245N5:l100">AMA5FA &gt; 2</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F241N5:l101">AMA5FA &gt; 1</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F202N23:l102">MAFA &gt; 1</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F203N23:l103">MAFA &gt; 2</a></li>
+</ul>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode277">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F277N22:l104">InXA2FA &gt; 1</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode278">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F278N22:l105">InXA2FA &gt; 2</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode279">
+
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F279N21:l106">InXA2ArrayMultiplier_8X8</a>
+<ul>
+<li class="leaf passed"><a href="#" class="fcn  " id="F192N18:l107">HalfAdder &gt; 1</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F277N22:l108">InXA2FA &gt; 1</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F197N18:l109">HalfAdder &gt; 2</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F278N22:l110">InXA2FA &gt; 2</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F203N23:l111">MAFA &gt; 2</a></li>
+</ul>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode280">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F280N20:l112">InXA1FA &gt; 1</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode281">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F281N20:l113">InXA1FA &gt; 2</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode282">
+
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F282N19:l114">InXA1ArrayMultiplier_8X8</a>
+<ul>
+<li class="leaf passed"><a href="#" class="fcn  " id="F192N18:l115">HalfAdder &gt; 1</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F280N20:l116">InXA1FA &gt; 1</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F197N18:l117">HalfAdder &gt; 2</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F281N20:l118">InXA1FA &gt; 2</a></li>
+<li class="leaf passed"><a href="#" class="fcn  " id="F203N23:l119">MAFA &gt; 2</a></li>
+</ul>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode283">
+
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F283N31:l120">mult_selector</a>
+<ul>
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F240N2:l121">AMA4ArrayMultiplier_8X8</a></li>
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F275N13:l122">Comp_E_AMA5_8X8_Multiplier</a></li>
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F276N4:l123">AMA5ArrayMultiplier_8X8</a></li>
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F279N21:l124">InXA2ArrayMultiplier_8X8</a></li>
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F282N19:l125">InXA1ArrayMultiplier_8X8</a></li>
+</ul>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode305">
+
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F305N12:l126">COMPARATIVE_ETM</a>
+<ul>
+<li class="node collapsed passed"><a href="#" class="fcn  " id="F283N31:l127">mult_selector</a></li>
+</ul>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode393">
+
+<li class="leaf passed"><a href="#" class="fcn  " id="F393N25:l128">binfrac2dec</a>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<!-- End Call Tree -->
+<!-- Begin C Code -->
+<div id="ccodebody" class="ui-tabs-panel hidden">
+<div class="grayline methodset" onclick="ccodeClick(event,1);">
+<a class="expanded">Target Source Files</a>
+</div>
+<!-- Begin C Code List -->
+<div id="ccodelistbody1" class="visible">
+<table class="myfunc-list" cellspacing="0" cellpadding="0" onclick="cFileClickWithMexWarning(event);">
+<tbody>
+<tr class="ccode" id="AMA4ArrayMultiplier_8X8_c.html"><td class="ccode"><a href="#">AMA4ArrayMultiplier_8X8.c</a></td></tr>
+<tr class="ccode" id="AMA4ArrayMultiplier_8X8_h.html"><td class="ccode"><a href="#">AMA4ArrayMultiplier_8X8.h</a></td></tr>
+<tr class="ccode" id="AMA4FA_c.html"><td class="ccode"><a href="#">AMA4FA.c</a></td></tr>
+<tr class="ccode" id="AMA4FA_h.html"><td class="ccode"><a href="#">AMA4FA.h</a></td></tr>
+<tr class="ccode" id="ApproxMatMult8x8_c.html"><td class="ccode"><a href="#">ApproxMatMult8x8.c</a></td></tr>
+<tr class="ccode" id="ApproxMatMult8x8_h.html"><td class="ccode"><a href="#">ApproxMatMult8x8.h</a></td></tr>
+<tr class="ccode" id="ApproxMatMult8x8_data_c.html"><td class="ccode"><a href="#">ApproxMatMult8x8_data.c</a></td></tr>
+<tr class="ccode" id="ApproxMatMult8x8_data_h.html"><td class="ccode"><a href="#">ApproxMatMult8x8_data.h</a></td></tr>
+<tr class="ccode" id="ApproxMatMult8x8_initialize_c.html"><td class="ccode"><a href="#">ApproxMatMult8x8_initialize.c</a></td></tr>
+<tr class="ccode" id="ApproxMatMult8x8_initialize_h.html"><td class="ccode"><a href="#">ApproxMatMult8x8_initialize.h</a></td></tr>
+<tr class="ccode" id="ApproxMatMult8x8_terminate_c.html"><td class="ccode"><a href="#">ApproxMatMult8x8_terminate.c</a></td></tr>
+<tr class="ccode" id="ApproxMatMult8x8_terminate_h.html"><td class="ccode"><a href="#">ApproxMatMult8x8_terminate.h</a></td></tr>
+<tr class="ccode" id="ApproxMatMult8x8_types_h.html"><td class="ccode"><a href="#">ApproxMatMult8x8_types.h</a></td></tr>
+<tr class="ccode" id="Comp_E_AMA5_8X8_Multiplier_c.html"><td class="ccode"><a href="#">Comp_E_AMA5_8X8_Multiplier.c</a></td></tr>
+<tr class="ccode" id="Comp_E_AMA5_8X8_Multiplier_h.html"><td class="ccode"><a href="#">Comp_E_AMA5_8X8_Multiplier.h</a></td></tr>
+<tr class="ccode" id="HalfAdder_c.html"><td class="ccode"><a href="#">HalfAdder.c</a></td></tr>
+<tr class="ccode" id="HalfAdder_h.html"><td class="ccode"><a href="#">HalfAdder.h</a></td></tr>
+<tr class="ccode" id="InXA1ArrayMultiplier_8X8_c.html"><td class="ccode"><a href="#">InXA1ArrayMultiplier_8X8.c</a></td></tr>
+<tr class="ccode" id="InXA1ArrayMultiplier_8X8_h.html"><td class="ccode"><a href="#">InXA1ArrayMultiplier_8X8.h</a></td></tr>
+<tr class="ccode" id="InXA1FA_c.html"><td class="ccode"><a href="#">InXA1FA.c</a></td></tr>
+<tr class="ccode" id="InXA1FA_h.html"><td class="ccode"><a href="#">InXA1FA.h</a></td></tr>
+<tr class="ccode" id="InXA2FA_c.html"><td class="ccode"><a href="#">InXA2FA.c</a></td></tr>
+<tr class="ccode" id="InXA2FA_h.html"><td class="ccode"><a href="#">InXA2FA.h</a></td></tr>
+<tr class="ccode" id="MAFA_c.html"><td class="ccode"><a href="#">MAFA.c</a></td></tr>
+<tr class="ccode" id="MAFA_h.html"><td class="ccode"><a href="#">MAFA.h</a></td></tr>
+<tr class="ccode" id="bi2de_c.html"><td class="ccode"><a href="#">bi2de.c</a></td></tr>
+<tr class="ccode" id="bi2de_h.html"><td class="ccode"><a href="#">bi2de.h</a></td></tr>
+<tr class="ccode" id="bin2dec_c.html"><td class="ccode"><a href="#">bin2dec.c</a></td></tr>
+<tr class="ccode" id="bin2dec_h.html"><td class="ccode"><a href="#">bin2dec.h</a></td></tr>
+<tr class="ccode" id="c_mexapi_version_c.html"><td class="ccode"><a href="#">c_mexapi_version.c</a></td></tr>
+<tr class="ccode" id="de2bi_c.html"><td class="ccode"><a href="#">de2bi.c</a></td></tr>
+<tr class="ccode" id="de2bi_h.html"><td class="ccode"><a href="#">de2bi.h</a></td></tr>
+<tr class="ccode" id="dec2bin_c.html"><td class="ccode"><a href="#">dec2bin.c</a></td></tr>
+<tr class="ccode" id="dec2bin_h.html"><td class="ccode"><a href="#">dec2bin.h</a></td></tr>
+<tr class="ccode" id="dec2binfrac_c.html"><td class="ccode"><a href="#">dec2binfrac.c</a></td></tr>
+<tr class="ccode" id="dec2binfrac_h.html"><td class="ccode"><a href="#">dec2binfrac.h</a></td></tr>
+<tr class="ccode" id="error_c.html"><td class="ccode"><a href="#">error.c</a></td></tr>
+<tr class="ccode" id="error_h.html"><td class="ccode"><a href="#">error.h</a></td></tr>
+<tr class="ccode" id="mult_selector_c.html"><td class="ccode"><a href="#">mult_selector.c</a></td></tr>
+<tr class="ccode" id="mult_selector_h.html"><td class="ccode"><a href="#">mult_selector.h</a></td></tr>
+<tr class="ccode" id="rt_nonfinite_h.html"><td class="ccode"><a href="#">rt_nonfinite.h</a></td></tr>
+<tr class="ccode" id="rtwtypes_h.html"><td class="ccode"><a href="#">rtwtypes.h</a></td></tr>
+</tbody>
+</table>
+</div>
+<!-- End C Code List -->
+<div class="grayline methodset" onclick="ccodeClick(event,3);">
+<a class="collapsed">Interface Source Files</a>
+</div>
+<!-- Begin C Code List -->
+<div id="ccodelistbody3" class="hidden">
+<table class="myfunc-list" cellspacing="0" cellpadding="0" onclick="cFileClickWithMexWarning(event);">
+<tbody>
+<tr class="ccode" id="_coder_ApproxMatMult8x8_api_c.html"><td class="ccode"><a href="#">_coder_ApproxMatMult8x8_api.c</a></td></tr>
+<tr class="ccode" id="_coder_ApproxMatMult8x8_api_h.html"><td class="ccode"><a href="#">_coder_ApproxMatMult8x8_api.h</a></td></tr>
+<tr class="ccode" id="_coder_ApproxMatMult8x8_info_c.html"><td class="ccode"><a href="#">_coder_ApproxMatMult8x8_info.c</a></td></tr>
+<tr class="ccode" id="_coder_ApproxMatMult8x8_info_h.html"><td class="ccode"><a href="#">_coder_ApproxMatMult8x8_info.h</a></td></tr>
+<tr class="ccode" id="_coder_ApproxMatMult8x8_mex_c.html"><td class="ccode"><a href="#">_coder_ApproxMatMult8x8_mex.c</a></td></tr>
+<tr class="ccode" id="_coder_ApproxMatMult8x8_mex_h.html"><td class="ccode"><a href="#">_coder_ApproxMatMult8x8_mex.h</a></td></tr>
+</tbody>
+</table>
+</div>
+<!-- End C Code List -->
+</div>
+<!-- End C Code -->
+</div>
+<!-- Tooltips -->
+<div class="aux hidden">
+<div class="tooltips">
+<div class="tooltip" id="TT1"><table class="tooltip"><tr><th>Size</th><td>8 x 8</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT2"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT3"><table class="tooltip"><tr><th>Size</th><td>1 x 18</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT4"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>logical</td></tr></table></div>
+<div class="tooltip" id="TT5"><table class="tooltip"><tr><th>Size</th><td>1 x 1 *</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT6"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fi</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>16</td></tr><tr><th>FL</th><td>13</td></tr></table></div>
+<div class="tooltip" id="TT7"><table class="tooltip"><tr><th>Size</th><td>1 x <b>:</b>52</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT8"><table class="tooltip"><tr><th>Size</th><td>1 x 13</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT9"><table class="tooltip"><tr><th>Size</th><td>1 x <b>:</b>65</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT10"><table class="tooltip"><tr><th>Size</th><td>1 x 32</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT11"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>uint32</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT12"><table class="tooltip"><tr><th>Size</th><td>1 x 6</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT13"><table class="tooltip"><tr><th>Size</th><td>1 x 6</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT14"><table class="tooltip"><tr><th>Size</th><td>1 x 26</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT15"><table class="tooltip"><tr><th>Size</th><td>1 x 26</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT16"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>uint8</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT17"><table class="tooltip"><tr><th>Size</th><td>0 x 0</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT18"><table class="tooltip"><tr><th>Size</th><td>1 x 3</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT19"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT20"><table class="tooltip"><tr><th>Size</th><td>1 x 0</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT21"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT22"><table class="tooltip"><tr><th>Size</th><td>1 x 2</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT23"><table class="tooltip"><tr><th>Size</th><td>1 x 3</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT24"><table class="tooltip"><tr><th>Size</th><td>1 x 2</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT25"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.numerictype</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>16</td></tr><tr><th>FL</th><td>13</td></tr></table></div>
+<div class="tooltip" id="TT26"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fimath</td></tr></table></div>
+<div class="tooltip" id="TT27"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>embedded.fi</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Signedness</th><td>Unsigned</td></tr><tr><th>WL</th><td>16</td></tr><tr><th>FL</th><td>13</td></tr></table></div>
+<div class="tooltip" id="TT28"><table class="tooltip"><tr><th>Size</th><td>1 x 8</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT29"><table class="tooltip"><tr><th>Size</th><td>1 x 15</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT30"><table class="tooltip"><tr><th>Size</th><td>1 x 4</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT31"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>mxArray</td></tr></table></div>
+<div class="tooltip" id="TT32"><table class="tooltip"><tr><th>Size</th><td>1 x <b>:</b>?</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT33"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT34"><table class="tooltip"><tr><th>Size</th><td>1 x 5</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT35"><table class="tooltip"><tr><th>Size</th><td>1 x 23</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT36"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT37"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>int32</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT38"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT39"><table class="tooltip"><tr><th>Size</th><td>1 x 14</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT40"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT41"><table class="tooltip"><tr><th>Size</th><td>1 x 31</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT42"><table class="tooltip"><tr><th>Size</th><td>1 x 16</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT43"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT44"><table class="tooltip"><tr><th>Size</th><td>1 x 52 *</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT45"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT46"><table class="tooltip"><tr><th>Size</th><td>1 x 2</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT47"><table class="tooltip"><tr><th>Size</th><td>1 x <b>:</b>51</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT48"><table class="tooltip"><tr><th>Size</th><td>1 x 1 *</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT49"><table class="tooltip"><tr><th>Size</th><td>1 x <b>:</b>51</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT50"><table class="tooltip"><tr><th>Size</th><td>1 x 1 *</td></tr><tr><th>Class</th><td>logical</td></tr></table></div>
+<div class="tooltip" id="TT51"><table class="tooltip"><tr><th>Size</th><td>13 x 1</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT52"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT53"><table class="tooltip"><tr><th>Size</th><td>1 x 13</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT54"><table class="tooltip"><tr><th>Size</th><td><b>:</b>? x <b>:</b>?</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT55"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT56"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT57"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT58"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT59"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT60"><table class="tooltip"><tr><th>Size</th><td>2 x 1</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT61"><table class="tooltip"><tr><th>Size</th><td>2 x 1</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT62"><table class="tooltip"><tr><th>Size</th><td>1 x <b>:</b>?</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT63"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>uint16</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT64"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT65"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT66"><table class="tooltip"><tr><th>Size</th><td>1 x 30</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT67"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT68"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT69"><table class="tooltip"><tr><th>Size</th><td>1 x 8</td></tr><tr><th>Class</th><td>uint8</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT70"><table class="tooltip"><tr><th>Size</th><td>1 x 19</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT71"><table class="tooltip"><tr><th>Size</th><td>1 x 2</td></tr><tr><th>Class</th><td>logical</td></tr></table></div>
+<div class="tooltip" id="TT72"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT73"><table class="tooltip"><tr><th>Size</th><td>1 x 2</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT74"><table class="tooltip"><tr><th>Size</th><td>1 x 7</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT75"><table class="tooltip"><tr><th>Size</th><td>1 x 2</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT76"><table class="tooltip"><tr><th>Size</th><td>1 x 2</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT77"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT78"><table class="tooltip"><tr><th>Size</th><td>1 x 2</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT79"><table class="tooltip"><tr><th>Size</th><td>1 x 2</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT80"><table class="tooltip"><tr><th>Size</th><td>1 x 16</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT81"><table class="tooltip"><tr><th>Size</th><td>1 x 15</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT82"><table class="tooltip"><tr><th>Size</th><td>1 x 17</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT83"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT84"><table class="tooltip"><tr><th>Size</th><td>1 x 2</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT85"><table class="tooltip"><tr><th>Size</th><td>1 x 26</td></tr><tr><th>Class</th><td>double</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT86"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT87"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>int8</td></tr><tr><th>Complex</th><td>No</td></tr></table></div>
+<div class="tooltip" id="TT88"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="V1"><table class="tooltip"><tr><th>Value</th><td>    13</br></td></tr></table></div>
+<div class="tooltip" id="V2"><table class="tooltip"><tr><th>Value</th><td></br>        RoundingMethod: Nearest</br>        OverflowAction: Saturate</br>           ProductMode: FullPrecision</br>               SumMode: FullPrecision</br></td></tr></table></div>
+<div class="tooltip" id="V3"><table class="tooltip"><tr><th>Value</th><td></br>          DataTypeMode: Fixed-point: binary point scaling</br>            Signedness: Unsigned</br>            WordLength: 16</br>        FractionLength: 13</br></td></tr></table></div>
+</div>
+</div>
+<!-- End Tooltips -->
+
+<div class="south">
+<ul class="ui-tabs-nav">
+<li class="ui-tabs-nav-item ui-tabs-selected"><span class="tab-link" id="summary"><span>Summary</span></span></li>
+<li class="ui-tabs-nav-item"><span class="tab-link" id="messages"><span>All Messages (0)</span></span></li>
+<li class="ui-tabs-nav-item"><span class="tab-link" id="watchlist"><span>Variables</span></span></li>
+<li class="ui-tabs-nav-item hidden"><span class="tab-link" id="watchload"><span>Variables</span></span></li>
+<li class="ui-tabs-nav-item"><span class="tab-link" id="buildlog1"><span>Build Log</span></span></li>
+</ul>
+
+<!-- Compilation Summary -->
+<div id="summarybody" class="ui-tabs-panel">
+<table cellpadding="1" cellspacing="4">
+<tr><td>C source code generated on:</td><td>08-Sep-2018 11:21:03</td></tr>
+<tr><td>Coding target:</td><td>MEX Function</td></tr>
+<tr><td>Number of errors:</td><td><a href="javascript:selectMessagesTab();">0</a></td></tr>
+<tr><td>Number of warnings:</td><td><a href="javascript:selectMessagesTab();">0</a></td></tr>
+<tr><td>Number of notices:</td><td><a href="javascript:selectMessagesTab();">0</a></td></tr>
+</table>
+<p/><p/><table>
+<tr><td><b>Tell Us What You Think</b></td></tr>
+<tr><td>We value your feedback. Please take a few minutes to answer this short questionnaire regarding the Code Generation Report.</td></tr>
+<tr><td><a href="matlab: emlcprivate('launchReportSurvey');">&gt;&gt;Provide Feedback</a></td></tr>
+</table>
+</div>
+
+<!-- Message Table -->
+<div id="messagesbody" class="ui-tabs-panel hidden">
+<div>
+<div class="msgsuccess">Code generation successful. Click here to <a href="javaScript:selectSummaryTab();">view summary</a>.</div>
+</div>
+</div>
+<!-- Watchlist Table -->
+<div id="watchlistbody" class="ui-tabs-panel hidden">
+</div>
+<div id="watchloadbody" class="ui-tabs-panel hidden">
+Loading Variables table ...
+</div>
+
+<!-- Build Log -->
+<div id="buildlog1body" class="ui-tabs-panel hidden">
+<div class="grayline"></div>
+<table cellpadding="4" cellspacing="1"><tr>
+<td align="left" class="td-linebottomrt-gray" colspan="2">Build Parameters</td>
+</tr>
+<tr><td align="left" valign="top" class="td-linebottomrt">Build directory</td>
+<td align="left" valign="top" class="td-linebottomrt-link"><a href="matlab: cd('C:\Users\USER\Documents\One Lab\Comparing_multipliers\Application\Application\Comparative\codegen\mex\ApproxMatMult8x8')">C:\Users\USER\Documents\One Lab\Comparing_multipliers\Application\Application\Comparative\codegen\mex\ApproxMatMult8x8</a></td></tr>
+<tr><td align="left" valign="top" class="td-linebottomrt">Make wrapper</td>
+<td align="left" valign="top" class="td-linebottomrt-link">ApproxMatMult8x8_mex.bat</td></tr>
+</table>
+<br/>
+<table border="1" cellpadding="4" cellspacing="1" width="100%">
+<tr><td align="left" class="td-linebottomrt-gray">Build Log</td></tr>
+<tr><td valign="top" class="td-script">
+<pre>
+<span class="td-line-number">    1   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "ApproxMatMult8x8_data.c"</span>
+<span class="td-line-number">    2   </span><span class="td-line-normal">ApproxMatMult8x8_data.c</span>
+<span class="td-line-number">    3   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "ApproxMatMult8x8_initialize.c"</span>
+<span class="td-line-number">    4   </span><span class="td-line-normal">ApproxMatMult8x8_initialize.c</span>
+<span class="td-line-number">    5   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "ApproxMatMult8x8_terminate.c"</span>
+<span class="td-line-number">    6   </span><span class="td-line-normal">ApproxMatMult8x8_terminate.c</span>
+<span class="td-line-number">    7   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "ApproxMatMult8x8.c"</span>
+<span class="td-line-number">    8   </span><span class="td-line-normal">ApproxMatMult8x8.c</span>
+<span class="td-line-number">    9   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "dec2bin.c"</span>
+<span class="td-line-number">   10   </span><span class="td-line-normal">dec2bin.c</span>
+<span class="td-line-number">   11   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "error.c"</span>
+<span class="td-line-number">   12   </span><span class="td-line-normal">error.c</span>
+<span class="td-line-number">   13   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "dec2binfrac.c"</span>
+<span class="td-line-number">   14   </span><span class="td-line-normal">dec2binfrac.c</span>
+<span class="td-line-number">   15   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "bin2dec.c"</span>
+<span class="td-line-number">   16   </span><span class="td-line-normal">bin2dec.c</span>
+<span class="td-line-number">   17   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "mult_selector.c"</span>
+<span class="td-line-number">   18   </span><span class="td-line-normal">mult_selector.c</span>
+<span class="td-line-number">   19   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "AMA4ArrayMultiplier_8X8.c"</span>
+<span class="td-line-number">   20   </span><span class="td-line-normal">AMA4ArrayMultiplier_8X8.c</span>
+<span class="td-line-number">   21   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "de2bi.c"</span>
+<span class="td-line-number">   22   </span><span class="td-line-normal">de2bi.c</span>
+<span class="td-line-number">   23   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "HalfAdder.c"</span>
+<span class="td-line-number">   24   </span><span class="td-line-normal">HalfAdder.c</span>
+<span class="td-line-number">   25   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "AMA4FA.c"</span>
+<span class="td-line-number">   26   </span><span class="td-line-normal">AMA4FA.c</span>
+<span class="td-line-number">   27   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "MAFA.c"</span>
+<span class="td-line-number">   28   </span><span class="td-line-normal">MAFA.c</span>
+<span class="td-line-number">   29   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "bi2de.c"</span>
+<span class="td-line-number">   30   </span><span class="td-line-normal">bi2de.c</span>
+<span class="td-line-number">   31   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "Comp_E_AMA5_8X8_Multiplier.c"</span>
+<span class="td-line-number">   32   </span><span class="td-line-normal">Comp_E_AMA5_8X8_Multiplier.c</span>
+<span class="td-line-number">   33   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "InXA2FA.c"</span>
+<span class="td-line-number">   34   </span><span class="td-line-normal">InXA2FA.c</span>
+<span class="td-line-number">   35   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "InXA1ArrayMultiplier_8X8.c"</span>
+<span class="td-line-number">   36   </span><span class="td-line-normal">InXA1ArrayMultiplier_8X8.c</span>
+<span class="td-line-number">   37   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "InXA1FA.c"</span>
+<span class="td-line-number">   38   </span><span class="td-line-normal">InXA1FA.c</span>
+<span class="td-line-number">   39   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "interface/_coder_ApproxMatMult8x8_info.c"</span>
+<span class="td-line-number">   40   </span><span class="td-line-normal">_coder_ApproxMatMult8x8_info.c</span>
+<span class="td-line-number">   41   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "interface/_coder_ApproxMatMult8x8_api.c"</span>
+<span class="td-line-number">   42   </span><span class="td-line-normal">_coder_ApproxMatMult8x8_api.c</span>
+<span class="td-line-number">   43   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "interface/_coder_ApproxMatMult8x8_mex.c"</span>
+<span class="td-line-number">   44   </span><span class="td-line-normal">_coder_ApproxMatMult8x8_mex.c</span>
+<span class="td-line-number">   45   </span><span class="td-line-normal">cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE  /O2 /Oy- /DNDEBUG /fp:strict    /I "C:\PROGRA~1\MATLAB\R2017b\simulink\include" /I "C:\PROGRA~1\MATLAB\R2017b\toolbox\shared\simtargets" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1\codegen\mex\ApproxMatMult8x8" /I "C:\Users\USER\DOCUME~1\ONELAB~1\COMPAR~1\APPLIC~1\APPLIC~1\COMPAR~1" /I ".\interface" /I "C:\PROGRA~1\MATLAB\R2017b\extern\include" /I "." "c_mexapi_version.c"</span>
+<span class="td-line-number">   46   </span><span class="td-line-normal">c_mexapi_version.c</span>
+<span class="td-line-number">   47   </span><span class="td-line-normal">link /nologo /manifest /DLL /LIBPATH:"C:\Program Files\MATLAB\R2017b\extern\lib\win64\microsoft" libmx.lib libmex.lib libmat.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /EXPORT:mexFunction /NODEFAULTLIB:LIBCMT   /OUT:ApproxMatMult8x8_mex.mexw64  ApproxMatMult8x8_data.obj ApproxMatMult8x8_initialize.obj ApproxMatMult8x8_terminate.obj ApproxMatMult8x8.obj dec2bin.obj error.obj dec2binfrac.obj bin2dec.obj mult_selector.obj AMA4ArrayMultiplier_8X8.obj de2bi.obj HalfAdder.obj AMA4FA.obj MAFA.obj bi2de.obj Comp_E_AMA5_8X8_Multiplier.obj InXA2FA.obj InXA1ArrayMultiplier_8X8.obj InXA1FA.obj _coder_ApproxMatMult8x8_info.obj _coder_ApproxMatMult8x8_api.obj _coder_ApproxMatMult8x8_mex.obj c_mexapi_version.obj   @ApproxMatMult8x8_mex_mex.arf</span>
+<span class="td-line-number">   48   </span><span class="td-line-normal">   Creating library ApproxMatMult8x8_mex.lib and object ApproxMatMult8x8_mex.exp</span>
+<span class="td-line-number">   49   </span><span class="td-line-normal">Build completed using compiler msvc150</span>
+<span class="td-line-number">   50   </span><span class="td-line-normal">mt -outputresource:"ApproxMatMult8x8_mex.mexw64;2" -manifest "ApproxMatMult8x8_mex.mexw64.manifest"</span>
+<span class="td-line-number">   51   </span><span class="td-line-normal">Microsoft (R) Manifest Tool</span>
+<span class="td-line-number">   52   </span><span class="td-line-normal">Copyright (c) Microsoft Corporation. </span>
+<span class="td-line-number">   53   </span><span class="td-line-normal">All rights reserved.</span>
+</pre>
+</td></tr></table>
+
+</div>
+
+<!-- Potential Differences -->
+<div id="potentialDifferencesBody" class="ui-tabs-panel hidden">
+</div>
+
+</div>
+<!-- Begin MATLAB Code Panel -->
+<div class="center">
+<div class="center-title">
+<div class="ui-tabs-nav-item ui-tabs-selected">
+<span class="functiontitle">
+</span>
+<!-- Begin Call Sites -->
+<span id="callsiteselecttable" class="call-sites-tbl">
+<span id="callsiteselectlabel" class="filtered">Calls:</span>
+<select id="callsiteselect" onchange="callSiteChange(event)">
+<option value="callsiteprompt">Select a function call:</option>
+</select>
+</span>
+<!-- End Call Sites -->
+</div>
+</div>
+<div class="ui-tabs-panel">
+<iframe id="hiddenCodeFrame"></iframe>
+<div class="code" onmouseover="mcodeMouseOver(event);" onmouseout="mcodeMouseOut(event);"onclick="mcodeClick(event);">
+</div>
+</div>
+</div>
+<!-- End MATLAB Code Panel -->
+</body>
+</html>

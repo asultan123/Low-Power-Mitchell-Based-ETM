@@ -1,0 +1,11 @@
+libemlrt.lib
+libcovrt.lib
+libut.lib
+libmwmathutil.lib
+/export:mexFunction
+/export:mexfilerequiredapiversion
+/export:emlrtMexFcnProperties
+/export:ApproxMatMult8x8
+/export:ApproxMatMult8x8_initialize
+/export:ApproxMatMult8x8_terminate
+/export:ApproxMatMult8x8_atexit

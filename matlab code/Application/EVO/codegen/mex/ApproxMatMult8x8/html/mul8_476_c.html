@@ -1,0 +1,298 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>RTW Report - mul8_476.c</title>
+<script language="JavaScript" type="text/javascript" src="rtwreport_utils.js"></script>
+<script src="resources/eml_report_loadable_data.js"></script>
+</head>
+<body bgcolor="#eeeeee" onload="try {if (top) { if (top.rtwFileOnLoad) top.rtwFileOnLoad(window.document); else local_onload();}} catch(err) {};">
+<p>
+<table border="0" cellspacing="0" cellpadding="6" width="100%%" height="100%%"><tr><td width="100%%" valign="top" bgcolor="#ffffff">
+<h4>File: <a href="../mul8_476.c" target="rtwreport_document_frame" id="linkToText_plain">mul8_476.c</a></h4>
+<pre id="RTWcode">
+<a name="1"><font color="#888888 "><i>    1   </i></font></a><font color="#117755"><i>/*</i></font>
+<a name="2"><font color="#888888 "><i>    2   </i></font></a><font color="#117755"><I> * mul8_476.c</i></font>
+<a name="3"><font color="#888888 "><i>    3   </i></font></a><font color="#117755"><I> *</i></font>
+<a name="4"><font color="#888888 "><i>    4   </i></font></a><font color="#117755"><I> * Code generation for function 'mul8_476'</i></font>
+<a name="5"><font color="#888888 "><i>    5   </i></font></a><font color="#117755"><I> *</i></font>
+<a name="6"><font color="#888888 "><i>    6   </i></font></a><font color="#117755"><I> */</i></font>
+<a name="7"><font color="#888888 "><i>    7   </i></font></a>
+<a name="8"><font color="#888888 "><i>    8   </i></font></a><font color="#117755"><i>/* Include files */</i></font>
+<a name="9"><font color="#888888 "><i>    9   </i></font></a><font color="#992211">#</font><font color="#992211"><b>include</b></font> <font color="#992211">&quot;rt_nonfinite.h&quot;</font>
+<a name="10"><font color="#888888 "><i>   10   </i></font></a><font color="#992211">#</font><font color="#992211"><b>include</b></font> <font color="#992211">&quot;ApproxMatMult8x8.h&quot;</font>
+<a name="11"><font color="#888888 "><i>   11   </i></font></a><font color="#992211">#</font><font color="#992211"><b>include</b></font> <font color="#992211">&quot;mul8_476.h&quot;</font>
+<a name="12"><font color="#888888 "><i>   12   </i></font></a>
+<a name="13"><font color="#888888 "><i>   13   </i></font></a><font color="#117755"><i>/* Function Definitions */</i></font>
+<a name="14"><font color="#888888 "><i>   14   </i></font></a>uint16_T <a name="fcn_mul8_476">mul8_476</a>(uint8_T a, uint8_T b)
+<a name="15"><font color="#888888 "><i>   15   </i></font></a><b>{</b>
+<a name="16"><font color="#888888 "><i>   16   </i></font></a>  uint16_T c;
+<a name="17"><font color="#888888 "><i>   17   </i></font></a>  uint16_T n0;
+<a name="18"><font color="#888888 "><i>   18   </i></font></a>  uint16_T n2;
+<a name="19"><font color="#888888 "><i>   19   </i></font></a>  uint16_T n4;
+<a name="20"><font color="#888888 "><i>   20   </i></font></a>  uint16_T n6;
+<a name="21"><font color="#888888 "><i>   21   </i></font></a>  uint16_T n8;
+<a name="22"><font color="#888888 "><i>   22   </i></font></a>  uint16_T n10;
+<a name="23"><font color="#888888 "><i>   23   </i></font></a>  uint16_T n12;
+<a name="24"><font color="#888888 "><i>   24   </i></font></a>  uint16_T n14;
+<a name="25"><font color="#888888 "><i>   25   </i></font></a>  uint16_T n16;
+<a name="26"><font color="#888888 "><i>   26   </i></font></a>  uint16_T n18;
+<a name="27"><font color="#888888 "><i>   27   </i></font></a>  uint16_T n20;
+<a name="28"><font color="#888888 "><i>   28   </i></font></a>  uint16_T n22;
+<a name="29"><font color="#888888 "><i>   29   </i></font></a>  uint16_T n24;
+<a name="30"><font color="#888888 "><i>   30   </i></font></a>  uint16_T n26;
+<a name="31"><font color="#888888 "><i>   31   </i></font></a>  uint16_T n28;
+<a name="32"><font color="#888888 "><i>   32   </i></font></a>  uint16_T n30;
+<a name="33"><font color="#888888 "><i>   33   </i></font></a>  uint16_T n33;
+<a name="34"><font color="#888888 "><i>   34   </i></font></a>  uint16_T n34;
+<a name="35"><font color="#888888 "><i>   35   </i></font></a>  uint16_T n35;
+<a name="36"><font color="#888888 "><i>   36   </i></font></a>  uint16_T n38;
+<a name="37"><font color="#888888 "><i>   37   </i></font></a>  uint16_T n41;
+<a name="38"><font color="#888888 "><i>   38   </i></font></a>  uint16_T n46;
+<a name="39"><font color="#888888 "><i>   39   </i></font></a>  uint16_T n47;
+<a name="40"><font color="#888888 "><i>   40   </i></font></a>  uint16_T n57;
+<a name="41"><font color="#888888 "><i>   41   </i></font></a>  uint16_T n90;
+<a name="42"><font color="#888888 "><i>   42   </i></font></a>  uint16_T n106;
+<a name="43"><font color="#888888 "><i>   43   </i></font></a>  uint16_T n121;
+<a name="44"><font color="#888888 "><i>   44   </i></font></a>  uint16_T n150;
+<a name="45"><font color="#888888 "><i>   45   </i></font></a>  uint16_T n238;
+<a name="46"><font color="#888888 "><i>   46   </i></font></a>  uint16_T n254;
+<a name="47"><font color="#888888 "><i>   47   </i></font></a>  uint16_T n255;
+<a name="48"><font color="#888888 "><i>   48   </i></font></a>  uint16_T n329;
+<a name="49"><font color="#888888 "><i>   49   </i></font></a>  uint16_T n343;
+<a name="50"><font color="#888888 "><i>   50   </i></font></a>  uint16_T n356;
+<a name="51"><font color="#888888 "><i>   51   </i></font></a>  uint16_T n372;
+<a name="52"><font color="#888888 "><i>   52   </i></font></a>  uint16_T n432;
+<a name="53"><font color="#888888 "><i>   53   </i></font></a>  uint16_T n446;
+<a name="54"><font color="#888888 "><i>   54   </i></font></a>  uint16_T n460;
+<a name="55"><font color="#888888 "><i>   55   </i></font></a>  uint16_T n476;
+<a name="56"><font color="#888888 "><i>   56   </i></font></a>  uint16_T n490;
+<a name="57"><font color="#888888 "><i>   57   </i></font></a>  uint16_T n514;
+<a name="58"><font color="#888888 "><i>   58   </i></font></a>  uint16_T n534;
+<a name="59"><font color="#888888 "><i>   59   </i></font></a>  uint16_T n564;
+<a name="60"><font color="#888888 "><i>   60   </i></font></a>  uint16_T n580;
+<a name="61"><font color="#888888 "><i>   61   </i></font></a>  uint16_T n594;
+<a name="62"><font color="#888888 "><i>   62   </i></font></a>  uint16_T n608;
+<a name="63"><font color="#888888 "><i>   63   </i></font></a>  uint16_T n668;
+<a name="64"><font color="#888888 "><i>   64   </i></font></a>  uint16_T n682;
+<a name="65"><font color="#888888 "><i>   65   </i></font></a>  uint16_T n698;
+<a name="66"><font color="#888888 "><i>   66   </i></font></a>  uint16_T n712;
+<a name="67"><font color="#888888 "><i>   67   </i></font></a>  uint16_T n728;
+<a name="68"><font color="#888888 "><i>   68   </i></font></a>  uint16_T n756;
+<a name="69"><font color="#888888 "><i>   69   </i></font></a>  uint16_T n772;
+<a name="70"><font color="#888888 "><i>   70   </i></font></a>  uint16_T n786;
+<a name="71"><font color="#888888 "><i>   71   </i></font></a>  uint16_T n802;
+<a name="72"><font color="#888888 "><i>   72   </i></font></a>  uint16_T n816;
+<a name="73"><font color="#888888 "><i>   73   </i></font></a>  uint16_T n832;
+<a name="74"><font color="#888888 "><i>   74   </i></font></a>  uint16_T n846;
+<a name="75"><font color="#888888 "><i>   75   </i></font></a>  uint16_T n860;
+<a name="76"><font color="#888888 "><i>   76   </i></font></a>  uint16_T n876;
+<a name="77"><font color="#888888 "><i>   77   </i></font></a>  uint16_T n890;
+<a name="78"><font color="#888888 "><i>   78   </i></font></a>  uint16_T n906;
+<a name="79"><font color="#888888 "><i>   79   </i></font></a>  uint16_T n920;
+<a name="80"><font color="#888888 "><i>   80   </i></font></a>  uint16_T n934;
+<a name="81"><font color="#888888 "><i>   81   </i></font></a>  uint16_T n950;
+<a name="82"><font color="#888888 "><i>   82   </i></font></a>  uint16_T n964;
+<a name="83"><font color="#888888 "><i>   83   </i></font></a>  uint16_T n1082;
+<a name="84"><font color="#888888 "><i>   84   </i></font></a>  uint16_T n1156;
+<a name="85"><font color="#888888 "><i>   85   </i></font></a>  uint16_T n1187;
+<a name="86"><font color="#888888 "><i>   86   </i></font></a>
+<a name="87"><font color="#888888 "><i>   87   </i></font></a>  <font color="#117755"><i>/*  Approximate function mul8_476 */</i></font>
+<a name="88"><font color="#888888 "><i>   88   </i></font></a>  <font color="#117755"><i>/*   Library = EvoApprox8b */</i></font>
+<a name="89"><font color="#888888 "><i>   89   </i></font></a>  <font color="#117755"><i>/*   Circuit = mul8_476 */</i></font>
+<a name="90"><font color="#888888 "><i>   90   </i></font></a>  <font color="#117755"><i>/*   Area   (180) = 8087 */</i></font>
+<a name="91"><font color="#888888 "><i>   91   </i></font></a>  <font color="#117755"><i>/*   Delay  (180) = 3.570 */</i></font>
+<a name="92"><font color="#888888 "><i>   92   </i></font></a>  <font color="#117755"><i>/*   Power  (180) = 3744.00 */</i></font>
+<a name="93"><font color="#888888 "><i>   93   </i></font></a>  <font color="#117755"><i>/*   Area   (45) = 594 */</i></font>
+<a name="94"><font color="#888888 "><i>   94   </i></font></a>  <font color="#117755"><i>/*   Delay  (45) = 1.250 */</i></font>
+<a name="95"><font color="#888888 "><i>   95   </i></font></a>  <font color="#117755"><i>/*   Power  (45) = 324.00 */</i></font>
+<a name="96"><font color="#888888 "><i>   96   </i></font></a>  <font color="#117755"><i>/*   Nodes = 136 */</i></font>
+<a name="97"><font color="#888888 "><i>   97   </i></font></a>  <font color="#117755"><i>/*   HD = 267606 */</i></font>
+<a name="98"><font color="#888888 "><i>   98   </i></font></a>  <font color="#117755"><i>/*   MAE = 104.91718 */</i></font>
+<a name="99"><font color="#888888 "><i>   99   </i></font></a>  <font color="#117755"><i>/*   MSE = 21249.56250 */</i></font>
+<a name="100"><font color="#888888 "><i>  100   </i></font></a>  <font color="#117755"><i>/*   MRE = 3.01 % */</i></font>
+<a name="101"><font color="#888888 "><i>  101   </i></font></a>  <font color="#117755"><i>/*   WCE = 594 */</i></font>
+<a name="102"><font color="#888888 "><i>  102   </i></font></a>  <font color="#117755"><i>/*   WCRE = 500 % */</i></font>
+<a name="103"><font color="#888888 "><i>  103   </i></font></a>  <font color="#117755"><i>/*   EP = 96.3 % */</i></font>
+<a name="104"><font color="#888888 "><i>  104   </i></font></a>  n0 = (uint16_T)(a &amp; 1);
+<a name="105"><font color="#888888 "><i>  105   </i></font></a>  n2 = (uint16_T)((int32_T)((uint32_T)a &gt;&gt; 1) &amp; 1);
+<a name="106"><font color="#888888 "><i>  106   </i></font></a>  n4 = (uint16_T)((int32_T)((uint32_T)a &gt;&gt; 2) &amp; 1);
+<a name="107"><font color="#888888 "><i>  107   </i></font></a>  n6 = (uint16_T)((int32_T)((uint32_T)a &gt;&gt; 3) &amp; 1);
+<a name="108"><font color="#888888 "><i>  108   </i></font></a>  n8 = (uint16_T)((int32_T)((uint32_T)a &gt;&gt; 4) &amp; 1);
+<a name="109"><font color="#888888 "><i>  109   </i></font></a>  n10 = (uint16_T)((int32_T)((uint32_T)a &gt;&gt; 5) &amp; 1);
+<a name="110"><font color="#888888 "><i>  110   </i></font></a>  n12 = (uint16_T)((int32_T)((uint32_T)a &gt;&gt; 6) &amp; 1);
+<a name="111"><font color="#888888 "><i>  111   </i></font></a>  n14 = (uint16_T)((uint32_T)a &gt;&gt; 7);
+<a name="112"><font color="#888888 "><i>  112   </i></font></a>  n16 = (uint16_T)(b &amp; 1);
+<a name="113"><font color="#888888 "><i>  113   </i></font></a>  n18 = (uint16_T)((int32_T)((uint32_T)b &gt;&gt; 1) &amp; 1);
+<a name="114"><font color="#888888 "><i>  114   </i></font></a>  n20 = (uint16_T)((int32_T)((uint32_T)b &gt;&gt; 2) &amp; 1);
+<a name="115"><font color="#888888 "><i>  115   </i></font></a>  n22 = (uint16_T)((int32_T)((uint32_T)b &gt;&gt; 3) &amp; 1);
+<a name="116"><font color="#888888 "><i>  116   </i></font></a>  n24 = (uint16_T)((int32_T)((uint32_T)b &gt;&gt; 4) &amp; 1);
+<a name="117"><font color="#888888 "><i>  117   </i></font></a>  n26 = (uint16_T)((int32_T)((uint32_T)b &gt;&gt; 5) &amp; 1);
+<a name="118"><font color="#888888 "><i>  118   </i></font></a>  n28 = (uint16_T)((int32_T)((uint32_T)b &gt;&gt; 6) &amp; 1);
+<a name="119"><font color="#888888 "><i>  119   </i></font></a>  n30 = (uint16_T)((uint32_T)b &gt;&gt; 7);
+<a name="120"><font color="#888888 "><i>  120   </i></font></a>  n33 = (uint16_T)(n18 &amp; n12);
+<a name="121"><font color="#888888 "><i>  121   </i></font></a>  n34 = (uint16_T)~(uint16_T)(n33 &amp; (n0 &amp; n6));
+<a name="122"><font color="#888888 "><i>  122   </i></font></a>  n35 = (uint16_T)~(uint16_T)(n33 &amp; (n0 &amp; n6));
+<a name="123"><font color="#888888 "><i>  123   </i></font></a>  n38 = (uint16_T)~(uint16_T)((n30 &amp; n24) | n35);
+<a name="124"><font color="#888888 "><i>  124   </i></font></a>  n41 = (uint16_T)(n12 &amp; n38);
+<a name="125"><font color="#888888 "><i>  125   </i></font></a>  n46 = (uint16_T)~(uint16_T)((n2 &amp; n18) | n34);
+<a name="126"><font color="#888888 "><i>  126   </i></font></a>  n47 = (uint16_T)~(uint16_T)((n2 &amp; n18) | n34);
+<a name="127"><font color="#888888 "><i>  127   </i></font></a>  n57 = (uint16_T)~(uint16_T)((uint16_T)~(uint16_T)((n18 &amp; n38) | n35) |
+<a name="128"><font color="#888888 "><i>  128   </i></font></a>    (uint16_T)~(uint16_T)(n2 &amp; (n24 &amp; n30)));
+<a name="129"><font color="#888888 "><i>  129   </i></font></a>  n33 = (uint16_T)~(uint16_T)((n18 &amp; n12) | n35);
+<a name="130"><font color="#888888 "><i>  130   </i></font></a>  n34 = (uint16_T)~(uint16_T)((n18 | n4) &amp; n41);
+<a name="131"><font color="#888888 "><i>  131   </i></font></a>  n90 = (uint16_T)(n47 &amp; n33);
+<a name="132"><font color="#888888 "><i>  132   </i></font></a>  n106 = (uint16_T)(n10 &amp; n33);
+<a name="133"><font color="#888888 "><i>  133   </i></font></a>  n121 = (uint16_T)(n12 &amp; n38);
+<a name="134"><font color="#888888 "><i>  134   </i></font></a>  n33 = (uint16_T)(n14 &amp; n16);
+<a name="135"><font color="#888888 "><i>  135   </i></font></a>  n150 = (uint16_T)(n0 &amp; n18);
+<a name="136"><font color="#888888 "><i>  136   </i></font></a>  n238 = (uint16_T)(n12 &amp; n18);
+<a name="137"><font color="#888888 "><i>  137   </i></font></a>  n254 = (uint16_T)(n14 &amp; n18);
+<a name="138"><font color="#888888 "><i>  138   </i></font></a>  n255 = (uint16_T)(n14 &amp; n18);
+<a name="139"><font color="#888888 "><i>  139   </i></font></a>  n329 = (uint16_T)(n8 &amp; n20);
+<a name="140"><font color="#888888 "><i>  140   </i></font></a>  n343 = (uint16_T)(n10 &amp; n20);
+<a name="141"><font color="#888888 "><i>  141   </i></font></a>  n356 = (uint16_T)(n12 &amp; n20);
+<a name="142"><font color="#888888 "><i>  142   </i></font></a>  n372 = (uint16_T)(n14 &amp; n20);
+<a name="143"><font color="#888888 "><i>  143   </i></font></a>  n432 = (uint16_T)(n6 &amp; n22);
+<a name="144"><font color="#888888 "><i>  144   </i></font></a>  n446 = (uint16_T)(n8 &amp; n22);
+<a name="145"><font color="#888888 "><i>  145   </i></font></a>  n460 = (uint16_T)(n10 &amp; n22);
+<a name="146"><font color="#888888 "><i>  146   </i></font></a>  n476 = (uint16_T)(n12 &amp; n22);
+<a name="147"><font color="#888888 "><i>  147   </i></font></a>  n490 = (uint16_T)(n14 &amp; n22);
+<a name="148"><font color="#888888 "><i>  148   </i></font></a>  n514 = (uint16_T)~(uint16_T)((uint16_T)(n12 &amp; n18) | (uint16_T)~(uint16_T)(n18
+<a name="149"><font color="#888888 "><i>  149   </i></font></a>    &amp; (uint16_T)~(uint16_T)((uint16_T)((uint16_T)(n34 &amp; (uint16_T)~(uint16_T)
+<a name="150"><font color="#888888 "><i>  150   </i></font></a>    ((n18 &amp; n38) | n35)) | (uint16_T)((uint16_T)~n34 &amp; n18)) ^ (uint16_T)
+<a name="151"><font color="#888888 "><i>  151   </i></font></a>    ~(uint16_T)(n57 ^ n41))));
+<a name="152"><font color="#888888 "><i>  152   </i></font></a>  n534 = (uint16_T)(n4 &amp; n24);
+<a name="153"><font color="#888888 "><i>  153   </i></font></a>  n35 = (uint16_T)(n6 &amp; n24);
+<a name="154"><font color="#888888 "><i>  154   </i></font></a>  n564 = (uint16_T)(n8 &amp; n24);
+<a name="155"><font color="#888888 "><i>  155   </i></font></a>  n580 = (uint16_T)(n10 &amp; n24);
+<a name="156"><font color="#888888 "><i>  156   </i></font></a>  n594 = (uint16_T)(n12 &amp; n24);
+<a name="157"><font color="#888888 "><i>  157   </i></font></a>  n608 = (uint16_T)(n14 &amp; n24);
+<a name="158"><font color="#888888 "><i>  158   </i></font></a>  n34 = (uint16_T)(n2 &amp; n26);
+<a name="159"><font color="#888888 "><i>  159   </i></font></a>  n38 = (uint16_T)(n4 &amp; n26);
+<a name="160"><font color="#888888 "><i>  160   </i></font></a>  n668 = (uint16_T)(n6 &amp; n26);
+<a name="161"><font color="#888888 "><i>  161   </i></font></a>  n682 = (uint16_T)(n8 &amp; n26);
+<a name="162"><font color="#888888 "><i>  162   </i></font></a>  n698 = (uint16_T)(n10 &amp; n26);
+<a name="163"><font color="#888888 "><i>  163   </i></font></a>  n712 = (uint16_T)(n12 &amp; n26);
+<a name="164"><font color="#888888 "><i>  164   </i></font></a>  n728 = (uint16_T)(n14 &amp; n26);
+<a name="165"><font color="#888888 "><i>  165   </i></font></a>  n756 = (uint16_T)(n2 &amp; n28);
+<a name="166"><font color="#888888 "><i>  166   </i></font></a>  n772 = (uint16_T)(n4 &amp; n28);
+<a name="167"><font color="#888888 "><i>  167   </i></font></a>  n786 = (uint16_T)(n6 &amp; n28);
+<a name="168"><font color="#888888 "><i>  168   </i></font></a>  n802 = (uint16_T)(n8 &amp; n28);
+<a name="169"><font color="#888888 "><i>  169   </i></font></a>  n816 = (uint16_T)(n10 &amp; n28);
+<a name="170"><font color="#888888 "><i>  170   </i></font></a>  n832 = (uint16_T)(n12 &amp; n28);
+<a name="171"><font color="#888888 "><i>  171   </i></font></a>  n846 = (uint16_T)(n14 &amp; n28);
+<a name="172"><font color="#888888 "><i>  172   </i></font></a>  n860 = (uint16_T)(n0 &amp; n30);
+<a name="173"><font color="#888888 "><i>  173   </i></font></a>  n876 = (uint16_T)(n57 &amp; n30);
+<a name="174"><font color="#888888 "><i>  174   </i></font></a>  n890 = (uint16_T)(n4 &amp; n30);
+<a name="175"><font color="#888888 "><i>  175   </i></font></a>  n906 = (uint16_T)(n6 &amp; n30);
+<a name="176"><font color="#888888 "><i>  176   </i></font></a>  n920 = (uint16_T)(n8 &amp; n30);
+<a name="177"><font color="#888888 "><i>  177   </i></font></a>  n934 = (uint16_T)(n10 &amp; n30);
+<a name="178"><font color="#888888 "><i>  178   </i></font></a>  n950 = (uint16_T)(n12 &amp; n30);
+<a name="179"><font color="#888888 "><i>  179   </i></font></a>  n964 = (uint16_T)(n14 &amp; n30);
+<a name="180"><font color="#888888 "><i>  180   </i></font></a>  n10 = (uint16_T)(n33 ^ n238 ^ n343);
+<a name="181"><font color="#888888 "><i>  181   </i></font></a>  n14 = (uint16_T)((n33 &amp; n238) | (n238 &amp; n343) | (n33 &amp; n343));
+<a name="182"><font color="#888888 "><i>  182   </i></font></a>  n1082 = (uint16_T)(n254 &amp; n356);
+<a name="183"><font color="#888888 "><i>  183   </i></font></a>  n4 = (uint16_T)(n254 ^ n356);
+<a name="184"><font color="#888888 "><i>  184   </i></font></a>  n26 = (uint16_T)(n432 ^ n534 ^ n34);
+<a name="185"><font color="#888888 "><i>  185   </i></font></a>  n254 = (uint16_T)((n432 &amp; n534) | (n534 &amp; n34) | (n432 &amp; n34));
+<a name="186"><font color="#888888 "><i>  186   </i></font></a>  n1156 = (uint16_T)(n446 ^ n35 ^ n38);
+<a name="187"><font color="#888888 "><i>  187   </i></font></a>  n38 = (uint16_T)((n446 &amp; n35) | (n35 &amp; n38) | (n446 &amp; n38));
+<a name="188"><font color="#888888 "><i>  188   </i></font></a>  n34 = (uint16_T)(n460 ^ n564 ^ n668);
+<a name="189"><font color="#888888 "><i>  189   </i></font></a>  n35 = (uint16_T)((n460 &amp; n564) | (n564 &amp; n668) | (n460 &amp; n668));
+<a name="190"><font color="#888888 "><i>  190   </i></font></a>  n33 = (uint16_T)(n476 ^ n580 ^ n682);
+<a name="191"><font color="#888888 "><i>  191   </i></font></a>  n1187 = (uint16_T)((n476 &amp; n580) | (n580 &amp; n682) | (n476 &amp; n682));
+<a name="192"><font color="#888888 "><i>  192   </i></font></a>  n580 = (uint16_T)(n490 ^ n594 ^ n698);
+<a name="193"><font color="#888888 "><i>  193   </i></font></a>  n57 = (uint16_T)((n490 &amp; n594) | (n594 &amp; n698) | (n490 &amp; n698));
+<a name="194"><font color="#888888 "><i>  194   </i></font></a>  n446 = (uint16_T)(n608 ^ n712);
+<a name="195"><font color="#888888 "><i>  195   </i></font></a>  n608 &amp;= n712;
+<a name="196"><font color="#888888 "><i>  196   </i></font></a>  n712 = (uint16_T)((n6 &amp; n16) | (n41 &amp; (uint16_T)~(uint16_T)~(uint16_T)(n2 &amp;
+<a name="197"><font color="#888888 "><i>  197   </i></font></a>    (n24 &amp; n30))));
+<a name="198"><font color="#888888 "><i>  198   </i></font></a>  n682 = (uint16_T)(n106 | n90);
+<a name="199"><font color="#888888 "><i>  199   </i></font></a>  n343 = (uint16_T)(n329 ^ n534 ^ n26);
+<a name="200"><font color="#888888 "><i>  200   </i></font></a>  n534 = (uint16_T)((n329 &amp; n534) | (n534 &amp; n26) | (n329 &amp; n26));
+<a name="201"><font color="#888888 "><i>  201   </i></font></a>  n8 = (uint16_T)(n10 ^ n121 ^ n1156);
+<a name="202"><font color="#888888 "><i>  202   </i></font></a>  n10 = (uint16_T)((n10 &amp; n121) | (n121 &amp; n1156) | (n10 &amp; n1156));
+<a name="203"><font color="#888888 "><i>  203   </i></font></a>  n238 = (uint16_T)(n4 ^ n14 ^ n34);
+<a name="204"><font color="#888888 "><i>  204   </i></font></a>  n490 = (uint16_T)((n4 &amp; n14) | (n14 &amp; n34) | (n4 &amp; n34));
+<a name="205"><font color="#888888 "><i>  205   </i></font></a>  n4 = (uint16_T)(n372 ^ n1082 ^ n33);
+<a name="206"><font color="#888888 "><i>  206   </i></font></a>  n698 = (uint16_T)((n372 &amp; n1082) | (n1082 &amp; n33) | (n372 &amp; n33));
+<a name="207"><font color="#888888 "><i>  207   </i></font></a>  n372 = (uint16_T)((uint16_T)~(uint16_T)(n41 &amp; n22) &amp; n2 &amp; (n0 &amp; n28));
+<a name="208"><font color="#888888 "><i>  208   </i></font></a>  n594 = (uint16_T)(n254 ^ n756 ^ n860);
+<a name="209"><font color="#888888 "><i>  209   </i></font></a>  n564 = (uint16_T)((n254 &amp; n756) | (n756 &amp; n860) | (n254 &amp; n860));
+<a name="210"><font color="#888888 "><i>  210   </i></font></a>  n460 = (uint16_T)(n38 ^ n772 ^ n876);
+<a name="211"><font color="#888888 "><i>  211   </i></font></a>  n1156 = (uint16_T)((n38 &amp; n772) | (n772 &amp; n876) | (n38 &amp; n876));
+<a name="212"><font color="#888888 "><i>  212   </i></font></a>  n38 = (uint16_T)(n35 ^ n786 ^ n890);
+<a name="213"><font color="#888888 "><i>  213   </i></font></a>  n16 = (uint16_T)((n35 &amp; n786) | (n786 &amp; n890) | (n35 &amp; n890));
+<a name="214"><font color="#888888 "><i>  214   </i></font></a>  n35 = (uint16_T)(n1187 ^ n802 ^ n906);
+<a name="215"><font color="#888888 "><i>  215   </i></font></a>  n6 = (uint16_T)((n1187 &amp; n802) | (n802 &amp; n906) | (n1187 &amp; n906));
+<a name="216"><font color="#888888 "><i>  216   </i></font></a>  n33 = (uint16_T)(n57 ^ n816 ^ n920);
+<a name="217"><font color="#888888 "><i>  217   </i></font></a>  n1082 = (uint16_T)((n57 &amp; n816) | (n816 &amp; n920) | (n57 &amp; n920));
+<a name="218"><font color="#888888 "><i>  218   </i></font></a>  n34 = (uint16_T)(n608 ^ n832 ^ n934);
+<a name="219"><font color="#888888 "><i>  219   </i></font></a>  n476 = (uint16_T)((n608 &amp; n832) | (n832 &amp; n934) | (n608 &amp; n934));
+<a name="220"><font color="#888888 "><i>  220   </i></font></a>  n756 = (uint16_T)(n846 &amp; n950);
+<a name="221"><font color="#888888 "><i>  221   </i></font></a>  n26 = (uint16_T)(n846 ^ n950);
+<a name="222"><font color="#888888 "><i>  222   </i></font></a>  n329 = (uint16_T)(n90 ^ n712);
+<a name="223"><font color="#888888 "><i>  223   </i></font></a>  n432 = (uint16_T)(n90 &amp; n712);
+<a name="224"><font color="#888888 "><i>  224   </i></font></a>  n668 = (uint16_T)(n343 ^ n514 ^ n255);
+<a name="225"><font color="#888888 "><i>  225   </i></font></a>  n24 = (uint16_T)((n343 &amp; n514) | (n514 &amp; n255) | (n343 &amp; n255));
+<a name="226"><font color="#888888 "><i>  226   </i></font></a>  n30 = (uint16_T)(n8 ^ n534 ^ n594);
+<a name="227"><font color="#888888 "><i>  227   </i></font></a>  n254 = (uint16_T)((n8 &amp; n534) | (n534 &amp; n594) | (n8 &amp; n594));
+<a name="228"><font color="#888888 "><i>  228   </i></font></a>  n356 = (uint16_T)(n238 ^ n10 ^ n460);
+<a name="229"><font color="#888888 "><i>  229   </i></font></a>  n10 = (uint16_T)((n238 &amp; n10) | (n10 &amp; n460) | (n238 &amp; n460));
+<a name="230"><font color="#888888 "><i>  230   </i></font></a>  n238 = (uint16_T)(n4 ^ n490 ^ n38);
+<a name="231"><font color="#888888 "><i>  231   </i></font></a>  n38 = (uint16_T)((n4 &amp; n490) | (n490 &amp; n38) | (n4 &amp; n38));
+<a name="232"><font color="#888888 "><i>  232   </i></font></a>  n4 = (uint16_T)(n580 ^ n698 ^ n35);
+<a name="233"><font color="#888888 "><i>  233   </i></font></a>  n35 = (uint16_T)((n580 &amp; n698) | (n698 &amp; n35) | (n580 &amp; n35));
+<a name="234"><font color="#888888 "><i>  234   </i></font></a>  n343 = (uint16_T)(n446 &amp; n33);
+<a name="235"><font color="#888888 "><i>  235   </i></font></a>  n33 ^= n446;
+<a name="236"><font color="#888888 "><i>  236   </i></font></a>  n14 = (uint16_T)(n728 &amp; n34);
+<a name="237"><font color="#888888 "><i>  237   </i></font></a>  n34 ^= n728;
+<a name="238"><font color="#888888 "><i>  238   </i></font></a>  n1187 = (uint16_T)(n329 | n106);
+<a name="239"><font color="#888888 "><i>  239   </i></font></a>  n534 = (uint16_T)(n682 ^ n432);
+<a name="240"><font color="#888888 "><i>  240   </i></font></a>  n712 = (uint16_T)(n682 &amp; n432);
+<a name="241"><font color="#888888 "><i>  241   </i></font></a>  n490 = (uint16_T)(n668 ^ n682);
+<a name="242"><font color="#888888 "><i>  242   </i></font></a>  n580 = (uint16_T)(n668 &amp; n682);
+<a name="243"><font color="#888888 "><i>  243   </i></font></a>  n682 = (uint16_T)((n30 &amp; n24) | (n24 &amp; n372) | (n30 &amp; n372));
+<a name="244"><font color="#888888 "><i>  244   </i></font></a>  n608 = (uint16_T)(n356 ^ n254 ^ n564);
+<a name="245"><font color="#888888 "><i>  245   </i></font></a>  n446 = (uint16_T)((n356 &amp; n254) | (n254 &amp; n564) | (n356 &amp; n564));
+<a name="246"><font color="#888888 "><i>  246   </i></font></a>  n698 = (uint16_T)(n238 ^ n10 ^ n1156);
+<a name="247"><font color="#888888 "><i>  247   </i></font></a>  n1156 = (uint16_T)((n238 &amp; n10) | (n10 &amp; n1156) | (n238 &amp; n1156));
+<a name="248"><font color="#888888 "><i>  248   </i></font></a>  n564 = (uint16_T)(n4 ^ n38 ^ n16);
+<a name="249"><font color="#888888 "><i>  249   </i></font></a>  n594 = (uint16_T)((n4 &amp; n38) | (n38 &amp; n16) | (n4 &amp; n16));
+<a name="250"><font color="#888888 "><i>  250   </i></font></a>  n8 = (uint16_T)(n33 ^ n35 ^ n6);
+<a name="251"><font color="#888888 "><i>  251   </i></font></a>  n57 = (uint16_T)((n33 &amp; n35) | (n35 &amp; n6) | (n33 &amp; n6));
+<a name="252"><font color="#888888 "><i>  252   </i></font></a>  n460 = (uint16_T)(n34 ^ n343 ^ n1082);
+<a name="253"><font color="#888888 "><i>  253   </i></font></a>  n432 = (uint16_T)((n34 &amp; n343) | (n343 &amp; n1082) | (n34 &amp; n1082));
+<a name="254"><font color="#888888 "><i>  254   </i></font></a>  n668 = (uint16_T)(n26 ^ n14 ^ n476);
+<a name="255"><font color="#888888 "><i>  255   </i></font></a>  n34 = (uint16_T)((n26 &amp; n14) | (n14 &amp; n476) | (n26 &amp; n476));
+<a name="256"><font color="#888888 "><i>  256   </i></font></a>  n35 = (uint16_T)(n964 ^ n756);
+<a name="257"><font color="#888888 "><i>  257   </i></font></a>  n38 = (uint16_T)(n534 &amp; n1187);
+<a name="258"><font color="#888888 "><i>  258   </i></font></a>  n4 = (uint16_T)((uint16_T)((n490 &amp; n712) | (n712 &amp; n38)) | (uint16_T)(n490 &amp;
+<a name="259"><font color="#888888 "><i>  259   </i></font></a>    n38));
+<a name="260"><font color="#888888 "><i>  260   </i></font></a>  n10 = (uint16_T)((n608 &amp; n682) | (n682 &amp; n580) | (n608 &amp; n580));
+<a name="261"><font color="#888888 "><i>  261   </i></font></a>  n238 = (uint16_T)((n698 &amp; n446) | (n446 &amp; n10) | (n698 &amp; n10));
+<a name="262"><font color="#888888 "><i>  262   </i></font></a>  n343 = (uint16_T)((n564 &amp; n1156) | (n1156 &amp; n238) | (n564 &amp; n238));
+<a name="263"><font color="#888888 "><i>  263   </i></font></a>  n14 = (uint16_T)((n8 &amp; n594) | (n594 &amp; n343) | (n8 &amp; n343));
+<a name="264"><font color="#888888 "><i>  264   </i></font></a>  n26 = (uint16_T)((n460 &amp; n57) | (n57 &amp; n14) | (n460 &amp; n14));
+<a name="265"><font color="#888888 "><i>  265   </i></font></a>  n254 = (uint16_T)((n668 &amp; n432) | (n432 &amp; n26) | (n668 &amp; n26));
+<a name="266"><font color="#888888 "><i>  266   </i></font></a>  c = (uint16_T)(n18 &amp; n12);
+<a name="267"><font color="#888888 "><i>  267   </i></font></a>  n356 = (uint16_T)(((uint16_T)(n46 ^ n150) &amp; 1) &lt;&lt; 1);
+<a name="268"><font color="#888888 "><i>  268   </i></font></a>  n33 = (uint16_T)((n12 &amp; n20) ^ (n46 &amp; n150));
+<a name="269"><font color="#888888 "><i>  269   </i></font></a>  <font color="#112266"><b>return</b></font> (uint16_T)(c | n356 | n33 &lt;&lt; 2 | (n121 &amp; n18) &lt;&lt; 3 | ((uint16_T)(n329 |
+<a name="270"><font color="#888888 "><i>  270   </i></font></a>    n106) &amp; 1) &lt;&lt; 4 | ((uint16_T)(n534 ^ n1187) &amp; 1) &lt;&lt; 5 | ((uint16_T)(n490 ^
+<a name="271"><font color="#888888 "><i>  271   </i></font></a>    n712 ^ n38) &amp; 1) &lt;&lt; 6 | ((uint16_T)((uint16_T)(n4 &amp; (uint16_T)~(uint16_T)
+<a name="272"><font color="#888888 "><i>  272   </i></font></a>    (n47 &amp; n2)) | (uint16_T)((uint16_T)~n4 &amp; (n30 ^ n24 ^ n372))) &amp; 1) &lt;&lt; 7 |
+<a name="273"><font color="#888888 "><i>  273   </i></font></a>                    ((uint16_T)(n608 ^ n682 ^ n580) &amp; 1) &lt;&lt; 8 | (n698 ^ n446 ^
+<a name="274"><font color="#888888 "><i>  274   </i></font></a>    n10) &lt;&lt; 9 | (n564 ^ n1156 ^ n238) &lt;&lt; 10 | (n8 ^ n594 ^ n343) &lt;&lt; 11 | (n460 ^
+<a name="275"><font color="#888888 "><i>  275   </i></font></a>    n57 ^ n14) &lt;&lt; 12 | (n668 ^ n432 ^ n26) &lt;&lt; 13 | (n35 ^ n34 ^ n254) &lt;&lt; 14 |
+<a name="276"><font color="#888888 "><i>  276   </i></font></a>                    ((n964 &amp; n756) | ((n35 &amp; n34) | (n34 &amp; n254) | (n35 &amp; n254)))
+<a name="277"><font color="#888888 "><i>  277   </i></font></a>                    &lt;&lt; 15);
+<a name="278"><font color="#888888 "><i>  278   </i></font></a><b>}</b>
+<a name="279"><font color="#888888 "><i>  279   </i></font></a>
+<a name="280"><font color="#888888 "><i>  280   </i></font></a><font color="#117755"><i>/* End of code generation (mul8_476.c) */</i></font>
+<a name="281"><font color="#888888 "><i>  281   </i></font></a></pre>
+</td></tr></table>
+</p>
+</body>
+</html>

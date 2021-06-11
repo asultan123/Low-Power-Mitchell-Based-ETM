@@ -1,0 +1,15 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+<body>
+<script src="resources/eml_report_loadable_data.js"></script>
+<pre class="code">
+<span class="srcline"><span class="lineno"><a href="82,1" id="srcline1">1</a></span><span class="line"><span class="comment">% approx 6-3 compressor based on approximate AMA5</span></span></span>
+<span class="srcline"><span class="lineno"><a href="82,2" id="srcline2">2</a></span><span class="line"><span class="keyword">function</span> [<span class="var type1" id="S2T2U3">S3</span>,<span class="var type1" id="S3T2U4">S2</span>,<span class="var type1" id="S4T4U5">S1</span>] = Approx6to3_AMA5(<span class="var type1" id="S5T2U8">X6</span>,<span class="var type1" id="S6T2U9">X5</span>,<span class="var type1" id="S7T2U10">X4</span>,<span class="var type1" id="S8T2U11">X3</span>,<span class="var type1" id="S9T2U12">X2</span>,<span class="var type1" id="S10T2U13">X1</span>)</span></span>
+<span class="srcline"><span class="lineno"><a href="82,3" id="srcline3">3</a></span><span class="line">[<span class="var type1" id="S11T2U17">C11</span>,<span class="var type1" id="S12T2U18">S11</span>]=<span class="fcn" id="F241N5:B20">AMA5FA</span>(<span class="var type1" id="S8T2U21">X3</span>,<span class="var type1" id="S9T2U22">X2</span>,<span class="var type1" id="S10T2U23">X1</span>);</span></span>
+<span class="srcline"><span class="lineno"><a href="82,4" id="srcline4">4</a></span><span class="line">[<span class="var type1" id="S14T2U27">C12</span>,<span class="var type1" id="S15T2U28">S12</span>]=<span class="fcn" id="F241N5:B30">AMA5FA</span>(<span class="var type1" id="S5T2U31">X6</span>,<span class="var type1" id="S6T2U32">X5</span>,<span class="var type1" id="S7T2U33">X4</span>);</span></span>
+<span class="srcline"><span class="lineno"><a href="82,5" id="srcline5">5</a></span><span class="line">[<span class="var type1" id="S16T4U37">CHF</span>,<span class="var type1" id="S4T4U38">S1</span>]=<span class="fcn" id="F192N18:B40">HalfAdder</span>(<span class="var type1" id="S15T2U41">S12</span>,<span class="var type1" id="S12T2U42">S11</span>);</span></span>
+<span class="srcline"><span class="lineno"><a href="82,6" id="srcline6">6</a></span><span class="line">[<span class="var type1" id="S2T2U46">S3</span>,<span class="var type1" id="S3T2U47">S2</span>]=<span class="fcn" id="F245N5:B49">AMA5FA</span>(<span class="var type1" id="S14T2U50">C12</span>,<span class="var type1" id="S11T2U51">C11</span>,<span class="var type1" id="S16T4U52">CHF</span>);</span></span>
+<span class="srcline"><span class="lineno"><a href="82,7" id="srcline7">7</a></span><span class="line"><span class="keyword">end</span></span></span>
+</pre>
+</body>
+</html>

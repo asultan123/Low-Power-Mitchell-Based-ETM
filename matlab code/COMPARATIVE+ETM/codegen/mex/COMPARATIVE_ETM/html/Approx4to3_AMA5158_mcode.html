@@ -1,0 +1,16 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+<body>
+<script src="resources/eml_report_loadable_data.js"></script>
+<pre class="code">
+<span class="srcline"><span class="lineno"><a href="58,1" id="srcline1">1</a></span><span class="line"><span class="comment">% approx 4 to 3 compressor based on approximate MA5</span></span></span>
+<span class="srcline"><span class="lineno"><a href="58,2" id="srcline2">2</a></span><span class="line"> <span class="keyword">function</span> [<span class="var type1" id="S2T5U3">S3</span>,<span class="var type1" id="S3T5U4">S2</span>,<span class="var type1" id="S4T5U5">S1</span>] = Approx4to3_AMA5(<span class="var type1" id="S5T2U8">X4</span>,<span class="var type1" id="S6T2U9">X3</span>,<span class="var type1" id="S7T2U10">X2</span>,<span class="var type1" id="S8T2U11">X1</span>)</span></span>
+<span class="srcline"><span class="lineno"><a href="58,3" id="srcline3">3</a></span><span class="line">[<span class="var type1" id="S9T2U15">C11</span>,<span class="var type1" id="S10T2U16">S11</span>]=<span class="fcn" id="F156N4:B18">AMA5FA</span>(<span class="var type1" id="S5T2U19">X4</span>,<span class="var type1" id="S6T2U20">X3</span>,<span class="var type1" id="S7T2U21">X2</span>);</span></span>
+<span class="srcline"><span class="lineno"><a href="58,4" id="srcline4">4</a></span><span class="line">[<span class="var type1" id="S12T5U25">C12</span>,<span class="var type1" id="S4T5U26">S1</span>]=<span class="fcn" id="F103N16:B28">HalfAdder</span>(<span class="var type1" id="S10T2U29">S11</span>,<span class="var type1" id="S8T2U30">X1</span>);</span></span>
+<span class="srcline"><span class="lineno"><a href="58,5" id="srcline5">5</a></span><span class="line">[<span class="var type1" id="S2T5U34">S3</span>,<span class="var type1" id="S3T5U35">S2</span>]=<span class="fcn" id="F157N16:B37">HalfAdder</span>(<span class="var type1" id="S12T5U38">C12</span>,<span class="var type1" id="S9T2U39">C11</span>);</span></span>
+<span class="srcline"><span class="lineno"><a href="58,6" id="srcline6">6</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="58,7" id="srcline7">7</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="58,8" id="srcline8">8</a></span><span class="line"><span class="keyword">end</span></span></span>
+</pre>
+</body>
+</html>

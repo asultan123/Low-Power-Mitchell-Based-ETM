@@ -1,0 +1,24 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+<body>
+<script src="resources/eml_report_loadable_data.js"></script>
+<pre class="code">
+<span class="srcline"><span class="lineno"><a href="65,1" id="srcline1"> 1</a></span><span class="line"><span class="comment">% Exact 5 to 3 compressor based on exact FA</span></span></span>
+<span class="srcline"><span class="lineno"><a href="65,2" id="srcline2"> 2</a></span><span class="line"><span class="keyword">function</span> [<span class="var type1" id="S2T5U3">S3</span>,<span class="var type1" id="S3T5U4">S2</span>,<span class="var type1" id="S4T5U5">S1</span>] = Exact5to3(<span class="var type1" id="S5T2U8">X5</span>,<span class="var type1" id="S6T2U9">X4</span>,<span class="var type1" id="S7T2U10">X3</span>,<span class="var type1" id="S8T2U11">X2</span>,<span class="var type1" id="S9T2U12">X1</span>)</span></span>
+<span class="srcline"><span class="lineno"><a href="65,3" id="srcline3"> 3</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="65,4" id="srcline4"> 4</a></span><span class="line"><span class="comment">%   X1=[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1];</span></span></span>
+<span class="srcline"><span class="lineno"><a href="65,5" id="srcline5"> 5</a></span><span class="line"><span class="comment">%   X2=[0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1];</span></span></span>
+<span class="srcline"><span class="lineno"><a href="65,6" id="srcline6"> 6</a></span><span class="line"><span class="comment">%   X3=[0 0 0 0 1 1 1 1 0 0 0 0 1 1 1 1 0 0 0 0 1 1 1 1 0 0 0 0 1 1 1 1];</span></span></span>
+<span class="srcline"><span class="lineno"><a href="65,7" id="srcline7"> 7</a></span><span class="line"><span class="comment">%   X4=[0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1];</span></span></span>
+<span class="srcline"><span class="lineno"><a href="65,8" id="srcline8"> 8</a></span><span class="line"><span class="comment">%   X5=[0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1];</span></span></span>
+<span class="srcline"><span class="lineno"><a href="65,9" id="srcline9"> 9</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="65,10" id="srcline10">10</a></span><span class="line">[<span class="var type1" id="S10T5U16">C11</span>,<span class="var type1" id="S11T5U17">S11</span>]=<span class="fcn" id="F166N17:B19">MAFA</span>(<span class="var type1" id="S5T2U20">X5</span>,<span class="var type1" id="S6T2U21">X4</span>,<span class="var type1" id="S7T2U22">X3</span>);</span></span>
+<span class="srcline"><span class="lineno"><a href="65,11" id="srcline11">11</a></span><span class="line">[<span class="var type1" id="S13T5U26">C12</span>,<span class="var type1" id="S4T5U27">S1</span>]=<span class="fcn" id="F171N17:B29">MAFA</span>(<span class="var type1" id="S11T5U30">S11</span>,<span class="var type1" id="S8T2U31">X2</span>,<span class="var type1" id="S9T2U32">X1</span>);</span></span>
+<span class="srcline"><span class="lineno"><a href="65,12" id="srcline12">12</a></span><span class="line">[<span class="var type1" id="S2T5U36">S3</span>,<span class="var type1" id="S3T5U37">S2</span>]=<span class="fcn" id="F164N16:B39">HalfAdder</span>(<span class="var type1" id="S13T5U40">C12</span>,<span class="var type1" id="S10T5U41">C11</span>);</span></span>
+<span class="srcline"><span class="lineno"><a href="65,13" id="srcline13">13</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="65,14" id="srcline14">14</a></span><span class="line"><span class="comment">%result=S1+S2*2+S3*4;</span></span></span>
+<span class="srcline"><span class="lineno"><a href="65,15" id="srcline15">15</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="65,16" id="srcline16">16</a></span><span class="line"><span class="keyword">end</span></span></span>
+</pre>
+</body>
+</html>

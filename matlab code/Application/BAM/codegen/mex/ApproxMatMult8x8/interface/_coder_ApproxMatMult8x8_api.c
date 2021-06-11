@@ -1,0 +1,139 @@
+/*
+ * _coder_ApproxMatMult8x8_api.c
+ *
+ * Code generation for function '_coder_ApproxMatMult8x8_api'
+ *
+ */
+
+/* Include files */
+#include "rt_nonfinite.h"
+#include "ApproxMatMult8x8.h"
+#include "_coder_ApproxMatMult8x8_api.h"
+#include "ApproxMatMult8x8_data.h"
+
+/* Function Declarations */
+static real_T (*b_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u, const
+  emlrtMsgIdentifier *parentId))[64];
+static real_T c_emlrt_marshallIn(const emlrtStack *sp, const mxArray *vbl, const
+  char_T *identifier);
+static real_T d_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u, const
+  emlrtMsgIdentifier *parentId);
+static real_T (*e_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
+  const emlrtMsgIdentifier *msgId))[64];
+static real_T (*emlrt_marshallIn(const emlrtStack *sp, const mxArray *T, const
+  char_T *identifier))[64];
+static const mxArray *emlrt_marshallOut(const real_T u[64]);
+static real_T f_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src, const
+  emlrtMsgIdentifier *msgId);
+
+/* Function Definitions */
+static real_T (*b_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u, const
+  emlrtMsgIdentifier *parentId))[64]
+{
+  real_T (*y)[64];
+  y = e_emlrt_marshallIn(sp, emlrtAlias(u), parentId);
+  emlrtDestroyArray(&u);
+  return y;
+}
+  static real_T c_emlrt_marshallIn(const emlrtStack *sp, const mxArray *vbl,
+  const char_T *identifier)
+{
+  real_T y;
+  emlrtMsgIdentifier thisId;
+  thisId.fIdentifier = (const char *)identifier;
+  thisId.fParent = NULL;
+  thisId.bParentIsCell = false;
+  y = d_emlrt_marshallIn(sp, emlrtAlias(vbl), &thisId);
+  emlrtDestroyArray(&vbl);
+  return y;
+}
+
+static real_T d_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u, const
+  emlrtMsgIdentifier *parentId)
+{
+  real_T y;
+  y = f_emlrt_marshallIn(sp, emlrtAlias(u), parentId);
+  emlrtDestroyArray(&u);
+  return y;
+}
+
+static real_T (*e_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
+  const emlrtMsgIdentifier *msgId))[64]
+{
+  real_T (*ret)[64];
+  static const int32_T dims[2] = { 8, 8 };
+
+  emlrtCheckBuiltInR2012b(sp, msgId, src, "double", false, 2U, dims);
+  ret = (real_T (*)[64])emlrtMxGetData(src);
+  emlrtDestroyArray(&src);
+  return ret;
+}
+  static real_T (*emlrt_marshallIn(const emlrtStack *sp, const mxArray *T, const
+  char_T *identifier))[64]
+{
+  real_T (*y)[64];
+  emlrtMsgIdentifier thisId;
+  thisId.fIdentifier = (const char *)identifier;
+  thisId.fParent = NULL;
+  thisId.bParentIsCell = false;
+  y = b_emlrt_marshallIn(sp, emlrtAlias(T), &thisId);
+  emlrtDestroyArray(&T);
+  return y;
+}
+
+static const mxArray *emlrt_marshallOut(const real_T u[64])
+{
+  const mxArray *y;
+  const mxArray *m0;
+  static const int32_T iv2[2] = { 0, 0 };
+
+  static const int32_T iv3[2] = { 8, 8 };
+
+  y = NULL;
+  m0 = emlrtCreateNumericArray(2, iv2, mxDOUBLE_CLASS, mxREAL);
+  emlrtMxSetData((mxArray *)m0, (void *)&u[0]);
+  emlrtSetDimensions((mxArray *)m0, iv3, 2);
+  emlrtAssign(&y, m0);
+  return y;
+}
+
+static real_T f_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src, const
+  emlrtMsgIdentifier *msgId)
+{
+  real_T ret;
+  static const int32_T dims = 0;
+  emlrtCheckBuiltInR2012b(sp, msgId, src, "double", false, 0U, &dims);
+  ret = *(real_T *)emlrtMxGetData(src);
+  emlrtDestroyArray(&src);
+  return ret;
+}
+
+void ApproxMatMult8x8_api(const mxArray * const prhs[4], const mxArray *plhs[1])
+{
+  real_T (*res)[64];
+  real_T (*T)[64];
+  real_T (*I)[64];
+  real_T vbl;
+  real_T hbl;
+  emlrtStack st = { NULL,              /* site */
+    NULL,                              /* tls */
+    NULL                               /* prev */
+  };
+
+  st.tls = emlrtRootTLSGlobal;
+  res = (real_T (*)[64])mxMalloc(sizeof(real_T [64]));
+
+  /* Marshall function inputs */
+  T = emlrt_marshallIn(&st, emlrtAlias(prhs[0]), "T");
+  I = emlrt_marshallIn(&st, emlrtAlias(prhs[1]), "I");
+  vbl = c_emlrt_marshallIn(&st, emlrtAliasP(prhs[2]), "vbl");
+  hbl = c_emlrt_marshallIn(&st, emlrtAliasP(prhs[3]), "hbl");
+
+  /* Invoke the target function */
+  ApproxMatMult8x8(&st, *T, *I, vbl, hbl, *res);
+
+  /* Marshall function outputs */
+  plhs[0] = emlrt_marshallOut(*res);
+}
+
+/* End of code generation (_coder_ApproxMatMult8x8_api.c) */

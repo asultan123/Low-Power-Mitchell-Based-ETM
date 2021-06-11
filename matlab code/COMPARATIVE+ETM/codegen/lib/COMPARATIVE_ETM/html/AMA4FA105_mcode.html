@@ -1,0 +1,23 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+<body>
+<script src="resources/eml_report_loadable_data.js"></script>
+<pre class="code">
+<span class="srcline"><span class="lineno"><a href="47,1" id="srcline1"> 1</a></span><span class="line"><span class="comment">% Approximate MA4</span></span></span>
+<span class="srcline"><span class="lineno"><a href="47,2" id="srcline2"> 2</a></span><span class="line"><span class="keyword">function</span> [<span class="var type1" id="S2T2U3">AMA4Cout</span>,<span class="var type1" id="S3T5U4">AMA4Sum</span> ] = AMA4FA(<span class="var type1" id="S4T2U7">X</span>,<span class="var type1" id="S5T2U8">Y</span>,<span class="var type1" id="S6T2U9">Cin</span>)</span></span>
+<span class="srcline"><span class="lineno"><a href="47,3" id="srcline3"> 3</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="47,4" id="srcline4"> 4</a></span><span class="line"><span class="mxinfo " id="T5:U6"><span class="var type1" id="S7T5U12">Xbar</span>=<span class="mxinfo " id="T5:U8">not(<span class="var type1" id="S4T2U15">X</span>)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="47,5" id="srcline5"> 5</a></span><span class="line"><span class="mxinfo " id="T5:U10"><span class="var type1" id="S9T5U18">Ybar</span>=<span class="mxinfo " id="T5:U12">not(<span class="var type1" id="S5T2U21">Y</span>)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="47,6" id="srcline6"> 6</a></span><span class="line"><span class="mxinfo " id="T5:U14"><span class="var type1" id="S10T5U24">Cinbar</span>=<span class="mxinfo " id="T5:U16">not(<span class="var type1" id="S6T2U27">Cin</span>)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="47,7" id="srcline7"> 7</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="47,8" id="srcline8"> 8</a></span><span class="line"><span class="mxinfo " id="T5:U18"><span class="var type1" id="S11T5U30">m1</span>=<span class="mxinfo " id="T5:U20">and(<span class="mxinfo " id="T5:U21">and(<span class="var type1" id="S7T5U35">Xbar</span>,<span class="var type1" id="S9T5U36">Ybar</span>)</span>,<span class="var type1" id="S6T2U37">Cin</span>)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="47,9" id="srcline9"> 9</a></span><span class="line"><span class="mxinfo " id="T5:U25"><span class="var type1" id="S13T5U40">m3</span>=<span class="mxinfo " id="T5:U27">and(<span class="mxinfo " id="T5:U28">and(<span class="var type1" id="S7T5U45">Xbar</span>,<span class="var type1" id="S5T2U46">Y</span>)</span>,<span class="var type1" id="S6T2U47">Cin</span>)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="47,10" id="srcline10">10</a></span><span class="line"><span class="mxinfo " id="T5:U32"><span class="var type1" id="S14T5U50">m7</span>=<span class="mxinfo " id="T5:U34">and(<span class="mxinfo " id="T5:U35">and(<span class="var type1" id="S4T2U55">X</span>,<span class="var type1" id="S5T2U56">Y</span>)</span>,<span class="var type1" id="S6T2U57">Cin</span>)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="47,11" id="srcline11">11</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="47,12" id="srcline12">12</a></span><span class="line"><span class="mxinfo " id="T5:U39"><span class="var type1" id="S3T5U60">AMA4Sum</span>=<span class="mxinfo " id="T5:U41">or(<span class="var type1" id="S11T5U63">m1</span>,<span class="mxinfo " id="T5:U43">or(<span class="var type1" id="S13T5U66">m3</span>,<span class="var type1" id="S14T5U67">m7</span>)</span>)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="47,13" id="srcline13">13</a></span><span class="line"><span class="mxinfo " id="T2:U46"><span class="var type1" id="S2T2U70">AMA4Cout</span>= <span class="var type1" id="S4T2U71">X</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="47,14" id="srcline14">14</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="47,15" id="srcline15">15</a></span><span class="line"><span class="keyword">end</span></span></span>
+</pre>
+</body>
+</html>

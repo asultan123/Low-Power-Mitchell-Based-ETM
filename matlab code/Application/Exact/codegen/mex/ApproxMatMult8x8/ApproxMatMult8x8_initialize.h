@@ -1,0 +1,28 @@
+/*
+ * ApproxMatMult8x8_initialize.h
+ *
+ * Code generation for function 'ApproxMatMult8x8_initialize'
+ *
+ */
+
+#ifndef APPROXMATMULT8X8_INITIALIZE_H
+#define APPROXMATMULT8X8_INITIALIZE_H
+
+/* Include files */
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "mwmathutil.h"
+#include "tmwtypes.h"
+#include "mex.h"
+#include "emlrt.h"
+#include "rtwtypes.h"
+#include "ApproxMatMult8x8_types.h"
+
+/* Function Declarations */
+extern void ApproxMatMult8x8_initialize(void);
+
+#endif
+
+/* End of code generation (ApproxMatMult8x8_initialize.h) */

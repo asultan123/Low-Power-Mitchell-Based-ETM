@@ -1,0 +1,19 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+<body>
+<script src="resources/eml_report_loadable_data.js"></script>
+<pre class="code">
+<span class="srcline"><span class="lineno"><a href="85,1" id="srcline1"> 1</a></span><span class="line"><span class="comment">% Exact 7 to 3 compressor based on exact FA</span></span></span>
+<span class="srcline"><span class="lineno"><a href="85,2" id="srcline2"> 2</a></span><span class="line"><span class="keyword">function</span> [<span class="var type1" id="S2T4U3">S3</span>,<span class="var type1" id="S3T4U4">S2</span>,<span class="var type1" id="S4T4U5">S1</span>] = Exact7to3(<span class="var type1" id="S5T2U8">X7</span>,<span class="var type1" id="S6T2U9">X6</span>,<span class="var type1" id="S7T2U10">X5</span>,<span class="var type1" id="S8T2U11">X4</span>,<span class="var type1" id="S9T2U12">X3</span>,<span class="var type1" id="S10T2U13">X2</span>,<span class="var type1" id="S11T2U14">X1</span>)</span></span>
+<span class="srcline"><span class="lineno"><a href="85,3" id="srcline3"> 3</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="85,4" id="srcline4"> 4</a></span><span class="line">[<span class="var type1" id="S12T4U18">C11</span>,<span class="var type1" id="S13T4U19">S11</span>]=<span class="fcn" id="F251N23:B21">MAFA</span>(<span class="var type1" id="S8T2U22">X4</span>,<span class="var type1" id="S9T2U23">X3</span>,<span class="var type1" id="S10T2U24">X2</span>);</span></span>
+<span class="srcline"><span class="lineno"><a href="85,5" id="srcline5"> 5</a></span><span class="line">[<span class="var type1" id="S15T4U28">C12</span>,<span class="var type1" id="S16T4U29">S12</span>]=<span class="fcn" id="F251N23:B31">MAFA</span>(<span class="var type1" id="S5T2U32">X7</span>,<span class="var type1" id="S6T2U33">X6</span>,<span class="var type1" id="S7T2U34">X5</span>);</span></span>
+<span class="srcline"><span class="lineno"><a href="85,6" id="srcline6"> 6</a></span><span class="line">[<span class="var type1" id="S17T4U38">CFF</span>,<span class="var type1" id="S4T4U39">S1</span>]=<span class="fcn" id="F252N23:B41">MAFA</span>(<span class="var type1" id="S16T4U42">S12</span>,<span class="var type1" id="S13T4U43">S11</span>,<span class="var type1" id="S11T2U44">X1</span>);</span></span>
+<span class="srcline"><span class="lineno"><a href="85,7" id="srcline7"> 7</a></span><span class="line">[<span class="var type1" id="S2T4U48">S3</span>,<span class="var type1" id="S3T4U49">S2</span>]=<span class="fcn" id="F253N23:B51">MAFA</span>(<span class="var type1" id="S15T4U52">C12</span>,<span class="var type1" id="S12T4U53">C11</span>,<span class="var type1" id="S17T4U54">CFF</span>);</span></span>
+<span class="srcline"><span class="lineno"><a href="85,8" id="srcline8"> 8</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="85,9" id="srcline9"> 9</a></span><span class="line"><span class="comment">%result=S1+S2*2+S3*4;</span></span></span>
+<span class="srcline"><span class="lineno"><a href="85,10" id="srcline10">10</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="85,11" id="srcline11">11</a></span><span class="line"><span class="keyword">end</span></span></span>
+</pre>
+</body>
+</html>

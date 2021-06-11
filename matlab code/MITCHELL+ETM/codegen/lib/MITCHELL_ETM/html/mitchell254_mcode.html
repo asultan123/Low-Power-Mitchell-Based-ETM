@@ -1,0 +1,33 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+<body>
+<script src="resources/eml_report_loadable_data.js"></script>
+<pre class="code">
+<span class="srcline"><span class="lineno"><a href="78,1" id="srcline1"> 1</a></span><span class="line"><span class="keyword">function</span> [<span class="var type1" id="S2T3U3">result</span>] = mitchell(<span class="var type1" id="S3T4U6">a</span>,<span class="var type1" id="S4T4U7">b</span>)</span></span>
+<span class="srcline"><span class="lineno"><a href="78,2" id="srcline2"> 2</a></span><span class="line">    </span></span>
+<span class="srcline"><span class="lineno"><a href="78,3" id="srcline3"> 3</a></span><span class="line">    <span class="mxinfo " id="T41:U4"><span class="var type1" id="S5T41U10">F</span> = <span class="mxinfo " id="T41:U6">fimath(<span class="string">'RoundingMethod'</span>, <span class="string">'Nearest'</span>, <span class="keyword">...</span></span></span>
+<span class="srcline"><span class="lineno"><a href="78,4" id="srcline4"> 4</a></span><span class="line">     <span class="string">'OverflowAction'</span>, <span class="string">'Wrap'</span>, <span class="keyword">...</span></span></span>
+<span class="srcline"><span class="lineno"><a href="78,5" id="srcline5"> 5</a></span><span class="line">     <span class="string">'SumMode'</span>, <span class="string">'SpecifyPrecision'</span>, <span class="keyword">...</span></span></span>
+<span class="srcline"><span class="lineno"><a href="78,6" id="srcline6"> 6</a></span><span class="line">     <span class="string">'SumWordLength'</span>, 11, <span class="keyword">...</span></span></span>
+<span class="srcline"><span class="lineno"><a href="78,7" id="srcline7"> 7</a></span><span class="line">     <span class="string">'SumFractionLength'</span>, 7, <span class="keyword">...</span></span></span>
+<span class="srcline"><span class="lineno"><a href="78,8" id="srcline8"> 8</a></span><span class="line">     <span class="string">'CastBeforeSum'</span>, true)</span></span>; </span></span>
+<span class="srcline"><span class="lineno"><a href="78,9" id="srcline9"> 9</a></span><span class="line"> </span></span>
+<span class="srcline"><span class="lineno"><a href="78,10" id="srcline10">10</a></span><span class="line">    <span class="keyword">if</span> <span class="mxinfo " id="T5:U7"><span class="var type1" id="S3T4U30">a</span>&lt;<span class="mxinfo " id="T2:U9">1</span></span> || <span class="mxinfo " id="T5:U10"><span class="var type1" id="S4T4U33">b</span>&lt;<span class="mxinfo " id="T2:U12">1</span></span></span></span>
+<span class="srcline"><span class="lineno"><a href="78,11" id="srcline11">11</a></span><span class="line">        <span class="mxinfo " id="T3:U13"><span class="var type1" id="S2T3U37">result</span> = <span class="mxinfo " id="T3:U15">uint16(<span class="mxinfo " id="T2:U16">0</span>)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="78,12" id="srcline12">12</a></span><span class="line">        <span class="keyword">return</span></span></span>
+<span class="srcline"><span class="lineno"><a href="78,13" id="srcline13">13</a></span><span class="line">    <span class="keyword">end</span></span></span>
+<span class="srcline"><span class="lineno"><a href="78,14" id="srcline14">14</a></span><span class="line">    </span></span>
+<span class="srcline"><span class="lineno"><a href="78,15" id="srcline15">15</a></span><span class="line">    [<span class="var type1" id="S3T2U45">a</span>, <span class="var type1" id="S9T2U46">lower_a</span>] = <span class="fcn" id="F136N4:B48">log_approx</span>(<span class="var type1" id="S3T4U49">a</span>);</span></span>
+<span class="srcline"><span class="lineno"><a href="78,16" id="srcline16">16</a></span><span class="line">    </span></span>
+<span class="srcline"><span class="lineno"><a href="78,17" id="srcline17">17</a></span><span class="line">    [<span class="var type1" id="S4T2U53">b</span>, <span class="var type1" id="S11T2U54">lower_b</span>] = <span class="fcn" id="F136N4:B56">log_approx</span>(<span class="var type1" id="S4T4U57">b</span>);</span></span>
+<span class="srcline"><span class="lineno"><a href="78,18" id="srcline18">18</a></span><span class="line">    </span></span>
+<span class="srcline"><span class="lineno"><a href="78,19" id="srcline19">19</a></span><span class="line">    <span class="mxinfo " id="T2:U23"><span class="var type1" id="S12T2U60">correction_term</span> = <span class="mxinfo " id="T2:U25"><span class="fcn" id="F146N5:B62">lut_correction</span>(<span class="var type1" id="S9T2U63">lower_a</span>,<span class="var type1" id="S11T2U64">lower_b</span>)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="78,20" id="srcline20">20</a></span><span class="line">    </span></span>
+<span class="srcline"><span class="lineno"><a href="78,21" id="srcline21">21</a></span><span class="line">    <span class="mxinfo " id="T39:U28"><span class="var type1" id="S14T39U67">log_addition</span> = <span class="mxinfo " id="T39:U30"><span class="mxinfo " id="T39:U31"><span class="mxinfo " id="T39:U32">fi(<span class="var type1" id="S3T2U72">a</span>,0,11,7,<span class="var type1" id="S5T41U76">F</span>)</span>+<span class="mxinfo " id="T39:U35">fi(<span class="var type1" id="S4T2U79">b</span>,0,11,7,<span class="var type1" id="S5T41U83">F</span>)</span></span>+<span class="mxinfo " id="T39:U38">fi(<span class="var type1" id="S12T2U86">correction_term</span>,0,11,7,<span class="var type1" id="S5T41U90">F</span>)</span></span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="78,22" id="srcline22">22</a></span><span class="line">    </span></span>
+<span class="srcline"><span class="lineno"><a href="78,23" id="srcline23">23</a></span><span class="line">    <span class="mxinfo " id="T3:U41"><span class="var type1" id="S2T3U93">result</span> = <span class="mxinfo " id="T3:U43"><span class="fcn" id="F253N3:B95">antilog_approx</span>(<span class="mxinfo " id="T2:U44">double(<span class="var type1" id="S14T39U98">log_addition</span>)</span>)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="78,24" id="srcline24">24</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="78,25" id="srcline25">25</a></span><span class="line"><span class="keyword">end</span></span></span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,1533 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass IEEEtran
+\begin_preamble
+% for subfigures/subtables
+\usepackage[caption=false,font=footnotesize]{subfig}
+\end_preamble
+\options journal
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\float_placement tbh
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_title "Your Title"
+\pdf_author "Your Name"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle false
+\pdf_quoted_options "pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 2
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+A Low-Power Mitchell based Error Tolerant Multiplier
+\end_layout
+
+\begin_layout Author
+Aly
+\begin_inset space ~
+\end_inset
+
+Sultan,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Flex IEEE membership
+status open
+
+\begin_layout Plain Layout
+Member,
+\begin_inset space ~
+\end_inset
+
+IEEE,
+\end_layout
+
+\end_inset
+
+ Ali Elhussien,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Flex IEEE membership
+status open
+
+\begin_layout Plain Layout
+Fellow,OSA,
+\end_layout
+
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+Dr.
+ Hassan Mostafa,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Flex IEEE membership
+status open
+
+\begin_layout Plain Layout
+Life
+\begin_inset space ~
+\end_inset
+
+Fellow,
+\begin_inset space ~
+\end_inset
+
+IEEE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Page headings
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Journal of XXX
+\end_layout
+
+\end_inset
+
+Your Name 
+\begin_inset Flex Lowercase
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+et al.
+\end_layout
+
+\end_inset
+
+: Your Title
+\end_layout
+
+\begin_layout Abstract
+Approximate multipliers have recently gained significance due to their reduced
+ area and power consumption in applications that exhibit a high degree of
+ error tolerance.
+ This comes at the cost of accuracy which is a primary design parameter
+ when selecting the appropriate approximate multiplier for a given application.
+ In this paper, several approximate multiplier architectures are combined
+ with the approximation method of the error tolerant multiplier (ETM) to
+ produce hybrid designs.
+ The proposed hybrid multipliers are evaluated using an image compression
+ application - JPEG compression using Discrete Cosine Transform (DCT).
+ The Mitchell based ETM was found to provid the greatest tradoff in terms
+ of Area, Power, Delay and Accuracy in JPEG Compression, with an average
+ PDP reduction of 47.5%, an area reduction of 62.8% and a corresponding 20%
+ reduction in output image Peak Signal to Noise Ration (PSNR).
+\end_layout
+
+\begin_layout Keywords
+Approximate Computing, adder, multiplier, low-energy design, imprecise computati
+onal blocks
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Paragraph Start
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+W
+\end_layout
+
+\end_inset
+
+ith 
+\end_layout
+
+\end_inset
+
+the increasing prevalence of mobile and embedded systems, demand for ultra
+ lower power, small footprint, and high performance hardware is greater
+ than ever.
+ Approximate computing aims to satisfy this demand by trading computationally
+ accuracy for superior performance and reduced power and area consumption.
+ The effectiveness of approximate computing can be seen in applications
+ like image processing where error tolerance is a product of human perceptual
+ limitations 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "approx_gen"
+literal "false"
+
+\end_inset
+
+.
+ Most approximate multipliers have been designed using the following methodologi
+es:
+\end_layout
+
+\begin_layout Enumerate
+Approximation in partial products generation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "TBM"
+literal "false"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Approximation in partial product tree 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BAM,ETM"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Approximation in partial products summation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "review2018"
+literal "false"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Mitchell's Approximate logarithmic multiplication 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Mitchell_lut"
+literal "true"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Approximate hardware generation using genetic algorithms 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "evoapprox"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Of the previous methodologies ETM 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ETM"
+literal "false"
+
+\end_inset
+
+ allows the greatest flexibility when attempting to create hybrid approximate
+ multipliers with significantly reduced hardware.
+ In this paper several of the previously mentioned approximate multiplier
+ designs are combined with ETM to create hybrid unsigned 16-bit approximate
+ multipliers that are compared with each other while considering their error
+ performance and circuit characteristics.
+ The rest of the paper is organized as follows section II describes the
+ ETM architecture and the proposed modification used to create more efficient
+ hybrid approximate multipliers.
+ Section III briefly describes the approximate multiplier architectures
+ that are combined with ETM.
+ Section IV details the error and circuit performance characteristics of
+ the proposed hybrid multipliers.
+ Section V details the evaluation of the different multipliers using JPEG
+ compression, specifically in the Discrete Cosine Transform (DCT) encoding
+ part of JPEG compression.
+ A brief conclusion is given in section VI.
+\end_layout
+
+\begin_layout Section
+The Hybrid Error Tolerant Multiplier
+\end_layout
+
+\begin_layout Subsection
+Original Design
+\end_layout
+
+\begin_layout Standard
+An illustration of the ETM algorithm is provided in Fig.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ETM algorithm"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Initially.
+ both the multiplicand (65295)
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+10 
+\end_layout
+
+\end_inset
+
+= (1111111100001111)
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+ and the multiplier (36472)
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+
+= (1000111001111000)
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+ are segmented into two equal 8 bit parts.
+ When these inputs are fed to the multiplier, the upper parts of both operands
+ are sent to an 8bit exact multiplier and the lower parts of both operands
+ are sent to an approximation unit.
+ The 8 bit Exact multiplier generates the upper 16 bits of the resulting
+ 32 bit number and the approximation unit applies an approximation algorithm
+ to generate the lower 16 bits.
+ This algorithm begins at the point where the inputs are segmented into
+ upper and lower parts then it progresses moves to rightmost bits of the
+ input operands.
+ An OR operation is applied to the lower bits of the operands.
+ When the algorithm detects the presence of the first logic '1' output from
+ the OR operation it begins to approximates the rest of the 16 bit output
+ by setting all bits past the first '1' bit to a logic '1'.
+ In the event where no logic '1' bit is detected when an OR operation is
+ applied to lower bits of both operands, the lower 16 bits of the output
+ are assumed to be logic '0'.
+ If the upper parts of both operands are equal to zero, then the lower parts
+ of both operands are sent to the exact multiplier.
+ The starting point for the the multiplier is arbitrary.
+ Moving the starting point left reduces the size of the exact multiplier
+ which minimizes hardware but also decreases accuracy.
+ Moving the starting point right increases accuracy at the cost of a larger
+ multiplier.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/Illustrations/etm.png
+	scale 90
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ETM algorithm
+\begin_inset CommandInset label
+LatexCommand label
+name "ETM algorithm"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Proposed Modification
+\end_layout
+
+\begin_layout Standard
+The segmentation of a 16 bit multipliers into two components (Approximate,
+ and Exact) greatly reduces power and area consumption of the multiplier
+ by around 50% 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ETM"
+literal "false"
+
+\end_inset
+
+ due to it's removal of 50% of the exact multiplier's hardware.
+ Additionally because of the flexibility provided by this segmentation,
+ the exact part of the multiplier can also be replaced by an approximate
+ multiplier to further reduce power and area consumption.
+ This approximate multiplier must be able to evaluate a majority of the
+ most significant bits of the input operands more precisely than the lower
+ bits to limit output inaccuracy.
+ 
+\end_layout
+
+\begin_layout Section
+Approximate multipliers
+\end_layout
+
+\begin_layout Subsection
+Truncated Binary Multiplier
+\end_layout
+
+\begin_layout Standard
+Petra et al.
+ proposed a truncated binary nxn multiplier (TBM) that computes only the
+ upper n bits of the expected 2n bit output 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "TBM"
+literal "false"
+
+\end_inset
+
+.
+ They also introduce a suitable compensation function that minimizes the
+ mean square error of the truncated output.
+ Petra et al.
+ obtain a closed form expression for the compensation function to be used
+ in multipliers with arbitrary truncation points.
+ 
+\end_layout
+
+\begin_layout Subsection
+Broken Array Multiplier
+\end_layout
+
+\begin_layout Standard
+Mahdini et al.
+ proposed an approximate broken array multiplier (BAM) composed of carry
+ select adder cells (CSA) and an nbit row of vector merging cells 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BAM"
+literal "false"
+
+\end_inset
+
+.
+ Depending on the desired reduction in hardware necessary Mahdini proposes
+ the removal of several CSA blocks according to two design parameters, the
+ vertical break line (VBL), and the horizontal break line (HBL).
+ The VBL moves from the right-most CSA block to the left and depending on
+ the position of the line any CSA blocks that fall to the right of it are
+ omitted with their output assumed to be null.
+ Similarly the HBL moves from top to bottom and all CSA blocks falling above
+ the HBL are omitted with their output assumed to be null.
+ BAM designs are defined by their VBL and HBL index number.
+ A BAM with VBL equal to four and HBL equal to one refers to a BAM design
+ with the first CSA cell row is omitted, and the first four columns are
+ also omitted.
+ 
+\end_layout
+
+\begin_layout Subsection
+Approximated Partial Product Summation Multipliers
+\end_layout
+
+\begin_layout Standard
+Masadeh et al.
+ proposed several array based and tree based approximate multipliers composed
+ of several approximate full adder cells 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "review2018"
+literal "false"
+
+\end_inset
+
+.
+ The proposed designs are defined by the percentage and type of approximate
+ full adders used.
+ Designs considered in this paper are designs are both array based and tree
+ based multipliers were only the full adders and compressors that contribute
+ to the lowest 50% of the output bits are approximate.
+ The designs considered in this paper are the array based EM4 and compressor
+ based CEM5.
+ The EM4 multiplier replaces 50% of the full adders in an array multiplier
+ with an AMA4 full adder.
+ The CEM5 multiplier uses approximate compressors to evaluate partial production
+ summation for the lower 50% partial products.
+ The compressors are based on the AMA5 full adder cell which is a set of
+ two buffers connected to the inputs.
+ The truth table for both the AMA cells is given in fig.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Truth-Table-for"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/Illustrations/AMA4FA_AMA5FA.png
+	scale 32
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Truth Table for AMA4FA and AMA5FA 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Truth-Table-for"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Mitchell Based Approximate Multipliers
+\end_layout
+
+\begin_layout Standard
+Mitchell Logarithm multiplication converts input operands into approximate
+ logarithms, adds the converted logarithms and then gets the anti-logarithm
+ of the result.
+ This reduces the multiplication of the two operands to a simple addition.
+ McLaren proposed a modified Mitchell based logarithm multiplier that uses
+ a look up table with 64 correction values to improve on Mitchell's original
+ design 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Mitchell_lut"
+literal "false"
+
+\end_inset
+
+.
+ McLaren managed to reduce the mean error in the result from 3% to 0.04%
+ with the addition of the look up table in the design.
+ While other implementations 
+\end_layout
+
+\begin_layout Subsection
+Approximate Multiplier Generation Using Genetic Algorithm
+\end_layout
+
+\begin_layout Standard
+Vojtech et al.
+ developed a library of approximate multipliers generated by a multi-objective
+ Cartesian genetic programming algorithm 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "evoapprox"
+literal "false"
+
+\end_inset
+
+.
+ The library documents each multipliers error performance metrics in addition
+ to to their circuit characteristics.
+ A selection of nine 8bit evo multipliers with varied error performance
+ metrics was chosen and used in this paper from the library provided in
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "evoapprox_lib"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Error Performance and Circuit Characteristics
+\end_layout
+
+\begin_layout Subsection
+Error Performance
+\end_layout
+
+\begin_layout Standard
+Error performance was evaluated in MATLAB using a test-set of 100 million
+ random multiplications.
+ The operands in the test-set were all normally distributed 16bit numbers.
+ The error rate (ER), mean relative error distance (MRED), and normalized
+ mean error distance (NMED) are the primary metrics used to evaluate approximate
+ multiplier performance [15].
+ ER is the rate at which a given design produces an incorrect output.
+ The Error Distance (ED) is defined as the distance between the approximate
+ result of a multiplication 
+\begin_inset Formula $M^{'}$
+\end_inset
+
+and the exact result of a multiplication 
+\begin_inset Formula $M$
+\end_inset
+
+ for each of the evaluated test cases as in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq.-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The Relative Error Distance (RED) is the scaling of ED by the exact result
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ as in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq.-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The Mean Error Distance (MED) is the mean of the evaluated ED's for all
+ the test cases as in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq."
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ where 
+\begin_inset Formula $n_{t}$
+\end_inset
+
+ is the number of test cases used.
+ The Mean Relative Error Distance (MRED) is the mean of the evaluated REDs
+ for the given test set as defined in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq."
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The Normalized Mean Error Distance (NMED) is the normalization of MED by
+ the maximum possible output of the design.
+ It is a function of the number of output bits of the multiplier 
+\begin_inset Formula $n_{i}$
+\end_inset
+
+ as defined in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq.-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ In all of the proposed designs in this paper 
+\begin_inset Formula $n_{i}=32$
+\end_inset
+
+.
+ NMED's purpose is to compare multiplier error performance across different
+ multiplier sizes.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+ED^{(i)}=|M'^{(i)}-M^{(i)}|\label{eq.-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+RED^{(i)}=\frac{ED^{(i)}}{M^{(i)}}\label{eq.-2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+MED=\dfrac{\sum_{i=1}^{n_{t}}ED^{(i)}}{n_{t}}\label{eq.-3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+MRED=\frac{\sum_{i=1}^{n_{t}}RED^{(i)}}{n_{t}}\label{eq.}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+NMED=\dfrac{MED}{2^{n_{i}}-1}\label{eq.-4}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As seen in Fig.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ER"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the ER for all multipliers was 100% since there are no 16bit input combination
+s that could result in an exact output being produced by any of the multiplers
+ proposed.
+ According to Fig.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig: MRED"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the Exact ETM had the lowest MRED and NMED of all the multipliers.
+ BAM error performance progressively declined with the removal of more CSA
+ blocks.
+ The omission of CSA columns has a much greater effect on accuracy in comparison
+ to the omission of CSA rows.
+ BAMV6H3 has the worst error performance in terms of MRED and NMED which
+ is understandable given that it ommits 57% of the total available CSA cells.
+ Mitchell's approximate multiplier had the lowest MRED when compared to
+ the Exact multiplier.
+ However, according to Fig.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:NMED"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, NMED ranking follows MRED ranking for all multipliers except with TBM
+ as it was analytically designed to produce the lowest mean square error
+ through the use of a compensation function 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "TBM"
+literal "false"
+
+\end_inset
+
+.
+ EVO MRED results were similair to those documented by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "evoapprox_lib"
+literal "false"
+
+\end_inset
+
+ even with the addition of the ETM approximation, however, NMED for the
+ EVO multipliers combined with ETM approximation was worse in comparison
+ to EVO operating as a standalone 8 bit multipliers.
+ CEM5 and EM4 are designed based on different approximate mirror full adders
+ (AMA)
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MirrorFA"
+literal "false"
+
+\end_inset
+
+.
+ CEM5 is based on had a higher MRED than EM4 because the AMA cells used
+ in it's compressors had more erroneous test cases and thus a higher probability
+ of error.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/ERROR_CHARTS/MRED_Chart.pdf
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+MRED for different HETMs 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig: MRED"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/ERROR_CHARTS/NMED_Chart.pdf
+	scale 25
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+NMED for different HETMs 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:NMED"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/ERROR_CHARTS/ER_Chart.pdf
+	scale 25
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ER for different HETMs 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ER"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Circuit Characteristics
+\end_layout
+
+\begin_layout Standard
+All hybrid multiplires where implemented on a Zynq xcz7020-1clg484 FPGA,
+ with power and area estimates produced by Xilinx ISE post implemetation.
+ Power estimation was performed in Xilinx XPower Analyzer using ten thousand
+ randomly generated multiplications.
+ Operand bits in each multiplication had an activity rate of 50% and input
+ frequency was set to 10Mhz.
+ PDP and Area Reduction percentages were evaluated relative to an array
+ based 16 bit exact multiplier implemented on the same FPGA platform.
+ Fig.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:PDP-and-Area "
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows the PDP and Area reduction for each of the different multipliers.
+ Area reduction exceeded 50% for all characterised multipliers which is
+ to be expected given the inclusion of the approximating unit.
+ The highest reduction in both PDP and area is achieved by the evo198, BAMV6H3
+ and evo429.
+ Significant gains in delay and power reduction can be observed in BAM based
+ HETMs due to the omission of CSA cells.
+ The movement of the VBL further left reduces delay in the critical path
+ of the circuit by 1 CSA cell in addition to removing more CSA cells with
+ each step left.
+ EM4 performed well in terms of PDP given the simplicity of the AMA4 full
+ adder cell it is based on.
+ CEM5, while based on a simpler AMA5 full adder cell, performed worse in
+ terms of power consumption due to it's internal node structure.
+ The Exact HETM performed poorly in terms of PDP due to the 8x8 exact array
+ mutliplier's high delay.
+ All evo approximate multipliers where generated using a genetic algorithm,
+ therefore no observations based on their structure can be made.
+ However, there is a strong inverse relationship between superior error
+ performance and PDP and Area reduction for all EVO multipliers.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/Circuit Charts/PDPvArea.pdf
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+PDP and Area Reduction Percentages for different multipliers
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:PDP-and-Area "
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Image Processing in JPEG Compression
+\end_layout
+
+\begin_layout Standard
+Joint Photographics Experts Group (JPEG) is a lossy compression standard
+ used for images.
+ An integral part of JPEG is DCT 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "DCT"
+literal "false"
+
+\end_inset
+
+, which is a mathametical transformation involving matrix multiplications
+ of two 
+\begin_inset Formula $8*8$
+\end_inset
+
+ matricies.
+ To perform compression, DCT needs 512 multiplication operations per 
+\begin_inset Formula $8*8$
+\end_inset
+
+ pixel block of any given grayscale image.
+ If this operation is performed in realtime with approximate multipliers,
+ resource use will be drastically reduced while maintaining satisfactory
+ output image quality.
+ 
+\end_layout
+
+\begin_layout Standard
+To evaluate real world error performance, the proposed hybrid multiplier
+ are used in forward DCT to compress an image.
+ A standard Lena image is compressed with various HETMs and the Peak Signal
+ to Noise (PSNR) is evaluated for all compressed images using the uncompressed
+ image as a reference.
+ PSNR is appropriate for evaluating compressed image quality due to it's
+ conistency with human visual quality analysis.
+ PSNR is defined as follows
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+PSNR=10\log_{10}\frac{255^{2}}{MSE}\label{eq:}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where 255 is the highest value a pixel can have in a grayscale image.
+\end_layout
+
+\begin_layout Standard
+Fig.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:CompressedImages"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows the original and compressed JPEG images using a selection of different
+ approximate multipliers.
+ The PSNR after compression using an exact 16bit multiplier, Mitchell ETM,
+ EVO474 ETM, BAMv4H0 ETM, and EVO218 ETM are 32.08 dB, 25.75 dB, 22.89 dB,
+ 19 dB and 18.07 dB respectively.
+ In terms of PDP and Accuracy, Mitchell ETM provided superior performance
+ and the lowest accuracy loss.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/APP_ORIGINAL/LennaGrayscale.png
+	scale 17
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/APP_16bitExact/girl_16exact.png
+	scale 17
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/APP_MITCHELL/girl_mitchell.png
+	scale 17
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/APP_EVO/girl_EVO2.png
+	scale 17
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/APP_BAM/girl_BAM_0.png
+	scale 17
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/APP_EVO/girl_EVO5.png
+	scale 17
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+(a) Original Image, Compressed JPEG images using (b) Exact 16bit Multiplier
+ (c) Mitchell (d) EVO474 (e) BAMV4H0 (f) EVO312 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CompressedImages"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/Circuit Charts/PDPvAccuracy.pdf
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+PDP and Accuracy Loss in JPEG compression for different multipliers 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:PDP-and-Accuracy"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Conclusion
+\end_layout
+
+\begin_layout Standard
+In this paper we proposed several different hybrid Error tolerant multipliers
+ based on the approximation method proposed in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ETM"
+literal "false"
+
+\end_inset
+
+.
+ The proposed designs were evaluated based on PDP reduction, Area Reduction,
+ MRED, NMED and accuracy loss in JPEG compression.
+ JPEG compression was used to evaluate multiplier in terms of PDP and PSNR.
+ The Mitchell based ETM was found to produce superior results in comparison
+ to all other proposed multipliers in terms of PDP, and PSNR.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "IEEEabrv,IEEEexample,Bibilography"
+options "IEEEtran"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

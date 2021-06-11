@@ -1,0 +1,21 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+<body>
+<script src="resources/eml_report_loadable_data.js"></script>
+<pre class="code">
+<span class="srcline"><span class="lineno"><a href="48,1" id="srcline1"> 1</a></span><span class="line"><span class="keyword">function</span> [<span class="var type1" id="S2T5U3">MAFACout</span>,<span class="var type1" id="S3T5U4">MAFASum</span>] = MAFA(<span class="var type1" id="S4T5U7">X</span>,<span class="var type1" id="S5T2U8">Y</span>,<span class="var type1" id="S6T2U9">Cin</span>)</span></span>
+<span class="srcline"><span class="lineno"><a href="48,2" id="srcline2"> 2</a></span><span class="line"><span class="comment">% X=[0 0 0 0 1 1 1 1];</span></span></span>
+<span class="srcline"><span class="lineno"><a href="48,3" id="srcline3"> 3</a></span><span class="line"><span class="comment">% Y=[0 0 1 1 0 0 1 1];</span></span></span>
+<span class="srcline"><span class="lineno"><a href="48,4" id="srcline4"> 4</a></span><span class="line"><span class="comment">% Cin=[0 1 0 1 0 1 0 1];</span></span></span>
+<span class="srcline"><span class="lineno"><a href="48,5" id="srcline5"> 5</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="48,6" id="srcline6"> 6</a></span><span class="line"><span class="mxinfo " id="T5:U6"><span class="var type1" id="S3T5U12">MAFASum</span>=<span class="mxinfo " id="T5:U8">xor(<span class="mxinfo " id="T5:U9">xor(<span class="var type1" id="S4T5U17">X</span>,<span class="var type1" id="S5T2U18">Y</span>)</span>,<span class="var type1" id="S6T2U19">Cin</span>)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="48,7" id="srcline7"> 7</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="48,8" id="srcline8"> 8</a></span><span class="line"><span class="mxinfo " id="T5:U13"><span class="var type1" id="S8T5U22">XY</span>=<span class="mxinfo " id="T5:U15">and(<span class="var type1" id="S4T5U25">X</span>,<span class="var type1" id="S5T2U26">Y</span>)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="48,9" id="srcline9"> 9</a></span><span class="line"><span class="mxinfo " id="T5:U18"><span class="var type1" id="S10T5U29">YCin</span>=<span class="mxinfo " id="T5:U20">and(<span class="var type1" id="S5T2U32">Y</span>,<span class="var type1" id="S6T2U33">Cin</span>)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="48,10" id="srcline10">10</a></span><span class="line"><span class="mxinfo " id="T5:U23"><span class="var type1" id="S11T5U36">XCin</span>=<span class="mxinfo " id="T5:U25">and(<span class="var type1" id="S4T5U39">X</span>,<span class="var type1" id="S6T2U40">Cin</span>)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="48,11" id="srcline11">11</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="48,12" id="srcline12">12</a></span><span class="line"><span class="mxinfo " id="T5:U28"><span class="var type1" id="S2T5U43">MAFACout</span>=<span class="mxinfo " id="T5:U30">or(<span class="mxinfo " id="T5:U31">or(<span class="var type1" id="S8T5U48">XY</span>,<span class="var type1" id="S10T5U49">YCin</span>)</span>,<span class="var type1" id="S11T5U50">XCin</span>)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="48,13" id="srcline13">13</a></span><span class="line"><span class="keyword">end</span></span></span>
+</pre>
+</body>
+</html>
